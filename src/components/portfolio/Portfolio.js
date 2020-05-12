@@ -18,7 +18,8 @@ const useStyles = createUseStyles({
     padding: 13,
   },
 })
-// Use magic graph ql to generate portfolio cards
+// TODO: Use magic graph ql to generate portfolio cards
+// TODO: Popout when card clicked showing description (Problem, solution, result, etc) and slide show of site
 export default function About(props) {
   const classes = useStyles()
   return (

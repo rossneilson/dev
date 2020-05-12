@@ -63,19 +63,19 @@ const useStyles = createUseStyles({
 export default function PortfolioCard(props) {
   const classes = useStyles()
   return (
-    <div className="projectCard">
-      <div className="bar">
-        <div className="dot" />
-        <div className="dot" />
-        <div className="dot" />
+    <div className={classes.projectCard}>
+      <div className={classes.bar}>
+        <div className={classes.dot} />
+        <div className={classes.dot} />
+        <div className={classes.dot} />
       </div>
-      <div className="cardImage">
+      <div className={classes.cardImage}>
         <a href={props.link}>
-          <Img styleName="projectImage" />
+          <Img styleName={classes.projectImage} />
         </a>
       </div>
 
-      <div className="projectText">
+      <div className={classes.projectText}>
         <h4>{props.title}</h4>
         {props.t("portfolio." + props.title)}
       </div>

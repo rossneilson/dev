@@ -2,6 +2,7 @@ import React from "react"
 import { createUseStyles } from "react-jss"
 import { graphql } from "gatsby"
 import "../index.css"
+import "../i18n"
 
 import Title from "../components/title/Title"
 import About from "../components/about/About"
@@ -25,7 +26,9 @@ export default function Main(props) {
   return (
     <div>
       <Title />
-      <About image={props.data.profileImage.childImageSharp.fluid} />
+      <About
+      // image={props.data.profileImage.childImageSharp.fluid}
+      />
       <Services />
       <Portfolio examples={true} />
       {/* <Blog /> */}
@@ -41,6 +44,11 @@ export const imageQuery = graphql`
         fluid(maxWidth: 700000) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

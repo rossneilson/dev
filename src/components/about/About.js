@@ -1,6 +1,6 @@
 import React from "react"
 import { createUseStyles } from "react-jss"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 
 import AboutCard from "./aboutCard"
 import ProgressBar from "./progressBar"
@@ -40,7 +40,7 @@ export default function About(props) {
       <SvgPattern type="metal" />
       <AboutCard />
       <div className={classes.rightWrapper}>
-        <Img className={classes.profile} fluid={props.image} />
+        {/* <Img className={classes.profile} fluid={props.image} /> */}
         <ProgressBar />
       </div>
     </div>

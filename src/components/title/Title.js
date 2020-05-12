@@ -41,7 +41,7 @@ const useStyles = createUseStyles({
     color: "white",
   },
 })
-
+// TODO: CTA to contact section scroll
 function Title(props) {
   const classes = useStyles()
   return (
