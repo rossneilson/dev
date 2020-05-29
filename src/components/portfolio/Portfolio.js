@@ -1,62 +1,65 @@
-import React from "react"
-import { createUseStyles } from "react-jss"
-import SvgPattern from "../svg/SvgPattern"
-// import ProjectCard from "./portfolioCard"
+import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
-const useStyles = createUseStyles({
-  portfolioFlexContainer: {
-    backgroundColor: "#76aed7",
-    zIndex: "998",
-    display: "flex",
-    flexWrap: "wrap",
-    maxWidth: "100%",
-    height: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-    position: "relative",
-    padding: 13,
-  },
-})
-// TODO: Use magic graph ql to generate portfolio cards
-// TODO: Popout when card clicked showing description (Problem, solution, result, etc) and slide show of site
-export default function About(props) {
-  const classes = useStyles()
+import SvgPattern from "../svg/SvgPattern"
+import ProjectCard from "./PortfolioCard"
+import PortfolioModal from "./PortfolioModal"
+
+const PortfolioFlexContainer = styled.section`
+  background-color: #76aed7;
+  z-index: 998;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding: 13px;
+`
+
+const Title = styled.h3`
+  color: white;
+  margin-left: 100px;
+  margin-right: 80%;
+  padding-bottom: 0;
+  padding-left: 4px;
+`
+
+export default function About({ devSiteImage }) {
+  const [show, setShow] = useState(false)
+  const [selectedExample, setSelectedExample] = useState({})
+
+  const openExample = data => {
+    setShow(true)
+    setSelectedExample(data)
+  }
+
   return (
-    <div className={classes.portfolioFlexContainer}>
+    <PortfolioFlexContainer>
       <SvgPattern type="point" />
-      <h3
-        style={{
-          color: "white",
-          marginLeft: "100px",
-          marginRight: "80%",
-          paddingBottom: "0",
-          zIndex: "998",
-          minWidth: "150px",
-          paddingLeft: "4px",
-        }}
-      >
-        Portfolio
-      </h3>
-      {/* 
+      <Title>
+        <FormattedMessage id="portfolio.title" />
+      </Title>
+      <PortfolioModal
+        show={show}
+        handleClose={setShow}
+        selectedExample={selectedExample}
+      />
+
       <ProjectCard
-        t={t}
-        title="Personal Site"
-        desc="Project number 1"
+        index="1"
         link="https://rossneilson.dev"
+        cover={devSiteImage}
+        openModal={openExample}
       />
       <ProjectCard
-        t={t}
-        title="Work in progress"
-        desc="Project number 2"
-        link=""
+        index="2"
+        link="https://tabitraveler.com"
+        openExample={openExample}
       />
-      <ProjectCard
-        t={t}
-        title="Work in progress"
-        desc="Project number 3"
-        link=""
-      /> */}
-    </div>
+    </PortfolioFlexContainer>
   )
 }

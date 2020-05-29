@@ -1,53 +1,42 @@
 import React from "react"
-import { createUseStyles } from "react-jss"
+import styled from "styled-components"
 import cover from "../../images/cover.svg"
 
-const useStyles = createUseStyles({
-  contact: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    width: "100%",
-    height: "100%",
-    background: "url(" + cover + ")",
-    backgroundAttachment: "fixed",
-    backgroundRepeat: "no-repeat",
-    webkitBackgroundSize: "cover",
-    mozBackgroundSize: "cover",
-    oBackgroundSize: "cover",
-    backgroundSize: "cover",
-    backgroundPosition: "left top",
-    fallbacks: [
-      {
-        backgroundPosition: "center",
-      },
-    ],
-  },
-  contactCard: {
-    backgroundColor: "white",
-    padding: 5,
-    zIndex: "998",
-    minHeight: "20%",
-    width: "40%",
-    margin: "5% 1% 5% 1%",
-    flexGrow: "2",
-    fallbacks: [
-      {
-        padding: 16,
-      },
-    ],
-    paddingBottom: 20,
-    textAlign: "center",
-    minWidth: 300,
-  },
-})
+const Wrapper = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: url(${props => props.background});
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  webkit-background-size: cover;
+  moz-background-size: cover;
+  o-background-size: cover;
+  background-size: cover;
+  background-position: left top;
+`
 
+const ContactCard = styled.section`
+  background-color: white;
+  padding: 5px;
+  z-index: 998;
+  min-height: 20%;
+  width: 40%;
+  margin: 5% 1% 5% 1%;
+  flex-grow: 2;
+  padding-bottom: 20px;
+  text-align: center;
+  min-width: 300px;
+`
+
+// Netlify contact form
 export default function Contact(props) {
-  const classes = useStyles()
   return (
-    <div className={classes.contact}>
-      <div className={classes.contactCard}>Contact</div>
-    </div>
+    <Wrapper background={cover}>
+      <ContactCard>Contact</ContactCard>
+    </Wrapper>
   )
 }

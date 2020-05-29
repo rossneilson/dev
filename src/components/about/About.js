@@ -1,48 +1,47 @@
 import React from "react"
-import { createUseStyles } from "react-jss"
-// import Img from "gatsby-image"
+import styled from "styled-components"
+import Img from "gatsby-image"
 
-import AboutCard from "./aboutCard"
-import ProgressBar from "./progressBar"
+import AboutCard from "./AboutCard"
+import ProgressBar from "./ProgressBar"
 import SvgPattern from "../svg/SvgPattern"
 
-const useStyles = createUseStyles({
-  aboutFlexContainer: {
-    backgroundColor: "#76aed7",
-    zIndex: "998",
-    position: "relative",
-    display: "flex",
-    flexWrap: "wrap",
-    maxWidth: "100%",
-    maxHeight: "100%",
-    overflow: "hidden",
-  },
-  rightWrapper: {
-    zIndex: "998",
-    margin: "auto",
-    paddingTop: 20,
-    maxWidth: "100%",
-    maxHeight: 900,
-  },
-  profile: {
-    zIndex: "998",
-    margin: "auto",
-    transform: "scale(0.95)",
-    maxWidth: "100%",
-    maxHeight: 700,
-  },
-})
+const FlexContainer = styled.section`
+  background-color: #76aed7;
+  z-index: 998;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+`
+
+const RightWrapper = styled.section`
+  z-index: 998;
+  margin: auto;
+  padding-top: 20;
+  max-width: 500px;
+  max-height: 900;
+`
+
+const ProfileImage = styled(Img)`
+  z-index: 998;
+  margin: auto;
+  transform: scale(0.95);
+  width: 100%;
+  max-height: 700px;
+`
 
 export default function About(props) {
-  const classes = useStyles()
   return (
-    <div className={classes.aboutFlexContainer}>
+    <FlexContainer>
       <SvgPattern type="metal" />
       <AboutCard />
-      <div className={classes.rightWrapper}>
-        {/* <Img className={classes.profile} fluid={props.image} /> */}
+      <RightWrapper>
+        <ProfileImage fluid={props.image} />
         <ProgressBar />
-      </div>
-    </div>
+      </RightWrapper>
+    </FlexContainer>
   )
 }

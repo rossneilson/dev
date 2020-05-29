@@ -1,0 +1,56 @@
+{
+  "title": {
+    "top": "Ross Neilson",
+    "bottom": "Developer"
+  },
+  "about": {
+    "title": "A little about me",
+    "line1": "Hi, I'm a freelance web developer specialising in high quality complex web solutions for small - medium businesses..",
+    "line2": "I have experience building enterprise grade web applicagtions at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
+    "line3": "My aim is to use my services to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
+    "line4": "I can make you a well designed intuitive and proffesional web presence to allow you to do anything from ecommerce to blogs and everything in between to help grow your business.",
+    "progress": "Progress through apprenticeship (until full time freelance)"
+  },
+  "services": {
+    "title": "My Services",
+    "1": {
+      "title": "Meeting and discussion",
+      "desc": "We will have a discussion about the needs of your business and what you are looking for in a web application then build a specialised plan tailored to your businesses needs. Once requirements are decided I can start work immediatly."
+    },
+    "2": {
+      "title": "Design / Prototype",
+      "desc": "I will draft up an initial design and sketch of what the end product will look like roughly to get feedback."
+    },
+    "3": {
+      "title": "Development of high performance web application",
+      "desc": ""
+    },
+    "4": {
+      "title": "Continuous communication and feedback",
+      "desc": ""
+    },
+    "5": {
+      "title": "Final product",
+      "desc": ""
+    },
+    "6": {
+      "title": "Maintenence options",
+      "desc": ""
+    }
+  },
+  "portfolio":{
+    "title": "Portfolio",
+    "1": {
+      "title": "Ross Neilson Web developer",
+      "desc": "Freelance site made in react and gatsby with english and japanese localization",
+      "detailed": "This website uses gatsby to build a fast efficient static website for the speed an efficiency of standard websites, but uses react for native application like performcane and allows for much more complex features. \n In addition SEO is far greater than a dynamic website would usually be able to achieve. \n Localization was also an important aspect as I want my company to be international to expand my market. \n This serves as a perfect platform to show what my websites can achieve for even a simple landing page. "
+    },
+    "2": {
+      "title": "Tabi Traveler",
+      "desc": "High performance website with localization, a portfolio, blog and shop",
+      "detailed": ""
+    }
+  },
+  "contact": "Contact",
+  "lang": "en"
+}
