@@ -15,6 +15,13 @@
     "title": "ポートフォリオ",
     "Personal Site": "英語と日本語でローカライズしたReactで作った個人サイト"
   },
-  "contact": "連絡",
+  "contact": {
+    "title": "連絡",
+    "name": "名前",
+    "email": "メール",
+    "invalidEmail": "メールは違う",
+    "message": "メッセージ",
+    "submit": "登録"
+  },
   "lang": "ja"
 }

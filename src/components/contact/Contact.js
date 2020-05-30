@@ -1,5 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import TextField from "@material-ui/core/TextField"
+import Button from "@material-ui/core/Button"
+
 import cover from "../../images/cover.svg"
 
 const Wrapper = styled.section`
@@ -21,7 +25,7 @@ const Wrapper = styled.section`
 
 const ContactCard = styled.section`
   background-color: white;
-  padding: 5px;
+  padding: 10px;
   z-index: 998;
   min-height: 20%;
   width: 40%;
@@ -32,11 +36,101 @@ const ContactCard = styled.section`
   min-width: 300px;
 `
 
-// Netlify contact form
+const Title = styled.h3`
+  margin: auto;
+`
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 75%;
+`
+const FormField = styled(TextField)`
+  margin: 20px;
+`
+const SubmitButton = styled(Button)`
+  background-color: rgb(32, 150, 243);
+  color: white;
+  &:hover {
+    background-color: rgb(250, 182, 0);
+  }
+  margin: auto;
+  width: 25%;
+`
+
+const validEmailRegex = RegExp(
+  /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+)
+
 export default function Contact(props) {
+  const intl = useIntl()
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [emailError, setEmailError] = useState(false)
+  const [submitAttempt, setSubmitAttempt] = useState(0)
   return (
     <Wrapper background={cover}>
-      <ContactCard>Contact</ContactCard>
+      <ContactCard>
+        <Title>{intl.formatMessage({ id: "contact.title" })}</Title>
+        <Form>
+          <label>
+            <FormField
+              label={intl.formatMessage({ id: "contact.name" })}
+              id="name"
+              fullWidth
+              onChange={e => setName(e.target.value)}
+            />
+          </label>
+          <label>
+            <FormField
+              label={intl.formatMessage({ id: "contact.email" })}
+              id="email"
+              fullWidth
+              error={emailError}
+              helperText={
+                emailError
+                  ? intl.formatMessage({ id: "contact.invalidEmail" })
+                  : null
+              }
+              onChange={e => {
+                const value = e.target.value
+                if (!validEmailRegex.test(value) && submitAttempt > 0) {
+                  setEmailError(true)
+                } else {
+                  setEmailError(false)
+                }
+                setEmail(e.target.value)
+              }}
+            />
+          </label>
+          <label>
+            <FormField
+              label={intl.formatMessage({ id: "contact.message" })}
+              id="message"
+              multiline
+              fullWidth
+              onChange={e => setMessage(e.target.value)}
+            />
+          </label>
+
+          <SubmitButton
+            variant="contained"
+            disabled={emailError}
+            onClick={() => {
+              setSubmitAttempt(submitAttempt + 1)
+              if (!validEmailRegex.test(email)) {
+                setEmailError(true)
+              } else {
+                console.log({ name, email, message })
+              }
+            }}
+          >
+            {intl.formatMessage({ id: "contact.submit" })}
+          </SubmitButton>
+        </Form>
+      </ContactCard>
     </Wrapper>
   )
 }

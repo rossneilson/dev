@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { FormattedMessage, changeLocale } from "gatsby-plugin-intl"
 import styled, { keyframes } from "styled-components"
 
@@ -30,6 +30,7 @@ const Background = styled.section`
   o-background-size: cover;
   background-size: cover;
   background-position: center left;
+  position: relative;
 `
 
 const CenterSection = styled.section`
@@ -56,9 +57,24 @@ const SubTitle = styled.h2`
 `
 
 function Title(props) {
+  const [offset, setOffset] = useState(0)
+
+  const listener = e => {
+    if (!(window.pageYOffset > 900)) {
+      setOffset(window.pageYOffset)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", listener)
+    return () => {
+      window.removeEventListener("scroll", listener)
+    }
+  })
+
   return (
     <div>
-      <Background cover={cover}>
+      <Background cover={cover} style={{ backgroundPositionY: offset / 1.6 }}>
         <CenterSection>
           <MainTitle>
             <FormattedMessage id="title.top" />

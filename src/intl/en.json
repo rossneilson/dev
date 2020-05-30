@@ -15,7 +15,7 @@
     "title": "My Services",
     "1": {
       "title": "Meeting and discussion",
-      "desc": "We will have a discussion about the needs of your business and what you are looking for in a web application then build a specialised plan tailored to your businesses needs. Once requirements are decided I can start work immediatly."
+      "desc": "I think the most important part of designing a web application is understanding the business and so this is what I will focus on first, undertsaninh your businesse's needs. We will have a discussion about the needs of your business and what you are looking for in a web application then build a specialised plan tailored to your businesses needs. Once requirements are decided I can start work immediatly."
     },
     "2": {
       "title": "Design / Prototype",
@@ -43,7 +43,7 @@
     "1": {
       "title": "Ross Neilson Web developer",
       "desc": "Freelance site made in react and gatsby with english and japanese localization",
-      "detailed": "This website uses gatsby to build a fast efficient static website for the speed an efficiency of standard websites, but uses react for native application like performcane and allows for much more complex features. \n In addition SEO is far greater than a dynamic website would usually be able to achieve. \n Localization was also an important aspect as I want my company to be international to expand my market. \n This serves as a perfect platform to show what my websites can achieve for even a simple landing page. "
+      "detailed": "This website uses gatsby to build a fast efficient static website for the speed an efficiency of standard websites, but uses react for native application like performcane and allows for much more complex features. \n In addition SEO is far greater than a dynamic website would usually be able to achieve. \n Localization was also an important aspect as I want my company to be international to expand my market. The use of a CDN also means my website can be accessed quickly anywhere in the world. \n This serves as a perfect platform to show what my websites can achieve for even a simple landing page. "
     },
     "2": {
       "title": "Tabi Traveler",
@@ -51,6 +51,13 @@
       "detailed": ""
     }
   },
-  "contact": "Contact",
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "email": "Email",
+    "invalidEmail": "Invalid Email",
+    "message": "Message",
+    "submit": "Submit"
+  },
   "lang": "en"
 }
