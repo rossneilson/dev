@@ -1,22 +1,22 @@
 import React from "react"
-import { createUseStyles } from "react-jss"
+import styled from "styled-components"
 
-const useStyles = createUseStyles({
-  svgPattern: {
-    position: "absolute",
-    height: "100%",
-    width: "100%",
-    overflow: "hidden",
-  },
-  rect: {
-    position: "absolute",
-    height: "999999%",
-  },
-})
-export default function SvgPattern(props) {
-  const classes = useStyles()
+const Pattern = styled.svg`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+`
+
+const Rectangle = styled.rect`
+  position: absolute;
+  height: 999999%;
+  fill: url(${props => "#" + props.type});
+`
+
+export default function SvgPattern({ type }) {
   var pattern
-  switch (props.type) {
+  switch (type) {
     case "circle":
       pattern = (
         <circle
@@ -73,27 +73,17 @@ export default function SvgPattern(props) {
         />
       )
       break
+    default:
+      throw new Error("Please specify pattern type")
   }
   return (
-    <svg className={classes.svgPattern}>
+    <Pattern>
       <defs>
-        <pattern
-          id={props.type}
-          patternUnits="userSpaceOnUse"
-          width="20"
-          height="20"
-        >
+        <pattern id={type} patternUnits="userSpaceOnUse" width="20" height="20">
           {pattern}
         </pattern>
       </defs>
-      <rect
-        style={{ fill: `url(#${props.type})` }}
-        className={classes.rect}
-        x="0"
-        y="0"
-        width="300000"
-        height="30000"
-      />
-    </svg>
+      <Rectangle type={type} x="0" y="0" width="300000" height="30000" />
+    </Pattern>
   )
 }

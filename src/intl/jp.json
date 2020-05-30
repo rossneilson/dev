@@ -1,0 +1,27 @@
+{
+  "title": {
+    "top": "ロス ニルソン",
+    "bottom": "ディベロッパー"
+  },
+  "about": {
+    "title": "事項紹介",
+    "line1": "Hi, I'm a freelance web developer specialising in high quality complex web solutions for small - medium businesses..",
+    "line2": "I have experience building enterprise grade web applicagtions at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
+    "line3": "My aim is to use my services to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
+    "line4": "I can make you a well designed intuitive and proffesional web presence to allow you to do anything from ecommerce to blogs and everything in between to help grow your business.",
+    "progress": "卒業するまで(フリランスは仕事になるまで)"
+  },
+  "portfolio":{
+    "title": "ポートフォリオ",
+    "Personal Site": "英語と日本語でローカライズしたReactで作った個人サイト"
+  },
+  "contact": {
+    "title": "連絡",
+    "name": "名前",
+    "email": "メール",
+    "invalidEmail": "メールは違う",
+    "message": "メッセージ",
+    "submit": "登録"
+  },
+  "lang": "ja"
+}

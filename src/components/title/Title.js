@@ -1,57 +1,89 @@
-import React from "react"
-import { createUseStyles } from "react-jss"
+import React, { useState, useEffect } from "react"
+import { FormattedMessage, changeLocale } from "gatsby-plugin-intl"
+import styled, { keyframes } from "styled-components"
+
 import cover from "../../images/cover.svg"
 
-const useStyles = createUseStyles({
-  bg: {
-    animation: "4s ease-out 0s 1 fadeIn",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    background: "url(" + cover + ") bottom right",
-    backgroundRepeat: "no-repeat",
-    textAlign: "center",
-    minHeight: "100vh",
-    webkitBackgroundSize: "cover",
-    mozBackgroundSize: "cover",
-    oBackgroundSize: "cover",
-    backgroundSize: "cover",
-    backgroundPosition: "center left",
-  },
-  centerText: {
-    fontFamily: "Sacramento",
-    animation: "1.5s ease-out 0s 1 slideInFromBottom",
-    backgroundColor: "#2196f3",
-    padding: "5% 2% 5% 2%",
-    width: "45%",
-    minWidth: 200,
-    boxShadow:
-      "0 10px 15px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4)",
-  },
-  title: {
-    fontFamily: "Sacramento",
-    borderBottom: "2px solid",
-    borderBottomColor: "#fab601",
-    paddingBottom: 6,
-    color: "white",
-  },
-  subTitle: {
-    fontFamily: "Sacramento",
-    color: "white",
-  },
-})
+const slideInFromBottom = keyframes`
+  0% {
+    transform: translateY(300%);
+  }
+  80% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`
+
+const Background = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(${props => props.cover}) bottom right;
+  background-repeat: no-repeat;
+  text-align: center;
+  min-height: 100vh;
+  webkit-background-size: cover;
+  moz-background-size: cover;
+  o-background-size: cover;
+  background-size: cover;
+  background-position: center left;
+  position: relative;
+`
+
+const CenterSection = styled.section`
+  font-family: Sacramento;
+  animation: 1.5s ease-out 0s 1 ${slideInFromBottom};
+  background-color: #2196f3;
+  padding: 5% 2% 5% 2%;
+  width: 45%;
+  min-width: 200;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+`
+
+const MainTitle = styled.h1`
+  font-family: Sacramento;
+  border-bottom: 2px solid;
+  border-bottom-color: #fab601;
+  padding-bottom: 6;
+  color: white;
+`
+
+const SubTitle = styled.h2`
+  font-family: Sacramento;
+  color: white;
+`
 
 function Title(props) {
-  const classes = useStyles()
+  const [offset, setOffset] = useState(0)
+
+  const listener = e => {
+    if (!(window.pageYOffset > 900)) {
+      setOffset(window.pageYOffset)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", listener)
+    return () => {
+      window.removeEventListener("scroll", listener)
+    }
+  })
+
   return (
     <div>
-      <div src={"../../images/cover.svg"} className={classes.bg}>
-        <div className={classes.centerText}>
-          <h1 className={classes.title}>Ross Neilson</h1>
-          <h2 className={classes.subTitle}>Developer</h2>
-        </div>
-      </div>
+      <Background cover={cover} style={{ backgroundPositionY: offset / 1.6 }}>
+        <CenterSection>
+          <MainTitle>
+            <FormattedMessage id="title.top" />
+          </MainTitle>
+          <SubTitle>
+            <FormattedMessage id="title.bottom" />
+          </SubTitle>
+        </CenterSection>
+      </Background>
     </div>
   )
 }

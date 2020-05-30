@@ -1,84 +1,83 @@
 import React from "react"
-import { createUseStyles } from "react-jss"
+import styled from "styled-components"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 
-const useStyles = createUseStyles({
-  projectCard: {
-    zIndex: "998",
-    width: 400,
-    height: "25%",
-    margin: "1% 1% 5% 1%",
-    flexGrow: "2",
-    transition:
-      "transform .6s ease,filter .6s ease,-webkit-transform .6s ease,-webkit-filter .6s ease",
-    transitionDelay: "var(--wait,0)",
-    willChange: "transform",
-    backgroundColor: "#ffffffd2",
-  },
-  bar: {
-    zIndex: "998",
-    display: "flex",
-    alignItems: "center",
-    padding: 9,
-    background: "hsl(0, 0%, 19%)",
-  },
-  dot: {
-    marginRight: 4,
-    width: 8,
-    height: 8,
-    background: "hsl(0, 0%, 67%)",
-    borderRadius: "100%",
-  },
-  cardImage: {
-    background:
-      "linear-gradient(90deg, rgba(28,5,0,1) 0%, rgba(121,57,9,1) 36%, rgba(0,179,255,1) 100%)",
-    fallbacks: [
-      {
-        background: "rgb(28,5,0)",
-      },
-    ],
-    width: "100%",
-    overflow: "hidden",
-    position: "relative",
-  },
-  projectImage: {
-    width: "100%",
-    height: "auto",
-    minHeight: 200,
-    transform: "scaleY(1.05)",
-    transition: "all 1s ease-in-out",
-    mozTransition: "all 1s ease-in-out",
-  },
-  "projectImage:hover": {
-    transform: "scale(1.1)",
-    opacity: "0.4",
-  },
-  projectText: {
-    padding: "0px 20px 20px 20px",
-    color: "#f2a319",
-    minHeight: 110,
-  },
-})
+const Card = styled.section`
+  zindex: 998;
+  width: 400px;
+  height: 25%;
+  margin: 1% 1% 5% 1%;
+  flexgrow: 2;
+  background-color: #ffffffd2;
+`
 
-export default function PortfolioCard(props) {
-  const classes = useStyles()
+const Bar = styled.section`
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  background: hsl(0, 0%, 19%);
+`
+
+const Dot = styled.section`
+  margin-right: 4px;
+  width: 8px;
+  height: 8px;
+  background: hsl(0, 0%, 67%);
+  border-radius: 100%;
+`
+
+const ImageBackground = styled.section`
+  background: linear-gradient(
+    90deg,
+    rgba(28, 5, 0, 1) 0%,
+    rgba(121, 57, 9, 1) 36%,
+    rgba(0, 179, 255, 1) 100%
+  );
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+`
+
+const ProjectImage = styled(Img)`
+  transition: all 1s ease-in-out;
+  moz-transition: all 1s ease-in-out;
+  cursor: pointer;
+  &:hover: {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
+`
+
+const ProjectText = styled.section`
+  padding: 0px 20px 20px 20px;
+  color: #f2a319;
+  min-height: 110px;
+`
+
+// Fix hover to make clickable more obvious
+export default function PortfolioCard({ cover, index, openModal }) {
   return (
-    <div className="projectCard">
-      <div className="bar">
-        <div className="dot" />
-        <div className="dot" />
-        <div className="dot" />
-      </div>
-      <div className="cardImage">
-        <a href={props.link}>
-          <Img styleName="projectImage" />
-        </a>
-      </div>
-
-      <div className="projectText">
-        <h4>{props.title}</h4>
-        {props.t("portfolio." + props.title)}
-      </div>
-    </div>
+    <Card
+      onClick={() => {
+        openModal({ cover, index })
+      }}
+    >
+      <Bar>
+        <Dot />
+        <Dot />
+        <Dot />
+      </Bar>
+      <ImageBackground>
+        {cover ? <ProjectImage fluid={cover} /> : null}
+      </ImageBackground>
+      <ProjectText>
+        <h4>
+          <FormattedMessage id={"portfolio." + index + ".title"} />
+        </h4>
+        <FormattedMessage id={"portfolio." + index + ".desc"} />
+      </ProjectText>
+    </Card>
   )
 }
