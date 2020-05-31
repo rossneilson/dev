@@ -26,7 +26,7 @@ const Wrapper = styled.section`
 const ContactCard = styled.section`
   background-color: white;
   padding: 10px;
-  z-index: 998;
+  z-index: 978;
   min-height: 20%;
   width: 40%;
   margin: 5% 1% 5% 1%;
@@ -45,6 +45,7 @@ const Form = styled.form`
   flex-direction: column;
   margin: auto;
   max-width: 75%;
+  margin-right: 16%;
 `
 const FormField = styled(TextField)`
   margin: 20px;
@@ -81,9 +82,10 @@ export default function Contact(props) {
     <Wrapper background={cover}>
       <ContactCard>
         <Title>{intl.formatMessage({ id: "contact.title" })}</Title>
-        <Form>
+        <Form netlify>
           <label>
             <FormField
+              aria-label="Name input"
               label={intl.formatMessage({ id: "contact.name" })}
               id="name"
               fullWidth
@@ -92,6 +94,7 @@ export default function Contact(props) {
           </label>
           <label>
             <FormField
+              aria-label="Email input"
               label={intl.formatMessage({ id: "contact.email" })}
               id="email"
               fullWidth
@@ -114,6 +117,7 @@ export default function Contact(props) {
           </label>
           <label>
             <FormField
+              aria-label="Message input"
               label={intl.formatMessage({ id: "contact.message" })}
               id="message"
               multiline
@@ -123,9 +127,12 @@ export default function Contact(props) {
           </label>
 
           <SubmitButton
+            type="submit"
+            aria-label="Submit button"
             variant="contained"
             disabled={emailError}
-            onClick={() => {
+            onClick={e => {
+              e.preventDefault()
               setSubmitAttempt(submitAttempt + 1)
               if (!validEmailRegex.test(email)) {
                 setEmailError(true)

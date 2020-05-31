@@ -50,7 +50,11 @@ export default function AboutCard(props) {
         <p>
           <FormattedMessage id="about.line4" />
         </p>
-        <CTA variant="contained" onClick={() => window.scrollTo(0, 99999)}>
+        <CTA
+          aria-label="Contact me button"
+          variant="contained"
+          onClick={() => window.scrollTo(0, 99999)}
+        >
           Contact me
         </CTA>
       </Paragraphs>

@@ -15,17 +15,22 @@ const Icon = styled.section`
 export default function Toggle(props) {
   return (
     <div>
-      <Switch
-        checked={props.checked}
-        onChange={props.changeLanguage}
-        height={50}
-        width={100}
-        offColor="#2196f3"
-        onColor="#2196f3"
-        aria-label="language switch"
-        uncheckedIcon={<Icon>English</Icon>}
-        checkedIcon={<Icon>日本語</Icon>}
-      />
+      <label>
+        <Switch
+          checked={props.checked}
+          onChange={props.changeLanguage}
+          height={50}
+          width={100}
+          offColor="#2196f3"
+          onColor="#2196f3"
+          aria-label="language switch"
+          role="button"
+          id="language switch"
+          aria-pressed={props.checked}
+          uncheckedIcon={<Icon>English</Icon>}
+          checkedIcon={<Icon>日本語</Icon>}
+        />
+      </label>
     </div>
   )
 }
