@@ -113,7 +113,7 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
             <ButtonLink
               aria-label="Go to website button"
               variant="contained"
-              rel="noopener"
+              rel="canonical"
               href="https://www.google.com"
               target="_blank"
             >
