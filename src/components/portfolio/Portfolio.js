@@ -22,13 +22,12 @@ const PortfolioFlexContainer = styled.section`
 
 const Title = styled.h3`
   color: white;
-  margin-left: 100px;
-  margin-right: 80%;
+  width: 100%;
+  margin-left: 5%;
   padding-bottom: 0;
-  padding-left: 4px;
 `
 
-export default function About({ devSiteImage }) {
+export default function About({ devSiteImage, tabiSiteImage }) {
   const [show, setShow] = useState(false)
   const [selectedExample, setSelectedExample] = useState({})
 
@@ -58,7 +57,8 @@ export default function About({ devSiteImage }) {
       <ProjectCard
         index="2"
         link="https://tabitraveler.com"
-        openExample={openExample}
+        cover={tabiSiteImage}
+        openModal={openExample}
       />
     </PortfolioFlexContainer>
   )

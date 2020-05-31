@@ -18,6 +18,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 
 import SvgPattern from "../svg/SvgPattern"
+import { lineToParagraph } from "../../utils/utils"
 
 const ServicesFlexContainer = styled.section`
   background-color: #f2a31991;
@@ -59,17 +60,41 @@ const StyledIcon = styled.section`
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <FormattedMessage id="services.1.desc" />
+      return (
+        <FormattedMessage id="services.1.desc">
+          {lineToParagraph}
+        </FormattedMessage>
+      )
     case 1:
-      return <FormattedMessage id="services.2.desc" />
+      return (
+        <FormattedMessage id="services.2.desc">
+          {lineToParagraph}
+        </FormattedMessage>
+      )
     case 2:
-      return <FormattedMessage id="services.3.desc" />
+      return (
+        <FormattedMessage id="services.3.desc">
+          {lineToParagraph}
+        </FormattedMessage>
+      )
     case 3:
-      return <FormattedMessage id="services.4.desc" />
+      return (
+        <FormattedMessage id="services.4.desc">
+          {lineToParagraph}
+        </FormattedMessage>
+      )
     case 4:
-      return <FormattedMessage id="services.5.desc" />
+      return (
+        <FormattedMessage id="services.5.desc">
+          {lineToParagraph}
+        </FormattedMessage>
+      )
     case 5:
-      return <FormattedMessage id="services.6.desc" />
+      return (
+        <FormattedMessage id="services.6.desc">
+          {lineToParagraph}
+        </FormattedMessage>
+      )
     default:
       return "Unknown step"
   }

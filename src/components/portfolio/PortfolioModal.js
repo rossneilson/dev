@@ -4,6 +4,8 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import Button from "@material-ui/core/Button"
 
+import { excalamationToList } from "../../utils/utils"
+
 const Modal = styled.section`
   z-index: 99999;
   position: fixed;
@@ -19,6 +21,7 @@ const ModalMain = styled.section`
   position: fixed;
   background: white;
   width: 80%;
+  min-width: 350px;
   height: auto;
   top: 50%;
   left: 50%;
@@ -48,7 +51,7 @@ const Card = styled.section`
 `
 
 const Image = styled(Img)`
-  min-width: 340px;
+  min-width: 350px;
   width: 50%;
   flex-grpw: 1;
 `
@@ -56,30 +59,26 @@ const Image = styled(Img)`
 const Description = styled.section`
   padding: 2%;
   min-width: 340px;
+  max-height: 10%;
+  overflow: auto;
   width: 50%;
   flex-grow: 1;
   background-color: #444444;
   color: white;
+  font-size: 70%;
 `
+
 const ButtonLink = styled(Button)`
   background-color: rgb(32, 150, 243);
   color: white;
+  text-shadow: none;
   &:hover {
     background-color: rgb(250, 182, 0);
   }
 `
 
-function linesToParagraphs(...nodes) {
-  return nodes
-    .map(node =>
-      typeof node === "string"
-        ? node.split("\n").map(text => <p>{text}</p>)
-        : node
-    )
-    .reduce((nodes, node) => nodes.concat(node), [])
-}
-
 export default function PortfolioModal({ handleClose, show, selectedExample }) {
+  console.log(selectedExample)
   return (
     <Modal
       show={show}
@@ -108,13 +107,13 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
             <FormattedMessage
               id={"portfolio." + selectedExample.index + ".detailed"}
             >
-              {linesToParagraphs}
+              {excalamationToList}
             </FormattedMessage>
             <ButtonLink
               aria-label="Go to website button"
               variant="contained"
               rel="canonical"
-              href="https://www.google.com"
+              href={selectedExample.link}
               target="_blank"
             >
               Go to site

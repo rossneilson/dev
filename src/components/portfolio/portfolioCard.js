@@ -4,7 +4,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 
 const Card = styled.section`
-  zindex: 998;
+  z-  index: 998;
   width: 400px;
   height: 25%;
   margin: 1% 1% 5% 1%;
@@ -35,6 +35,10 @@ const ImageBackground = styled.section`
     rgba(121, 57, 9, 1) 36%,
     rgba(0, 179, 255, 1) 100%
   );
+  &:hover: {
+    transform: scale(1.1);
+    opacity: 0.4;
+  }
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -45,7 +49,6 @@ const ProjectImage = styled(Img)`
   moz-transition: all 1s ease-in-out;
   cursor: pointer;
   &:hover: {
-    transform: scale(1.1);
     opacity: 0.4;
   }
 `
@@ -54,14 +57,18 @@ const ProjectText = styled.section`
   padding: 0px 20px 20px 20px;
   color: #f2a319;
   min-height: 110px;
+  &:hover: {
+    color: red;
+  }
 `
 
 // Fix hover to make clickable more obvious
-export default function PortfolioCard({ cover, index, openModal }) {
+export default function PortfolioCard({ cover, index, openModal, link }) {
+  console.log(index)
   return (
     <Card
       onClick={() => {
-        openModal({ cover, index })
+        openModal({ cover, index, link })
       }}
     >
       <Bar>

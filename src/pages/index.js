@@ -44,8 +44,6 @@ export default function Main(props) {
       changeLocale("jp")
     }
   }
-  console.log("index image")
-  console.log(props.data.devSiteImage.childImageSharp.fluid)
 
   return (
     <div>
@@ -63,7 +61,10 @@ export default function Main(props) {
       <Title />
       <About image={props.data.profileImage.childImageSharp.fluid} />
       <Services />
-      <Portfolio devSiteImage={props.data.devSiteImage.childImageSharp.fluid} />
+      <Portfolio
+        devSiteImage={props.data.devSiteImage.childImageSharp.fluid}
+        tabiSiteImage={props.data.tabiSiteImage.childImageSharp.fluid}
+      />
       {/* <Blog /> */}
       <Contact />
     </div>
@@ -80,6 +81,13 @@ export const imageQuery = graphql`
       }
     }
     devSiteImage: file(relativePath: { eq: "dev.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    tabiSiteImage: file(relativePath: { eq: "tabi.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid

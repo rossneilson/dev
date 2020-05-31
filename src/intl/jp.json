@@ -4,16 +4,52 @@
     "bottom": "ディベロッパー"
   },
   "about": {
-    "title": "事項紹介",
-    "line1": "Hi, I'm a freelance web developer specialising in high quality complex web solutions for small - medium businesses..",
-    "line2": "I have experience building enterprise grade web applicagtions at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
-    "line3": "My aim is to use my services to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
-    "line4": "I can make you a well designed intuitive and proffesional web presence to allow you to do anything from ecommerce to blogs and everything in between to help grow your business.",
-    "progress": "卒業するまで(フリランスは仕事になるまで)"
+    "title": "紹介",
+    "line1": "Hi, I'm a freelance web developer specializing in high-quality complex web solutions for small-medium businesses.",
+    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
+    "line3": "My aim is to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
+    "line4": "Through my services, I can make you a well designed intuitive and professional web presence to allow you to do anything from eCommerce to blogs and everything in between to help grow your business.",
+    "progress": "Progress through apprenticeship (until full-time freelance)"
+  },
+  "services": {
+    "title": "サービス",
+    "1": {
+      "title": "Meeting and discussion",
+      "desc": "I think the most important part of designing a web application is understanding the business and so this is what I will focus on first, understanding your business’s needs. We will have a discussion about the needs of your business and what you are looking for in a web application then build a specialised plan tailored to your business’ needs. Once requirements are decided I can start work immediately."
+    },
+    "2": {
+      "title": "Design / Prototype",
+      "desc": "I will draft up an initial design and sketch of what the end product will look like roughly to get feedback."
+    },
+    "3": {
+      "title": "Development of high performance web application",
+      "desc": "My streamlined pipeline for development uses a number of useful technologies to allow for the best end product. This allows for native application like performance and features without needing to convince users to download anything. \n A custom admin interface for content management can aid in the day to day updates if needed for your site. In addition, the technologies I use put the mobile experience at the forefront as well as taking full advantage of Search engine optimization (SEO) to reach as many customers as possible.\n The opportunities of this pipeline I have build are endless. Examples of what can be built include eCommerce, blogs, portfolios, landing pages as well as complex applications needed for the front or back end to support your business. "
+    },
+    "4": {
+      "title": "Continuous communication and feedback",
+      "desc": "Throughout this process, I will give continuous updates via your preferred way of communication. In addition, you have many opportunities for feedback during development. There can also be 3 major redesigns during the process if you do not like something."
+    },
+    "5": {
+      "title": "Final product",
+      "desc": "The final handoff will include complete ownership over the source code. In addition, I will set up hosting with a service that has a very generous free plan as well as options to seamlessly scale along with your business."
+    },
+    "6": {
+      "title": "Maintenence options",
+      "desc": "An additional retainer package is also available for a monthly fee. This would include maintenance (framework and security patches), improvements (These small changes, capped per month, can be A/B tested to measure effectiveness) as well as reports with analytics of the web app’s performance and immediate support if anything breaks at any point."
+    }
   },
   "portfolio":{
     "title": "ポートフォリオ",
-    "Personal Site": "英語と日本語でローカライズしたReactで作った個人サイト"
+    "1": {
+      "title": "ロスにルソン　ディベロッパー",
+      "desc": "Freelance site made in react and gatsby with english and japanese localization",
+      "detailed": "Modern designed landing page !Contact form !Lightweight high performance !Optimized SEO !Mobile friendly !All 90+ score in lighthouse !Progressive Web app (PWA) !Full Japanese and English localization"
+    },
+    "2": {
+      "title": "旅traveler",
+      "desc": "High-performance photography website with a portfolio, blog and shop",
+      "detailed": "Dynamic landing page design with parallax scrolling effect  !Interactive portfolio for photos with interactive filters !A blog with CMS backend for easy content changes and additions !Shop with stripe for selling prints and automatic processing of orders !SEO optimization !Mobile friendly !High performance !Localization"
+    }
   },
   "contact": {
     "title": "連絡",

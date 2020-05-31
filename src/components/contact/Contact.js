@@ -1,8 +1,11 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import TextField from "@material-ui/core/TextField"
 import Button from "@material-ui/core/Button"
+import TwitterIcon from "@material-ui/icons/Twitter"
+import EmailIcon from "@material-ui/icons/Email"
+import LinkedInIcon from "@material-ui/icons/LinkedIn"
 
 import cover from "../../images/cover.svg"
 
@@ -59,6 +62,24 @@ const SubmitButton = styled(Button)`
   margin: auto;
   width: 25%;
   padding: 5px;
+`
+
+const Icons = styled.section`
+  margin-right: 7%;
+  margin-top: 25px;
+`
+
+const Link = styled.a`
+  margin: 10px;
+  color: #2096f3;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) 1px,
+    #ffff 1px,
+    #ffff 2px,
+    rgba(0, 0, 0, 0) 2px
+  );
 `
 
 const validEmailRegex = RegExp(
@@ -173,6 +194,31 @@ export default function Contact(props) {
             {intl.formatMessage({ id: "contact.submit" })}
           </SubmitButton>
         </Form>
+        <Icons>
+          <Link
+            target="_blank"
+            rel="canonical"
+            href="https://twitter.com/Ross__N"
+          >
+            <TwitterIcon />
+          </Link>
+
+          <Link
+            target="_blank"
+            rel="canonical"
+            href="mailto:me@rossneilson.dev"
+          >
+            <EmailIcon />
+          </Link>
+
+          <Link
+            target="_blank"
+            rel="canonical"
+            href="https://www.linkedin.com/in/ross-neilson-99b62b14a/"
+          >
+            <LinkedInIcon />
+          </Link>
+        </Icons>
       </ContactCard>
     </Wrapper>
   )
