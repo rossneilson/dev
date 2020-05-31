@@ -85,18 +85,18 @@ export default function Contact(props) {
     if (!validEmailRegex.test(email)) {
       setEmailError(true)
     } else {
-      //   fetch("/", {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/x-www-form-urlencoded",
-      //     },
-      //     body: encode({
-      //       "form-name": "contact",
-      //       ...{ name, email, message },
-      //     }),
-      //   })
-      //     .then(() => alert("Success!"))
-      // .catch(error => alert(error))
+      fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encode({
+          "form-name": "contact",
+          ...{ name, email, message },
+        }),
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error))
     }
   }
 
