@@ -78,11 +78,33 @@ export default function Contact(props) {
   const [message, setMessage] = useState("")
   const [emailError, setEmailError] = useState(false)
   const [submitAttempt, setSubmitAttempt] = useState(0)
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    setSubmitAttempt(submitAttempt + 1)
+    if (!validEmailRegex.test(email)) {
+      setEmailError(true)
+    } else {
+      fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encode({
+          "form-name": "contact",
+          ...{ name, email, message },
+        }),
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error))
+    }
+  }
+
   return (
     <Wrapper background={cover}>
       <ContactCard>
         <Title>{intl.formatMessage({ id: "contact.title" })}</Title>
-        <Form netlify>
+        <Form onSubmit={handleSubmit}>
           <label>
             <FormField
               aria-label="Name input"
@@ -131,26 +153,6 @@ export default function Contact(props) {
             aria-label="Submit button"
             variant="contained"
             disabled={emailError}
-            onClick={e => {
-              e.preventDefault()
-              setSubmitAttempt(submitAttempt + 1)
-              if (!validEmailRegex.test(email)) {
-                setEmailError(true)
-              } else {
-                fetch("/", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/x-www-form-urlencoded",
-                  },
-                  body: encode({
-                    "form-name": "contact",
-                    ...{ name, email, message },
-                  }),
-                })
-                  .then(() => alert("Success!"))
-                  .catch(error => alert(error))
-              }
-            }}
           >
             {intl.formatMessage({ id: "contact.submit" })}
           </SubmitButton>
