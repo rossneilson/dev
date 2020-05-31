@@ -111,7 +111,9 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
               {linesToParagraphs}
             </FormattedMessage>
             <ButtonLink
+              aria-label="Go to website button"
               variant="contained"
+              rel="noopener"
               href="https://www.google.com"
               target="_blank"
             >

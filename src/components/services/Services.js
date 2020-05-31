@@ -119,6 +119,7 @@ export default function About(props) {
                 <div>
                   <div>
                     <Button
+                      aria-label="Previous step button"
                       disabled={activeStep === 0}
                       style={{
                         color:
@@ -131,6 +132,7 @@ export default function About(props) {
                       <KeyboardArrowUpIcon fontSize="large" />
                     </Button>
                     <Button
+                      aria-label="Next step button"
                       disabled={activeStep === steps.length - 1}
                       style={{
                         color:
