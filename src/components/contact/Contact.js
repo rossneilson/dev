@@ -57,11 +57,18 @@ const SubmitButton = styled(Button)`
   }
   margin: auto;
   width: 25%;
+  padding: 5px;
 `
 
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 )
+
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 
 export default function Contact(props) {
   const intl = useIntl()
@@ -123,7 +130,18 @@ export default function Contact(props) {
               if (!validEmailRegex.test(email)) {
                 setEmailError(true)
               } else {
-                console.log({ name, email, message })
+                fetch("/", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                  },
+                  body: encode({
+                    "form-name": "contact",
+                    ...{ name, email, message },
+                  }),
+                })
+                  .then(() => alert("Success!"))
+                  .catch(error => alert(error))
               }
             }}
           >

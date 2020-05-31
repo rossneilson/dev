@@ -2,7 +2,10 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled, { keyframes } from "styled-components"
 import "../index.css"
+import "typeface-sacramento"
+import "typeface-space-mono"
 
+import SEO from "../components/seo"
 import Title from "../components/title/Title"
 import About from "../components/about/About"
 import Services from "../components/services/Services"
@@ -12,33 +15,7 @@ import Toggle from "../components/Toggle"
 import { changeLocale } from "gatsby-plugin-intl"
 // import Blog from "../components/blog/Blog"
 
-// TODO Stop animation when changing language
-const slideInFromRight = keyframes`
-  0% {
-    transform: translateX(200%);
-  }
-  15% {
-    transform: translateX(-10%);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  90% {
-    transform: translateX(0);
-  }
-  93% {
-    transform: translateX(-10%);
-  }
-  96% {
-    transform: translateX(+20%);
-  }
-  100%{
-    transform: translateX(0);
-  }
-`
-
 const ToggleWrap = styled.section`
-  ${"" /* animation: 6s ease-out 0s 1 ${slideInFromRight}; */}
   position: fixed;
   z-index: 9998;
   margin: 15px;
@@ -72,6 +49,13 @@ export default function Main(props) {
 
   return (
     <div>
+      <SEO
+        title={"Ross Neilson - Web Developer"}
+        description={
+          "A freelance web developer specialising in complex dynamic web apps to improve small-medium businesses"
+        }
+        lang={props.pageContext.intl.language}
+      />
       <ToggleWrap>
         <Toggle checked={checked} changeLanguage={changeLanguage} />
       </ToggleWrap>
@@ -95,7 +79,7 @@ export const imageQuery = graphql`
         }
       }
     }
-    devSiteImage: file(relativePath: { eq: "dev.jpg" }) {
+    devSiteImage: file(relativePath: { eq: "dev.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
