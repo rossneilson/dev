@@ -39,7 +39,7 @@ const CenterSection = styled.section`
   background-color: #2196f3;
   padding: 5% 2% 5% 2%;
   width: 45%;
-  min-width: 200;
+  min-width: 270px;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 `
 

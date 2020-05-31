@@ -4,18 +4,19 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import Button from "@material-ui/core/Button"
 
 const Card = styled.section`
-  padding: 35px;
   background-color: white;
   z-index: 998;
   width: 60%;
   min-height: 40%;
-  min-width: 700px;
   width: 60%;
   margin: 30px 20px 5% 20px;
   left: 6%;
   flex-grow: 2;
-  align-content: centre;
   box-shadow: 4px 10px 8px 0 rgba(0, 0, 0, 0.4), 0 3px 5px 0 rgba(0, 0, 0, 0.4);
+`
+
+const Title = styled.h3`
+  margin-left: 10%;
 `
 
 const Paragraphs = styled.section`
@@ -33,9 +34,9 @@ const CTA = styled(Button)`
 export default function AboutCard(props) {
   return (
     <Card>
-      <h3>
+      <Title>
         <FormattedMessage id="about.title" />
-      </h3>
+      </Title>
       <Paragraphs>
         <p>
           <FormattedMessage id="about.line1" />

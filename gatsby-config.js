@@ -2,7 +2,9 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `Ross Neilson`,
+    description: `A freelance web developer specialising in complex dynamic web apps to improve small-medium businesses`,
+    author: `Ross Neilson`,
   },
   plugins: [
     {
@@ -18,10 +20,10 @@ module.exports = {
         name: `Ross Neilson - Developer`,
         short_name: `Ross Neilson`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#2096f3c7`,
+        theme_color: `#2096f3c7`,
         display: `standalone`,
-        icon: `static/favicon.ico`,
+        icon: `static/icon-512x512.png`,
       },
     },
     {
@@ -45,6 +47,12 @@ module.exports = {
         stylesProvider: {
           injectFirst: true,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-139306598-1",
       },
     },
     {
