@@ -109,7 +109,14 @@ export default function Contact(props) {
           <input type="email" name="email" />
           <textarea name="message"></textarea>
         </form>
-        <Form netlify onSubmit={handleSubmit}>
+        <Form
+          name="contact"
+          method="post"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          netlify
+          onSubmit={handleSubmit}
+        >
           <input type="hidden" name="form-name" value="contact" />
           <label>
             <FormField
