@@ -104,7 +104,13 @@ export default function Contact(props) {
     <Wrapper background={cover}>
       <ContactCard>
         <Title>{intl.formatMessage({ id: "contact.title" })}</Title>
-        <Form onSubmit={handleSubmit}>
+        <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+          <textarea name="message"></textarea>
+        </form>
+        <Form netlify onSubmit={handleSubmit}>
+          <input type="hidden" name="form-name" value="contact" />
           <label>
             <FormField
               aria-label="Name input"
