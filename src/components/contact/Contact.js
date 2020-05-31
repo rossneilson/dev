@@ -123,6 +123,7 @@ export default function Contact(props) {
               aria-label="Name input"
               label={intl.formatMessage({ id: "contact.name" })}
               id="name"
+              name="name"
               fullWidth
               onChange={e => setName(e.target.value)}
             />
@@ -132,6 +133,7 @@ export default function Contact(props) {
               aria-label="Email input"
               label={intl.formatMessage({ id: "contact.email" })}
               id="email"
+              name="email"
               fullWidth
               error={emailError}
               helperText={
@@ -155,6 +157,7 @@ export default function Contact(props) {
               aria-label="Message input"
               label={intl.formatMessage({ id: "contact.message" })}
               id="message"
+              name="message"
               multiline
               fullWidth
               onChange={e => setMessage(e.target.value)}
