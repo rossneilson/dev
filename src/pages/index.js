@@ -80,14 +80,14 @@ export const imageQuery = graphql`
         }
       }
     }
-    devSiteImage: file(relativePath: { eq: "dev.png" }) {
+    devSiteImage: file(relativePath: { eq: "dev.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    tabiSiteImage: file(relativePath: { eq: "tabi.png" }) {
+    tabiSiteImage: file(relativePath: { eq: "tabi.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
