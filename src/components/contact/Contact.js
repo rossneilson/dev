@@ -59,6 +59,9 @@ const SubmitButton = styled(Button)`
   &:hover {
     background-color: rgb(250, 182, 0);
   }
+  &:active {
+    background-color: rgb(250, 182, 0);
+  }
   margin: auto;
   width: 25%;
   padding: 5px;

@@ -15,7 +15,6 @@ export function excalamationToList(...nodes) {
 }
 
 export function lineToParagraph(...nodes) {
-  console.log("reeee")
   return nodes
     .map(node =>
       typeof node === "string"

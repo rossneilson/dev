@@ -1,10 +1,11 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import Button from "@material-ui/core/Button"
 
-import { excalamationToList } from "../../utils/utils"
+import { excalamationToList } from "../../utils/formatters"
+import * as Keyframes from "../../utils/keyframes"
 
 const Modal = styled.section`
   z-index: 99999;
@@ -15,6 +16,12 @@ const Modal = styled.section`
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
   display: ${props => (props.show ? "block" : "none")};
+  animation: ${props =>
+    props.show
+      ? css`
+          1s ease-out 0s 1 ${Keyframes.fadeIn} 
+        `
+      : "none"};
 `
 
 const ModalMain = styled.section`
@@ -26,6 +33,12 @@ const ModalMain = styled.section`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: ${props =>
+    props.show
+      ? css`
+          1s ease-out 0s 1 ${Keyframes.slideInFromBottomModal} 
+        `
+      : "none"};
 `
 const Bar = styled.section`
   z-index: 998;
@@ -75,6 +88,9 @@ const ButtonLink = styled(Button)`
   &:hover {
     background-color: rgb(250, 182, 0);
   }
+  &:active {
+    background-color: rgb(250, 182, 0);
+  }
 `
 
 export default function PortfolioModal({ handleClose, show, selectedExample }) {
@@ -88,9 +104,9 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
         }
       }}
     >
-      <ModalMain>
+      <ModalMain show={show}>
         <Bar onClick={() => handleClose(false)}>
-          <Dot />
+          <Dot style={{ backgroundColor: "red" }} Z />
           <Dot />
           <Dot />
         </Bar>

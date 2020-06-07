@@ -29,6 +29,9 @@ const CTA = styled(Button)`
   &:hover {
     background-color: rgb(250, 182, 0);
   }
+  &:active {
+    background-color: rgb(250, 182, 0);
+  }
 `
 
 export default function AboutCard(props) {
@@ -55,7 +58,7 @@ export default function AboutCard(props) {
           variant="contained"
           onClick={() => window.scrollTo(0, 99999)}
         >
-          Contact me
+          <FormattedMessage id="contact.title" />
         </CTA>
       </Paragraphs>
     </Card>

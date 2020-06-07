@@ -18,7 +18,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 
 import SvgPattern from "../svg/SvgPattern"
-import { lineToParagraph } from "../../utils/utils"
+import { lineToParagraph } from "../../utils/formatters"
 
 const ServicesFlexContainer = styled.section`
   background-color: #f2a31991;

@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from "react"
 import { FormattedMessage, changeLocale } from "gatsby-plugin-intl"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 
 import cover from "../../images/cover.svg"
-
-const slideInFromBottom = keyframes`
-  0% {
-    transform: translateY(300%);
-  }
-  80% {
-    transform: translateY(-10%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`
+import { slideInFromBottom } from "../../utils/keyframes"
 
 const Background = styled.section`
   display: flex;

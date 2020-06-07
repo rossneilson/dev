@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import "../index.css"
 import "typeface-sacramento"
 import "typeface-space-mono"

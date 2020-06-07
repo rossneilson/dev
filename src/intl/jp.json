@@ -5,37 +5,37 @@
   },
   "about": {
     "title": "紹介",
-    "line1": "Hi, I'm a freelance web developer specializing in high-quality complex web solutions for small-medium businesses.",
-    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
-    "line3": "My aim is to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
-    "line4": "Through my services, I can make you a well designed intuitive and professional web presence to allow you to do anything from eCommerce to blogs and everything in between to help grow your business.",
+    "line1": "こんにちは、私は中小企業向けの高品質で複雑なWebソリューションを専門とするフリーランスのWeb開発者です。 ",
+    "line2": "私は世界最大の銀行の1つであるJP MorganでエンタープライズグレードのWebアプリケーションを構築した経験があり、ビジネス向けソフトウェア開発の学位を取得しています（2022年卒業予定）。",
+    "line3": "私は、現代のビジネスの複雑なニーズに特化したソリューションを構築して、たくさんの人ががウェブで繁栄するのを手助けすることを目的としています。",
+    "line4": "私のサービスを通じて、eコマースからブログ、そしてその間のすべてをビジネスの成長に役立てることができるように、緻密に設計された直感的でプロフェッショナルなWebプレゼンスを提供します。",
     "progress": "Progress through apprenticeship (until full-time freelance)"
   },
   "services": {
     "title": "サービス",
     "1": {
-      "title": "Meeting and discussion",
-      "desc": "I think the most important part of designing a web application is understanding the business and so this is what I will focus on first, understanding your business’s needs. We will have a discussion about the needs of your business and what you are looking for in a web application then build a specialised plan tailored to your business’ needs. Once requirements are decided I can start work immediately."
+      "title": "ミーティング",
+      "desc": "私がアプリを開発する上で1番大切だと思っていることは、そのビジネスをよく理解することだと思っています。 \n ですから、まず初めにクライアント様とミーティングを行い、ニーズを理解し、どのようなアプリケーションを必要としているかを明らかにし、そのニーズに特化したプランを立てます。 \n ミーティングでクライアント様の要望を明らかにすることで、ウェブ開発にすぐに取り掛かることができます。"
     },
     "2": {
-      "title": "Design / Prototype",
-      "desc": "I will draft up an initial design and sketch of what the end product will look like roughly to get feedback."
+      "title": "デザイン",
+      "desc": "全体を大まかにデザインし、フィードバックをいただきます。"
     },
     "3": {
-      "title": "Development of high performance web application",
-      "desc": "My streamlined pipeline for development uses a number of useful technologies to allow for the best end product. This allows for native application like performance and features without needing to convince users to download anything. \n A custom admin interface for content management can aid in the day to day updates if needed for your site. In addition, the technologies I use put the mobile experience at the forefront as well as taking full advantage of Search engine optimization (SEO) to reach as many customers as possible.\n The opportunities of this pipeline I have build are endless. Examples of what can be built include eCommerce, blogs, portfolios, landing pages as well as complex applications needed for the front or back end to support your business. "
+      "title": "開発",
+      "desc": "私の開発方法は、新しく便利なテクノロジーを使うため、ダウンロードすることなくアプリのような機能と性能をもったものが作れます。 \n サイト内の管理が必要な場合はアドミンユーザーインターフェイスを付けることもできます。 \n また、できるだけ多くの方に利用していただくためにモバイル向けデザインとサーチェンジの最適化はとても大切です。 \n 私が構築したこのパイプラインの機会は無限大です。 構築できるものの例としては、eコマース、ブログ、ポートフォリオ、ランディングページだけでなく、ビジネスをサポートするためにフロントバックエンドに注意を払う複雑なアプリケーションも含まれています。"
     },
     "4": {
-      "title": "Continuous communication and feedback",
-      "desc": "Throughout this process, I will give continuous updates via your preferred way of communication. In addition, you have many opportunities for feedback during development. There can also be 3 major redesigns during the process if you do not like something."
+      "title": "継続的なコミュニケーションとフィードバック",
+      "desc": "これまでのプロセス全体を通じて、お客様のお好きなコミュニケーション方法で継続的に更新を行います。 さらに、開発中にフィードバックをいただく機会が多いため、お客様のさまざまな要望に答えることができます。また、お客様が変更を希望する場合は、開発中に3回、主要な再設計を行うことができる可能性があります。"
     },
     "5": {
-      "title": "Final product",
-      "desc": "The final handoff will include complete ownership over the source code. In addition, I will set up hosting with a service that has a very generous free plan as well as options to seamlessly scale along with your business."
+      "title": "製品",
+      "desc": "最終的なハンドオフには、ソースコードに対する完全な所有権が含まれます。 さらに、非常に寛大な無料プランと、ビジネスに合わせてシームレスに拡張できるオプションを備えたサービスでホスティングを設定いたします。"
     },
     "6": {
-      "title": "Maintenence options",
-      "desc": "An additional retainer package is also available for a monthly fee. This would include maintenance (framework and security patches), improvements (These small changes, capped per month, can be A/B tested to measure effectiveness) as well as reports with analytics of the web app’s performance and immediate support if anything breaks at any point."
+      "title": "整備オプション",
+      "desc": "追加料金保持パッケージも月額料金で利用できます。 これには、メンテナンス（フレームワークとセキュリティパッチ）、改善（小さな変更、月に上限あり、有効性を測定するためにA / Bテストを行うことができます）、およびWebアプリのパフォーマンスの分析と何らかの問題が発生した場合の即時サポートが含まれます。"
     }
   },
   "portfolio":{
@@ -52,12 +52,12 @@
     }
   },
   "contact": {
-    "title": "連絡",
+    "title": "連絡先",
     "name": "名前",
     "email": "メール",
     "invalidEmail": "メールは違う",
     "message": "メッセージ",
-    "submit": "登録"
+    "submit": "送信"
   },
   "lang": "ja"
 }
