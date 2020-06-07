@@ -106,7 +106,7 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
     >
       <ModalMain show={show}>
         <Bar onClick={() => handleClose(false)}>
-          <Dot style={{ backgroundColor: "red" }} Z />
+          <Dot style={{ backgroundColor: "red" }} />
           <Dot />
           <Dot />
         </Bar>
