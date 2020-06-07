@@ -24,6 +24,7 @@ module.exports = {
         theme_color: `#2096f3c7`,
         display: `standalone`,
         icon: `static/icon-512x512.png`,
+        cache_busting_mode: "none",
       },
     },
     {
@@ -56,11 +57,18 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-offline",
+      options: {
+        workboxConfig: {
+          globPatterns: ["**/*"],
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-remove-serviceworker`,
   ],
 }
