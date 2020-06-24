@@ -18,7 +18,10 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp"
 
 import SvgPattern from "../svg/SvgPattern"
-import { lineToParagraph } from "../../utils/formatters"
+import {
+  lineToParagraph,
+  newLineAndExclamationToParagraphsAndLists,
+} from "../../utils/formatters"
 
 const ServicesFlexContainer = styled.section`
   background-color: #f2a31991;
@@ -74,7 +77,7 @@ function getStepContent(step) {
     case 2:
       return (
         <FormattedMessage id="services.3.desc">
-          {lineToParagraph}
+          {newLineAndExclamationToParagraphsAndLists}
         </FormattedMessage>
       )
     case 3:
@@ -92,7 +95,7 @@ function getStepContent(step) {
     case 5:
       return (
         <FormattedMessage id="services.6.desc">
-          {lineToParagraph}
+          {newLineAndExclamationToParagraphsAndLists}
         </FormattedMessage>
       )
     default:
@@ -102,7 +105,7 @@ function getStepContent(step) {
 
 export default function About(props) {
   const intl = useIntl()
-  const [activeStep, setActiveStep] = React.useState(0)
+  const [activeStep, setActiveStep] = React.useState(2)
 
   const steps = [
     intl.formatMessage({ id: "services.1.title" }),

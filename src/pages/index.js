@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import loadable from "@loadable/component"
+
 import "../index.css"
 import "typeface-sacramento"
 import "typeface-space-mono"
@@ -8,11 +10,12 @@ import "typeface-space-mono"
 import SEO from "../components/seo"
 import Title from "../components/title/Title"
 import About from "../components/about/About"
-import Services from "../components/services/Services"
 import Portfolio from "../components/portfolio/Portfolio"
-import Contact from "../components/contact/Contact"
 import Toggle from "../components/Toggle"
 import { changeLocale } from "gatsby-plugin-intl"
+
+const Services = loadable(() => import("../components/services/Services"))
+const Contact = loadable(() => import("../components/contact/Contact"))
 // import Blog from "../components/blog/Blog"
 
 const ToggleWrap = styled.section`
@@ -23,8 +26,6 @@ const ToggleWrap = styled.section`
 `
 
 export default function Main(props) {
-  console.log(props)
-
   const checkLanguage = () => {
     if (props.pageContext.intl.language === "jp") {
       return true
@@ -48,9 +49,9 @@ export default function Main(props) {
   return (
     <div>
       <SEO
-        title={"Ross Neilson - Web Developer"}
+        title={"Ross Neilson"}
         description={
-          "A freelance web developer specialising in complex dynamic web apps to improve small-medium businesses"
+          "A freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses"
         }
         lang={props.pageContext.intl.language}
       />

@@ -1,11 +1,12 @@
 import React from "react"
 import styled, { css } from "styled-components"
+import loadable from "@loadable/component"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
-import Button from "@material-ui/core/Button"
 
 import { excalamationToList } from "../../utils/formatters"
 import * as Keyframes from "../../utils/keyframes"
+const Button = loadable(() => import("@material-ui/core/Button"))
 
 const Modal = styled.section`
   z-index: 99999;
@@ -70,7 +71,7 @@ const Image = styled(Img)`
 `
 
 const Description = styled.section`
-  padding: 2%;
+  padding: 0px 30px 20px 30px;
   min-width: 340px;
   max-height: 10%;
   overflow: auto;

@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
+import loadable from "@loadable/component"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import Button from "@material-ui/core/Button"
+const Button = loadable(() => import("@material-ui/core/Button"))
 
 const Card = styled.section`
   background-color: white;
@@ -20,7 +21,7 @@ const Title = styled.h3`
 `
 
 const Paragraphs = styled.section`
-  padding: 50px;
+  padding: 50px 75px 50px 75px;
 `
 
 const CTA = styled(Button)`

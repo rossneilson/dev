@@ -23,3 +23,23 @@ export function lineToParagraph(...nodes) {
     )
     .reduce((nodes, node) => nodes.concat(node), [])
 }
+
+export function newLineAndExclamationToParagraphsAndLists(...nodes) {
+  return nodes
+    .map(node =>
+      typeof node === "string"
+        ? node.split("\n").map(text => {
+            return text.includes("!") ? (
+              <ul>
+                {text.split("!").map(newText => (
+                  <li>{newText}</li>
+                ))}
+              </ul>
+            ) : (
+              <p>{text}</p>
+            )
+          })
+        : node
+    )
+    .reduce((nodes, node) => nodes.concat(node), [])
+}
