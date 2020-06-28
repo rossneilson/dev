@@ -56,14 +56,7 @@ module.exports = {
         trackingId: "UA-139306598-1",
       },
     },
-    {
-      resolve: "gatsby-plugin-offline",
-      options: {
-        workboxConfig: {
-          globPatterns: ["**/*"],
-        },
-      },
-    },
+    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-styled-components`,
     },
