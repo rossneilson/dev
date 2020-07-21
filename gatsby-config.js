@@ -5,6 +5,7 @@ module.exports = {
     title: `Web Developer`,
     description: `A freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses`,
     author: `Ross Neilson`,
+    siteUrl: `https://www.rossneilson.dev`,
   },
   plugins: [
     {
@@ -64,6 +65,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     "gatsby-plugin-loadable-components-ssr",
+    `gatsby-plugin-sitemap`,
     {
       resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
       options: {
