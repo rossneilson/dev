@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 
 const Card = styled.section`
@@ -11,6 +10,15 @@ const Card = styled.section`
   flexgrow: 2;
   background-color: #ffffffd2;
   cursor: pointer;
+  transition: all 1s;
+  &:hover {
+    opacity: 0.8;
+    transform: translateY(-15px);
+  }
+  &:focus {
+    opacity: 0.8;
+    transform: translateY(-15px);
+  }
 `
 
 const Bar = styled.section`
@@ -29,28 +37,17 @@ const Dot = styled.section`
   border-radius: 100%;
 `
 
-const ProjectImage = styled(Img)`
-  transition: all 1s ease-in-out;
-  moz-transition: all 1s ease-in-out;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.4;
-  }
-`
-
 const ProjectText = styled.section`
-  padding: 0px 20px 20px 20px;
-  color: #f2a319;
+  padding: 5px 20px 20px 20px;
   min-height: 110px;
 `
 
-// Fix hover to make clickable more obvious
-export default function PortfolioCard({ cover, index, openModal, link }) {
-  console.log(index)
+export default function PortfolioCard({ frontmatter, html, openModal }) {
+  const { title, description, image } = frontmatter
   return (
     <Card
       onClick={() => {
-        openModal({ cover, index, link })
+        openModal({ frontmatter, html })
       }}
     >
       <Bar>
@@ -58,12 +55,10 @@ export default function PortfolioCard({ cover, index, openModal, link }) {
         <Dot />
         <Dot />
       </Bar>
-      {cover ? <ProjectImage fluid={cover} /> : null}
+      {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
       <ProjectText>
-        <h4>
-          <FormattedMessage id={"portfolio." + index + ".title"} />
-        </h4>
-        <FormattedMessage id={"portfolio." + index + ".desc"} />
+        <h2 style={{ marginTop: "2%" }}>{title}</h2>
+        <h5>{description}</h5>
       </ProjectText>
     </Card>
   )

@@ -1,15 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import Button from "@material-ui/core/Button"
 
 const Card = styled.section`
   background-color: white;
   z-index: 998;
   width: 60%;
-  min-height: 40%;
-  width: 60%;
-  margin: 30px 20px 5% 20px;
+  margin: 5% 4% 5% 4%;
   left: 6%;
   flex-grow: 2;
   box-shadow: 4px 10px 8px 0 rgba(0, 0, 0, 0.4), 0 3px 5px 0 rgba(0, 0, 0, 0.4);
@@ -17,27 +14,39 @@ const Card = styled.section`
 
 const Title = styled.h3`
   margin-left: 10%;
+  margin-bottom: 0px;
 `
 
 const Paragraphs = styled.section`
-  padding: 50px;
-`
-
-const CTA = styled(Button)`
-  background-color: rgb(32, 150, 243);
-  color: white;
-  &:hover {
-    background-color: rgb(250, 182, 0);
-  }
-  &:active {
-    background-color: rgb(250, 182, 0);
-  }
+  padding: 2% 8% 8% 8%;
 `
 
 export default function AboutCard(props) {
   return (
     <Card>
       <Title>
+        <svg
+          style={{ transform: "translateY(10px)", marginRight: "4px" }}
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon-tabler icon-tabler-face-id"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="#76aed7"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+          <path d="M4 16v2a2 2 0 0 0 2 2h2" />
+          <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+          <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+          <line x1="9" y1="10" x2="9.01" y2="10" />
+          <line x1="15" y1="10" x2="15.01" y2="10" />
+          <path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
+        </svg>
         <FormattedMessage id="about.title" />
       </Title>
       <Paragraphs>
@@ -53,13 +62,6 @@ export default function AboutCard(props) {
         <p>
           <FormattedMessage id="about.line4" />
         </p>
-        <CTA
-          aria-label="Contact me button"
-          variant="contained"
-          onClick={() => window.scrollTo(0, 99999)}
-        >
-          <FormattedMessage id="contact.title" />
-        </CTA>
       </Paragraphs>
     </Card>
   )
