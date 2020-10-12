@@ -20,9 +20,9 @@ const FlexContainer = styled.section`
 const RightWrapper = styled.section`
   z-index: 998;
   margin: auto;
-  padding-top: 20;
-  max-width: 500px;
-  max-height: 900;
+  margin-top: 4%;
+  width: 30%;
+  min-width: 300px;
 `
 
 const ProfileImage = styled(Img)`
@@ -30,7 +30,7 @@ const ProfileImage = styled(Img)`
   margin: auto;
   transform: scale(0.95);
   width: 100%;
-  max-height: 700px;
+  max-width: 300px;
 `
 
 export default function About(props) {

@@ -1,12 +1,9 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import loadable from "@loadable/component"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 
-import { excalamationToList } from "../../utils/formatters"
 import * as Keyframes from "../../utils/keyframes"
-const Button = loadable(() => import("@material-ui/core/Button"))
 
 const Modal = styled.section`
   z-index: 99999;
@@ -26,6 +23,7 @@ const Modal = styled.section`
 `
 
 const ModalMain = styled.section`
+  z-index: 99999999;
   position: fixed;
   background: white;
   width: 80%;
@@ -67,7 +65,7 @@ const Card = styled.section`
 const Image = styled(Img)`
   min-width: 350px;
   width: 50%;
-  flex-grpw: 1;
+  flex-grow: 1;
 `
 
 const Description = styled.section`
@@ -82,20 +80,31 @@ const Description = styled.section`
   font-size: 70%;
 `
 
-const ButtonLink = styled(Button)`
+const ButtonLink = styled.a`
+  transition: 0.2s;
   background-color: rgb(32, 150, 243);
   color: white;
-  text-shadow: none;
+  height: 50px;
+  justify-content: space-around;
+  font-size: large;
+  font-weight: 500;
+  width: 300px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
   &:hover {
     background-color: rgb(250, 182, 0);
   }
-  &:active {
+  &:focus {
     background-color: rgb(250, 182, 0);
   }
 `
 
 export default function PortfolioModal({ handleClose, show, selectedExample }) {
-  console.log(selectedExample)
+  const { frontmatter, html } = selectedExample
+
   return (
     <Modal
       show={show}
@@ -107,30 +116,21 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
     >
       <ModalMain show={show}>
         <Bar onClick={() => handleClose(false)}>
-          <Dot style={{ backgroundColor: "red" }} />
+          <Dot style={{ background: "red" }} />
           <Dot />
           <Dot />
         </Bar>
         <Card>
-          {selectedExample.cover ? (
-            <Image fluid={selectedExample.cover} />
+          {frontmatter.image ? (
+            <Image fluid={frontmatter.image.childImageSharp.fluid} />
           ) : null}
           <Description>
-            <h4 style={{ color: "white" }}>
-              <FormattedMessage
-                id={"portfolio." + selectedExample.index + ".title"}
-              />
-            </h4>
-            <FormattedMessage
-              id={"portfolio." + selectedExample.index + ".detailed"}
-            >
-              {excalamationToList}
-            </FormattedMessage>
+            <h2 style={{ color: "white" }}>{frontmatter.title}</h2>
+            <div dangerouslySetInnerHTML={{ __html: html }} />
             <ButtonLink
               aria-label="Go to website button"
-              variant="contained"
               rel="canonical"
-              href={selectedExample.link}
+              href={frontmatter.link}
               target="_blank"
             >
               Go to site

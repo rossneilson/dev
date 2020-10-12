@@ -31,8 +31,8 @@ export function newLineAndExclamationToParagraphsAndLists(...nodes) {
         ? node.split("\n").map(text => {
             return text.includes("!") ? (
               <ul>
-                {text.split("!").map(newText => (
-                  <li>{newText}</li>
+                {text.split("!").map((newText, index) => (
+                  <li key={index}>{newText}</li>
                 ))}
               </ul>
             ) : (
@@ -42,4 +42,8 @@ export function newLineAndExclamationToParagraphsAndLists(...nodes) {
         : node
     )
     .reduce((nodes, node) => nodes.concat(node), [])
+}
+
+export function urlLocaleFormatting(language, toUrl) {
+  return language === "en" ? toUrl : language + toUrl
 }

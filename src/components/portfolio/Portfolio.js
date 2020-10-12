@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
@@ -14,32 +14,56 @@ const PortfolioFlexContainer = styled.section`
   max-width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   overflow: hidden;
   position: relative;
   padding: 13px;
 `
 
-const Title = styled.h3`
-  color: white;
+const Title = styled.h2`
+  color: #ffcd80;
   width: 100%;
-  margin-left: 5%;
-  padding-bottom: 0;
+  margin-left: 4%;
+  font-size: 250%;
 `
 
-export default function About({ devSiteImage, tabiSiteImage }) {
+export default function About({ devSiteImage, tabiSiteImage, sites }) {
   const [show, setShow] = useState(false)
-  const [selectedExample, setSelectedExample] = useState({})
+  const [selectedExample, setSelectedExample] = useState({ frontmatter: {} })
+  const ProjectCards = []
 
   const openExample = data => {
     setShow(true)
     setSelectedExample(data)
   }
 
+  sites.map(site => {
+    ProjectCards.push(<ProjectCard {...site.node} openModal={openExample} />)
+  })
+
   return (
     <PortfolioFlexContainer>
       <SvgPattern type="point" />
+      Currently looking for portfolio projects (Please contact me)
       <Title>
+        <svg
+          style={{ transform: "translateY(8px)" }}
+          xmlns="http://www.w3.org/2000/svg"
+          className="icon icon-tabler icon-tabler-browser"
+          width="48"
+          height="48"
+          viewBox="0 0 24 24"
+          strokeWidth="1.5"
+          stroke="#ffcd80"
+          fill="none"
+          stroke-Linecap="round"
+          strokeLinejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <rect x="4" y="4" width="16" height="16" rx="1" />
+          <line x1="4" y1="8" x2="20" y2="8" />
+          <line x1="8" y1="4" x2="8" y2="8" />
+        </svg>
         <FormattedMessage id="portfolio.title" />
       </Title>
       <PortfolioModal
@@ -47,19 +71,7 @@ export default function About({ devSiteImage, tabiSiteImage }) {
         handleClose={setShow}
         selectedExample={selectedExample}
       />
-
-      <ProjectCard
-        index="1"
-        link="https://rossneilson.dev"
-        cover={devSiteImage}
-        openModal={openExample}
-      />
-      <ProjectCard
-        index="2"
-        link="https://tabitraveler.com"
-        cover={tabiSiteImage}
-        openModal={openExample}
-      />
+      {ProjectCards}
     </PortfolioFlexContainer>
   )
 }

@@ -1,41 +1,42 @@
 {
   "title": {
     "top": "Ross Neilson",
-    "bottom": "Developer"
+    "bottom": "Developer",
+    "full": "Ross Neilson - Web Developer"
   },
   "about": {
     "title": "A little about me",
-    "line1": "Hi, I'm a freelance web developer specializing in high-quality complex web solutions for small-medium businesses.",
+    "line1": "Hi, I'm a freelance web developer specializing in high-quality complex web solutions for international small-medium businesses.",
     "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
     "line3": "My aim is to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
-    "line4": "Through my services, I can make you a well designed intuitive and professional web presence to allow you to do anything from eCommerce to blogs and everything in between to help grow your business.",
+    "line4": "Through my services, I can develop you a well designed intuitive and professional web presence to allow you to do anything from eCommerce to blogs and everything in between to help grow your business.",
     "progress": "Progress through apprenticeship (until full-time freelance)"
   },
   "services": {
     "title": "My Services",
     "1": {
-      "title": "Meeting and discussion",
-      "desc": "I think the most important part of designing a web application is understanding the business and so this is what I will focus on first, understanding your business’s needs. \n We will have a discussion about the needs of your business and what you are looking for in a web application then build a specialised plan tailored to your business’ needs. \nOnce requirements are decided I can start work immediately."
+      "title": "Complex web application",
+      "desc": "From simple sites, to blogs and stores using CMS, to complex applications with backend integration, I can build what your business needs."
     },
     "2": {
-      "title": "Design / Prototype",
-      "desc": "I will draft up an initial design and sketch of what the end product will look like roughly to get feedback."
+      "title": "Built for individual business needs",
+      "desc": "I will work directly with you to build the perfect web solution for your business. Always hand built with cutting edge technology, no wordpress or pagebuilders."
     },
     "3": {
-      "title": "Development of high performance web application",
-      "desc": "My streamlined pipeline for development uses a number of technologies to allow for the best end product. This allows for native application like performance and features without needing to convince users to download anything. \n Intuitive modern design !Integration into existing systems !Creation of new backend business systems !Application like performance !Business specific SEO results !Admin interface for content management \n These features will allow you to reach as many customers as possible while improving how you run your business.\n The opportunities of this pipeline I have build are endless. Examples of what can be built include eCommerce, blogs, portfolios, landing pages as well as complex applications needed for the front or back end to support your business. "
+      "title": "Modern Design",
+      "desc": "A modern business needs a proffesional unique design to create a brand and catch users attention. All designs work on all devices"
     },
     "4": {
-      "title": "Continuous communication and feedback",
-      "desc": "Throughout this process, I will give continuous updates via your preferred way of communication. \nIn addition, you have many opportunities for feedback during development. There can also be 3 major redesigns during the process if you do not like something."
+      "title": "Maintenence package",
+      "desc": "An additional retainer package is also available for a monthly fee. Including maintenence, additional improvements, reports, training, and support."
     },
     "5": {
-      "title": "Final product",
-      "desc": "The final handoff will include complete ownership over the source code. \nIn addition, I will set up hosting with a service that has a very generous free plan as well as options to seamlessly scale along with your business."
+      "title": "SEO + Analytics",
+      "desc": "All web sites are optimised for SEO results and have google analytics installed."
     },
     "6": {
-      "title": "Maintenence options",
-      "desc": "An additional retainer package is also available for a monthly fee. This would include: \n Maintenance - framework and security patches !Improvements - Small changes, capped per month, can be A/B tested to measure effectiveness) !Reports - Analytics of the web app’s performance and effectiveness !Immediate support if anything breaks at any point."
+      "title": "Hosting",
+      "desc": "Hosting is set up on an excellant service with a generous free plan that can scale with your business."
     }
   },
   "portfolio":{
@@ -55,9 +56,19 @@
     "title": "Contact Me",
     "name": "Name",
     "email": "Email",
-    "invalidEmail": "Invalid Email",
     "message": "Message",
-    "submit": "Submit"
+    "submit": "Submit",
+    "invalidEmail": "Invalid Email",
+    "success": "Sent, thank you"
+  },
+  "blog": {
+    "back": "Back to Blog",
+    "authorDesc": "I am a young web developer working on going full time freelance, currently writing blogs about technical issues, solutions, technologies and experiences.",
+    "cta": "Find out more"
+  },
+  "signup": {
+    "subscribe": "Subscribe",
+    "title": "Sign up to my monthly newsletter for updates and new articles"
   },
   "lang": "en"
 }

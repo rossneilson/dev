@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: master
+publish_mode: editorial_workflow
+media_folder: src/images
+public_folder: /static
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/markdown/blog" 
+    create: true 
+    identifier_field: title
+    fields: 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Category", name: "category", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Path", name: "path", widget: "string", hint: "blog/same-as-title"}
+      - {label: "Locale", name: "locale", widget: "select", options: ["en", "jp"]}
+      - {label: "Description", name: "SEO", widget: "string"}
+      - {label: "Content", name: "body", widget: "markdown"}
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/markdown/portfolio" 
+    create: true 
+    identifier_field: title
+    fields: 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link", name: "link", widget: "string"}
+      - {label: "Locale", name: "locale", widget: "select", options: ["en", "jp"]}
+      - {label: "Date", name: "date", widget: "datetime"}

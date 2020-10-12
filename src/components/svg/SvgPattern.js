@@ -5,7 +5,7 @@ const Pattern = styled.svg`
   position: absolute;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: ${props => (props.fullPage ? "visible !important" : "hidden")};
 `
 
 const Rectangle = styled.rect`
@@ -14,7 +14,7 @@ const Rectangle = styled.rect`
   fill: url(${props => "#" + props.type});
 `
 
-export default function SvgPattern({ type }) {
+export default function SvgPattern({ type, fullPage = false }) {
   var pattern
   switch (type) {
     case "circle":
@@ -77,7 +77,7 @@ export default function SvgPattern({ type }) {
       throw new Error("Please specify pattern type")
   }
   return (
-    <Pattern>
+    <Pattern fullPage={fullPage}>
       <defs>
         <pattern id={type} patternUnits="userSpaceOnUse" width="20" height="20">
           {pattern}

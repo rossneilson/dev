@@ -1,16 +1,17 @@
 import Typography from "typography"
-import theme from "typography-theme-fairy-gates"
+// import theme from "typography-theme-fairy-gates"
+import theme from "typography-theme-moraga"
 import "typeface-sacramento"
-import "typeface-space-mono"
+// import "typeface-space-mono"
 
 theme.overrideThemeStyles = () => ({
   h3: {
     color: "#76aed7",
-    marginLeft: "3%",
     borderBottom: "2px solid",
     borderBottomColor: "#f2a319",
-    paddingBottom: "15px",
+    paddingBottom: "10px",
     marginRight: "20%",
+    marginTop: "20px",
     fontSize: "180%",
   },
 })

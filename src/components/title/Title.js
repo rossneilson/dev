@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { FormattedMessage, changeLocale } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import cover from "../../images/cover.svg"
@@ -29,10 +29,10 @@ const CenterSection = styled.section`
   padding: 5% 2% 5% 2%;
   width: 45%;
   min-width: 270px;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 `
 
 const MainTitle = styled.h1`
+  margin-top: 30px;
   font-family: Sacramento;
   border-bottom: 2px solid;
   border-bottom-color: #fab601;

@@ -1,7 +1,5 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
-import styled from "styled-components"
-import loadable from "@loadable/component"
 
 import "../index.css"
 import "typeface-sacramento"
@@ -12,68 +10,105 @@ import Title from "../components/title/Title"
 import About from "../components/about/About"
 import Portfolio from "../components/portfolio/Portfolio"
 import Toggle from "../components/Toggle"
-import { changeLocale } from "gatsby-plugin-intl"
-
-const Services = loadable(() => import("../components/services/Services"))
-const Contact = loadable(() => import("../components/contact/Contact"))
-// import Blog from "../components/blog/Blog"
-
-const ToggleWrap = styled.section`
-  position: fixed;
-  z-index: 9998;
-  margin: 15px;
-  right: 0;
-`
+import BlogSection from "../components/blog/BlogSection"
+import ServicesSection from "../components/services/ServicesSection"
+import SignUp from "../components/contact/SignUp"
+import Contact from "../components/contact/Contact"
 
 export default function Main(props) {
-  const checkLanguage = () => {
-    if (props.pageContext.intl.language === "jp") {
-      return true
-    } else if (props.pageContext.intl.language === "en") {
-      return false
-    }
-  }
-
-  const [checked, setChecked] = useState(checkLanguage())
-
-  const changeLanguage = async e => {
-    setChecked(!checked)
-    await new Promise(r => setTimeout(r, 1))
-    if (checked) {
-      changeLocale("en")
-    } else {
-      changeLocale("jp")
-    }
-  }
-
   return (
     <div>
       <SEO
-        title={"Ross Neilson"}
+        title={
+          props.data.site.siteMetadata[props.pageContext.intl.language].title
+        }
         description={
-          "A freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses"
+          props.data.site.siteMetadata[props.pageContext.intl.language]
+            .description
         }
         lang={props.pageContext.intl.language}
       />
-      <ToggleWrap>
-        <Toggle checked={checked} changeLanguage={changeLanguage} />
-      </ToggleWrap>
+      <Toggle language={props.pageContext.intl.language} />
 
       <Title />
       <About image={props.data.profileImage.childImageSharp.fluid} />
-      <Services />
-      <Portfolio
-        devSiteImage={props.data.devSiteImage.childImageSharp.fluid}
-        tabiSiteImage={props.data.tabiSiteImage.childImageSharp.fluid}
+      <ServicesSection
+        icon1={props.data.icon1.childImageSharp.fixed}
+        icon2={props.data.icon2.childImageSharp.fixed}
+        icon3={props.data.icon3.childImageSharp.fixed}
+        icon4={props.data.icon4.childImageSharp.fixed}
+        icon5={props.data.icon5.childImageSharp.fixed}
+        icon6={props.data.icon6.childImageSharp.fixed}
       />
-      {/* <Blog /> */}
+      <Portfolio sites={props.data.portfolioSites.edges} />
+      <BlogSection
+        language={props.pageContext.intl.language}
+        posts={props.data.blogPosts.edges}
+      />
+      <SignUp language={props.pageContext.intl.language} />
       <Contact />
     </div>
   )
 }
 
 export const imageQuery = graphql`
-  query {
+  query getData($locale: String) {
+    blogPosts: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/(/blog/)/" }
+        frontmatter: { locale: { eq: $locale } }
+      }
+      sort: { fields: frontmatter___date, order: ASC }
+      limit: 4
+    ) {
+      edges {
+        node {
+          frontmatter {
+            path
+            locale
+            title
+            location
+            category
+            date
+            SEO
+            image {
+              childImageSharp {
+                fluid(maxWidth: 3000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    portfolioSites: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/(/portfolio/)/" }
+        frontmatter: { locale: { eq: $locale } }
+      }
+      sort: { fields: frontmatter___date, order: ASC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            description
+            link
+            locale
+            date
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     profileImage: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
@@ -81,23 +116,58 @@ export const imageQuery = graphql`
         }
       }
     }
-    devSiteImage: file(relativePath: { eq: "dev.jpg" }) {
+    icon1: file(relativePath: { eq: "icon1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 50) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
-    tabiSiteImage: file(relativePath: { eq: "tabi.jpg" }) {
+    icon2: file(relativePath: { eq: "icon2.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    icon3: file(relativePath: { eq: "icon3.png" }) {
+      childImageSharp {
+        fixed(width: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    icon4: file(relativePath: { eq: "icon4.png" }) {
+      childImageSharp {
+        fixed(width: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    icon5: file(relativePath: { eq: "icon5.png" }) {
+      childImageSharp {
+        fixed(width: 50) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    icon6: file(relativePath: { eq: "icon6.png" }) {
+      childImageSharp {
+        fixed(width: 50) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
     site {
       siteMetadata {
-        title
+        en {
+          title
+          description
+        }
+        jp {
+          title
+          description
+        }
       }
     }
   }
