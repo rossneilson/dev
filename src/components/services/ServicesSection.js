@@ -35,6 +35,10 @@ const StyledIllustration = styled.img`
   width: 50%;
   min-width: 300px;
   object-fit: contain;
+  @media (pointer: coarse) {
+    max-height: 30vh;
+    margin-bottom: 0px;
+  }
 `
 
 const Explanation = styled.section`
