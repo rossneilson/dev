@@ -8,6 +8,7 @@ const Wrapper = styled.section`
   width: 50%;
   margin: auto !important;
   margin-bottom: 50px !important;
+  margin-top: 50px !important;
   display: flex;
   padding: 30px;
   border-radius: 10px;
@@ -65,7 +66,7 @@ export default function Footer(props) {
       <Image fluid={props.image} />
       <Description>
         <h3>
-          <FormattedMessage id="main.names" />
+          <FormattedMessage id="title.top" />
         </h3>
         <blockquote>
           <FormattedMessage id="blog.authorDesc" />

@@ -53,8 +53,8 @@ const Image = styled(Img)`
 
 const Category = styled.section`
   font-size: 10px;
-  background-color: #ffffffb0;
-  padding: 4px;
+  background-color: #aacee8;
+  padding: 3px;
   justify-content: center;
   display: flex;
   border-radius: 7px;
