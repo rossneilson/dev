@@ -2,8 +2,10 @@ import React, { useState } from "react"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import styled from "styled-components"
 import { useIntl } from "react-intl"
-import ReCAPTCHA from "react-google-recaptcha"
+import loadable from "@loadable/component"
 
+var ReCAPTCHA = null
+var StyledCaptcha = null
 const recaptchaRef = React.createRef()
 
 const Container = styled.section`
@@ -75,9 +77,6 @@ const StyledButton = styled.button`
     background-color: #2096f3;
   }
 `
-const StyledCaptcha = styled(ReCAPTCHA)`
-  display: none;
-`
 
 function CustomForm({ status, message, onValidated, language }) {
   const intl = useIntl()
@@ -108,7 +107,13 @@ function CustomForm({ status, message, onValidated, language }) {
             id="name"
             name="name"
             placeholder={intl.formatMessage({ id: "contact.name" })}
-            onChange={e => setName(e.target.value)}
+            onChange={e => {
+              setName(e.target.value)
+              ReCAPTCHA = loadable(() => import("react-google-recaptcha"))
+              StyledCaptcha = styled(ReCAPTCHA)`
+                display: none;
+              `
+            }}
           />
           <StyledInput
             id="email"
@@ -116,13 +121,17 @@ function CustomForm({ status, message, onValidated, language }) {
             placeholder={intl.formatMessage({ id: "contact.email" })}
             onChange={e => setEmail(e.target.value)}
           />
-          <StyledCaptcha
-            ref={recaptchaRef}
-            size="invisible"
-            sitekey="6Lf8jtkZAAAAAMRbL76ebqoywAN_J-eyZt9jPVA0"
-            onChange={onChange}
-            badge={"inline"}
-          />
+          {ReCAPTCHA ? (
+            <StyledCaptcha
+              ref={recaptchaRef}
+              size="invisible"
+              sitekey="6LcMidkZAAAAAD44pvU5sAEDBs25vi2tTTy-92_p"
+              onChange={onChange}
+              badge={"inline"}
+            />
+          ) : (
+            <div style={{ display: "none" }} />
+          )}
           <StyledButton onClick={submit}>
             {intl.formatMessage({ id: "signup.subscribe" })}
           </StyledButton>
