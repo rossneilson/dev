@@ -125,7 +125,7 @@ function CustomForm({ status, message, onValidated, language }) {
             <StyledCaptcha
               ref={recaptchaRef}
               size="invisible"
-              sitekey="6LcMidkZAAAAAD44pvU5sAEDBs25vi2tTTy-92_p"
+              sitekey="6Lf8jtkZAAAAAMRbL76ebqoywAN_J-eyZt9jPVA0"
               onChange={onChange}
               badge={"inline"}
             />
