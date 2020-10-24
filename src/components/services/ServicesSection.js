@@ -100,7 +100,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
     <ServicesFlexContainer>
       <SvgPattern type="circle" />
       <Card>
-        <StyledIllustration src={Illustration} />
+        <StyledIllustration src={Illustration} alt={"services illustration"} />
         <Explanation>
           <h3>
             <svg

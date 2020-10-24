@@ -103,24 +103,28 @@ function CustomForm({ status, message, onValidated, language }) {
       <Title>{intl.formatMessage({ id: "signup.title" })}</Title>
       <FormContainer>
         <Form name="signup" method="post" onSubmit={submit}>
-          <StyledInput
-            id="name"
-            name="name"
-            placeholder={intl.formatMessage({ id: "contact.name" })}
-            onChange={e => {
-              setName(e.target.value)
-              ReCAPTCHA = loadable(() => import("react-google-recaptcha"))
-              StyledCaptcha = styled(ReCAPTCHA)`
-                display: none;
-              `
-            }}
-          />
-          <StyledInput
-            id="email"
-            name="email"
-            placeholder={intl.formatMessage({ id: "contact.email" })}
-            onChange={e => setEmail(e.target.value)}
-          />
+          <label for={"name"}>
+            <StyledInput
+              id="name"
+              name="name"
+              placeholder={intl.formatMessage({ id: "contact.name" })}
+              onChange={e => {
+                setName(e.target.value)
+                ReCAPTCHA = loadable(() => import("react-google-recaptcha"))
+                StyledCaptcha = styled(ReCAPTCHA)`
+                  display: none;
+                `
+              }}
+            />
+          </label>
+          <label for={"email"}>
+            <StyledInput
+              id="email"
+              name="email"
+              placeholder={intl.formatMessage({ id: "contact.email" })}
+              onChange={e => setEmail(e.target.value)}
+            />
+          </label>
           {ReCAPTCHA ? (
             <StyledCaptcha
               ref={recaptchaRef}
