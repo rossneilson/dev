@@ -13,6 +13,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@loadable/component": "^5.14.1",
     "babel-plugin-styled-components": "^1.10.7",
     "front-matter": "^4.0.2",
     "gatsby": "^2.24.83",
