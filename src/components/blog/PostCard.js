@@ -103,7 +103,7 @@ export default function PostCard({ post, index, isfullpage, language }) {
   return (
     <Wrapper
       isfullpage={isfullpage}
-      to={urlLocaleFormatting(frontmatter.locale, "../../" + frontmatter.path)}
+      to={urlLocaleFormatting(frontmatter.locale, "/" + frontmatter.path)}
       onClick={() => {
         window.scrollTo(0, 0)
       }}
