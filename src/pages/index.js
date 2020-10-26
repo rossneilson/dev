@@ -2,8 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import "../index.css"
-import "typeface-sacramento"
-import "typeface-space-mono"
 
 import SEO from "../components/seo"
 import Title from "../components/title/Title"

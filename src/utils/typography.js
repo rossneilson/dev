@@ -1,8 +1,6 @@
 import Typography from "typography"
-// import theme from "typography-theme-fairy-gates"
 import theme from "typography-theme-moraga"
 import "typeface-sacramento"
-// import "typeface-space-mono"
 
 theme.overrideThemeStyles = () => ({
   h3: {
