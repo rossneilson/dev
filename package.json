@@ -31,7 +31,6 @@
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-styled-components": "^3.3.2",
     "gatsby-plugin-typography": "^2.5.0",
-    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
     "gatsby-remark-images": "^3.3.13",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.3.0",
@@ -49,9 +48,7 @@
     "sharp": "^0.25.2",
     "styled-components": "^5.1.0",
     "typeface-sacramento": "0.0.72",
-    "typeface-space-mono": "0.0.71",
     "typography": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-moraga": "^0.16.19"
   },
   "devDependencies": {

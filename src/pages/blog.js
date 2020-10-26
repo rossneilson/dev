@@ -9,10 +9,7 @@ import SEO from "../components/seo"
 import Navigation from "../components/blog/Navigation"
 import BlogGrid from "../components/blog/BlogGrid"
 import Toggle from "../components/Toggle"
-
-// TODO: Replace material ui tabs
-// const Tabs = loadable(() => import("@material-ui/core/Tabs"))
-// const Tab = loadable(() => import("@material-ui/core/Tab"))
+import Tabs from "../components/common/Tabs"
 
 const BlogContainer = styled.section`
   background-color: #ececea96;
@@ -35,7 +32,7 @@ const createListOfCategories = posts => {
     }
     return 0
   })
-  categories.splice(0, 0, "all")
+  categories.splice(0, 0, "All")
   return categories
 }
 
@@ -58,13 +55,7 @@ export default function Blog(props) {
 
   const posts = props.data.allMarkdownRemark.edges
 
-  const tabsArray = []
-
   const categories = createListOfCategories(posts)
-
-  categories.map((cat, index) => {
-    // tabsArray.push(<Tab label={cat} key={index} />)
-  })
 
   const filteredPosts = setFilteredPosts(tab, posts, categories)
 
@@ -89,18 +80,14 @@ export default function Blog(props) {
         link2={"portfolio"}
         language={props.pageContext.intl.language}
       />
-      {/* <Tabs
-        value={tab}
-        onChange={(event, newValue) => {
+      <Tabs
+        options={categories}
+        onChange={newValue => {
           setTab(newValue)
         }}
-        indicatorColor="primary"
-        textColor="primary"
-        centered
-        aria-label="blog category tabs"
-      >
-        {tabsArray}
-      </Tabs> */}
+        current={tab}
+        scrollable={false}
+      />
       <BlogGrid posts={filteredPosts} />
     </BlogContainer>
   )
