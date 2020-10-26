@@ -1,6 +1,6 @@
 import Typography from "typography"
 import theme from "typography-theme-moraga"
-import "typeface-sacramento"
+// import "typeface-sacramento"
 
 theme.overrideThemeStyles = () => ({
   h3: {
