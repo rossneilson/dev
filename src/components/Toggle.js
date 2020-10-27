@@ -40,9 +40,9 @@ export default function Toggle({
 
   const [checked, setChecked] = useState(checkLanguage())
 
-  const changeLanguage = async e => {
+  const changeLanguage = e => {
     setChecked(!checked)
-    await new Promise(r => setTimeout(r, 1))
+    // await new Promise(r => setTimeout(r, 1))
     if (checked) {
       changeLocale("en")
     } else {

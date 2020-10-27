@@ -4,7 +4,7 @@ import "fontsource-source-sans-pro"
 
 theme.overrideThemeStyles = () => ({
   h3: {
-    color: "#76aed7",
+    color: "#618eaf",
     borderBottom: "2px solid",
     borderBottomColor: "#f2a319",
     paddingBottom: "10px",

@@ -103,10 +103,11 @@ function CustomForm({ status, message, onValidated, language }) {
       <Title>{intl.formatMessage({ id: "signup.title" })}</Title>
       <FormContainer>
         <Form name="signup" method="post" onSubmit={submit}>
-          <label for={"name"}>
+          <label>
             <StyledInput
-              id="name"
+              id="fullName"
               name="name"
+              aria-label="name input"
               placeholder={intl.formatMessage({ id: "contact.name" })}
               onChange={e => {
                 setName(e.target.value)
@@ -117,10 +118,11 @@ function CustomForm({ status, message, onValidated, language }) {
               }}
             />
           </label>
-          <label for={"email"}>
+          <label>
             <StyledInput
-              id="email"
+              id="emailAddress"
               name="email"
+              aria-label="email input"
               placeholder={intl.formatMessage({ id: "contact.email" })}
               onChange={e => setEmail(e.target.value)}
             />

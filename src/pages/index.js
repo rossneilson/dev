@@ -27,7 +27,6 @@ export default function Main(props) {
         lang={props.pageContext.intl.language}
       />
       <Toggle language={props.pageContext.intl.language} />
-
       <Title />
       <About image={props.data.profileImage.childImageSharp.fluid} />
       <ServicesSection
@@ -45,6 +44,7 @@ export default function Main(props) {
       />
       <SignUp language={props.pageContext.intl.language} />
       <Contact />
+      eek
     </div>
   )
 }
