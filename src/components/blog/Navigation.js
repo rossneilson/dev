@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { FormattedMessage } from "react-intl"
-import { Link } from "gatsby-plugin-intl"
+import { FormattedMessage, Link } from "gatsby-plugin-intl"
 
 import { urlLocaleFormatting } from "../../utils/formatters"
 

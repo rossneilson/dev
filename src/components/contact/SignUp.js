@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 import styled from "styled-components"
-import { useIntl } from "react-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import loadable from "@loadable/component"
 
 var ReCAPTCHA = null

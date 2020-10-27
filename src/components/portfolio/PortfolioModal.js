@@ -122,7 +122,10 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
         </Bar>
         <Card>
           {frontmatter.image ? (
-            <Image fluid={frontmatter.image.childImageSharp.fluid} />
+            <Image
+              loading="eager"
+              fluid={frontmatter.image.childImageSharp.fluid}
+            />
           ) : null}
           <Description>
             <h2 style={{ color: "white" }}>{frontmatter.title}</h2>

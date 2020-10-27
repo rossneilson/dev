@@ -39,7 +39,7 @@ export default function About(props) {
       <SvgPattern type="metal" />
       <AboutCard />
       <RightWrapper>
-        <ProfileImage fluid={props.image} />
+        <ProfileImage loading="eager" fluid={props.image} />
         <ProgressBar />
       </RightWrapper>
     </FlexContainer>

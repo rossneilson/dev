@@ -109,7 +109,7 @@ export default function PostCard({ post, index, isfullpage, language }) {
       }}
     >
       <Category>{frontmatter.category}</Category>
-      <Image fluid={frontmatter.image.childImageSharp.fluid} />
+      <Image loading="eager" fluid={frontmatter.image.childImageSharp.fluid} />
       <Description>
         <Title>{frontmatter.title}</Title>
         {desc}

@@ -1,8 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
-import { Link } from "gatsby-plugin-intl"
+import { Link, FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import { FormattedMessage } from "react-intl"
 
 const Wrapper = styled.section`
   width: 50%;
@@ -63,7 +62,7 @@ const CTA = styled(Link)`
 export default function Footer(props) {
   return (
     <Wrapper>
-      <Image fluid={props.image} />
+      <Image loading="eager" fluid={props.image} />
       <Description>
         <h3>
           <FormattedMessage id="title.top" />

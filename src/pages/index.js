@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import "../index.css"
-import "typeface-sacramento"
 
 import SEO from "../components/seo"
 import Title from "../components/title/Title"
@@ -73,7 +72,7 @@ export const imageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 3000) {
-                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
@@ -100,7 +99,7 @@ export const imageQuery = graphql`
             image {
               childImageSharp {
                 fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid_withWebp
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
@@ -111,49 +110,49 @@ export const imageQuery = graphql`
     profileImage: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
     icon1: file(relativePath: { eq: "icon1.png" }) {
       childImageSharp {
         fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
     icon2: file(relativePath: { eq: "icon2.png" }) {
       childImageSharp {
         fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
     icon3: file(relativePath: { eq: "icon3.png" }) {
       childImageSharp {
         fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
     icon4: file(relativePath: { eq: "icon4.png" }) {
       childImageSharp {
         fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
     icon5: file(relativePath: { eq: "icon5.png" }) {
       childImageSharp {
         fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
     icon6: file(relativePath: { eq: "icon6.png" }) {
       childImageSharp {
         fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }

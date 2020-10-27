@@ -55,7 +55,9 @@ export default function PortfolioCard({ frontmatter, html, openModal }) {
         <Dot />
         <Dot />
       </Bar>
-      {image ? <Img fluid={image.childImageSharp.fluid} /> : null}
+      {image ? (
+        <Img loading="eager" fluid={image.childImageSharp.fluid} />
+      ) : null}
       <ProjectText>
         <h2 style={{ marginTop: "2%" }}>{title}</h2>
         <h5>{description}</h5>

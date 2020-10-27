@@ -128,7 +128,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
           <BulletPointContainer>
             <BulletPoint>
               <Title>
-                <Icon fixed={icon1} />
+                <Icon loading="eager" fixed={icon1} />
                 <h2>
                   <FormattedMessage id="services.1.title" />
                 </h2>
@@ -139,7 +139,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon fixed={icon2} />
+                <Icon loading="eager" fixed={icon2} />
                 <h2>
                   <FormattedMessage id="services.2.title" />
                 </h2>
@@ -150,7 +150,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon fixed={icon3} />
+                <Icon loading="eager" fixed={icon3} />
                 <h2>
                   <FormattedMessage id="services.3.title" />
                 </h2>
@@ -161,7 +161,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon fixed={icon4} />
+                <Icon loading="eager" fixed={icon4} />
                 <h2>
                   <FormattedMessage id="services.4.title" />
                 </h2>
@@ -172,7 +172,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon fixed={icon5} />
+                <Icon loading="eager" fixed={icon5} />
                 <h2>
                   <FormattedMessage id="services.5.title" />
                 </h2>
@@ -183,7 +183,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon fixed={icon6} />
+                <Icon loading="eager" fixed={icon6} />
                 <h2>
                   <FormattedMessage id="services.6.title" />
                 </h2>

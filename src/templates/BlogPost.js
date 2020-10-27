@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { navigate } from "@reach/router"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 import "../index.css"
 
@@ -152,7 +152,10 @@ export default function BlogPost({ data, pageContext }) {
         lang={frontmatter.locale}
         slug={"/" + frontmatter.path}
       />
-      <BackgroundImage fluid={frontmatter.image.childImageSharp.fluid} />
+      <BackgroundImage
+        loading="eager"
+        fluid={frontmatter.image.childImageSharp.fluid}
+      />
       <Gradient offset={offset} />
       <BackIcon
         onClick={() => navigate("../../" + frontmatter.locale + "/blog")}
@@ -213,7 +216,7 @@ export const query = graphql`
         image {
           childImageSharp {
             fluid(maxWidth: 3000) {
-              ...GatsbyImageSharpFluid_withWebp
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
@@ -222,7 +225,7 @@ export const query = graphql`
     image: file(relativePath: { eq: "footerImage.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid_withWebp
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
