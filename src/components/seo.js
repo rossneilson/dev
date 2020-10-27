@@ -64,17 +64,17 @@ function SEO({ description, lang, meta, title, slug = "" }) {
     >
       <link
         rel="alternate"
-        hreflang="en"
+        hrefLang="en"
         href={"https://rossneilson.dev/en" + slug}
       />
       <link
         rel="alternate"
-        hreflang="ja"
+        hrefLang="ja"
         href={"https://rossneilson.dev/jp" + slug}
       />
       <link
         rel="alternate"
-        hreflang="x-default"
+        hrefLang="x-default"
         href={"https://rossneilson.dev" + slug}
       />
     </Helmet>

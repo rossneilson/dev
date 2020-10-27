@@ -15,7 +15,7 @@ const Rectangle = styled.rect`
 `
 
 export default function SvgPattern({ type, fullPage = false }) {
-  var pattern = <div />
+  var pattern
   switch (type) {
     case "circle":
       pattern = (

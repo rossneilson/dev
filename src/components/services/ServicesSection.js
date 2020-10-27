@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 
 import Illustration from "../../images/developer.svg"
@@ -94,8 +94,6 @@ const CTA = styled.button`
 `
 
 export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
-  const intl = useIntl()
-
   return (
     <ServicesFlexContainer>
       <SvgPattern type="circle" />
