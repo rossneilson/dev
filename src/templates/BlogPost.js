@@ -6,6 +6,7 @@ import { navigate } from "@reach/router"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
 import "../index.css"
+import "fontsource-sacramento"
 
 import Navigation from "../components/blog/Navigation"
 import Footer from "../components/blog/Footer"
