@@ -39,7 +39,7 @@ const Image = styled(Img)`
 `
 const CTA = styled(Link)`
   text-align: center;
-  color: white !important;
+  color: black !important;
   padding: 12px;
   background: #f79a60;
   border-radius: 5px;
@@ -64,7 +64,7 @@ export default function Footer(props) {
     <Wrapper>
       <Image loading="eager" fluid={props.image} />
       <Description>
-        <h3>
+        <h3 style={{ color: "#1281d2" }}>
           <FormattedMessage id="title.top" />
         </h3>
         <blockquote>

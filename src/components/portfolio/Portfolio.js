@@ -44,7 +44,9 @@ export default function About({ devSiteImage, tabiSiteImage, sites }) {
   return (
     <PortfolioFlexContainer>
       <SvgPattern type="point" />
-      Currently looking for portfolio projects (Please contact me)
+      <div style={{ color: "black" }}>
+        Currently looking for portfolio projects (Please contact me)
+      </div>
       <Title>
         <svg
           style={{ transform: "translateY(8px)" }}
