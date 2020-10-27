@@ -20,7 +20,7 @@ const Container = styled.section`
 const Title = styled.h2`
   width: 60%;
   min-width: 300px;
-  color: #5baef6;
+  color: #1771c1;
   font-weight: 900;
   @media (pointer: coarse) {
     text-align: center;
@@ -50,7 +50,7 @@ const StyledInput = styled.input`
   width: 250px;
   border-style: none;
   border-width: 1px 1px 4px;
-  border-color: #000 #000 #6f81b3;
+  border-color: black;
   border-radius: 10px;
   background-color: #fff;
   color: #ff6200;
@@ -59,7 +59,7 @@ const StyledInput = styled.input`
 
 const StyledButton = styled.button`
   transition: 0.2s;
-  background-color: #5baef6;
+  background-color: #1771c1;
   color: white;
   height: 40px;
   justify-content: space-around;

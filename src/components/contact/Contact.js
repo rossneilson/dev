@@ -57,14 +57,14 @@ const StyledInput = styled.input`
   border-width: 1px 1px 4px;
   border-color: #000 #000 #6f81b3;
   border-radius: 10px;
-  background-color: ${props => (props.error ? "#ff7777" : "#d4e0ef")};
+  background-color: ${props => (props.error ? "#ff7777" : "#eaebec")};
   color: black;
 `
 
 const StyledButton = styled.button`
   transition: 0.2s;
   background-color: rgb(32, 150, 243);
-  color: white;
+  color: #1771c1;
   height: 40px;
   justify-content: space-around;
   font-size: large;
