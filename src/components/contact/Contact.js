@@ -63,8 +63,8 @@ const StyledInput = styled.input`
 
 const StyledButton = styled.button`
   transition: 0.2s;
-  background-color: rgb(32, 150, 243);
-  color: #1771c1;
+  background-color: #1771c1;
+  color: white;
   height: 40px;
   justify-content: space-around;
   font-size: large;
@@ -212,6 +212,7 @@ export default function Contact(props) {
           <Link
             target="_blank"
             rel="canonical"
+            aria-label="Twitter"
             href="https://twitter.com/Ross__N"
           >
             <svg
@@ -234,6 +235,7 @@ export default function Contact(props) {
           <Link
             target="_blank"
             rel="canonical"
+            aria-label="Email me"
             href="mailto:me@rossneilson.dev"
           >
             <svg
@@ -257,6 +259,7 @@ export default function Contact(props) {
           <Link
             target="_blank"
             rel="canonical"
+            aria-label="LinkedIn"
             href="https://www.linkedin.com/in/ross-neilson-99b62b14a/"
           >
             <svg

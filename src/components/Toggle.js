@@ -42,7 +42,6 @@ export default function Toggle({
 
   const changeLanguage = e => {
     setChecked(!checked)
-    // await new Promise(r => setTimeout(r, 1))
     if (checked) {
       changeLocale("en")
     } else {
@@ -58,8 +57,8 @@ export default function Toggle({
           onChange={changeLanguage}
           height={50}
           width={100}
-          offColor="#2196f3"
-          onColor="#2196f3"
+          offColor="#0069bd"
+          onColor="#0069bd"
           aria-label="language switch"
           role="button"
           id="language switch"

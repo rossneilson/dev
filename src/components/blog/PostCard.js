@@ -67,7 +67,7 @@ const Category = styled.section`
 
 const Description = styled.section`
   padding: 10px;
-  color: #518ebb;
+  color: #336d98;
 `
 
 const Extra = styled.section`

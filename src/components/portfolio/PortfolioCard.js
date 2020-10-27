@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const Card = styled.section`
   z-index: 998;
   width: 400px;
-  height: 25%;
+  height: 396px;
   margin: 1% 1% 5% 1%;
   flexgrow: 2;
   background-color: #ffffffd2;
@@ -18,6 +18,10 @@ const Card = styled.section`
   &:focus {
     opacity: 0.8;
     transform: translateY(-15px);
+  }
+
+  @media (pointer: coarse) {
+    height: 25%;
   }
 `
 
@@ -42,6 +46,10 @@ const ProjectText = styled.section`
   min-height: 110px;
 `
 
+const Desc = styled.section`
+  font-size: 0.8rem;
+`
+
 export default function PortfolioCard({ frontmatter, html, openModal }) {
   const { title, description, image } = frontmatter
   return (
@@ -60,7 +68,7 @@ export default function PortfolioCard({ frontmatter, html, openModal }) {
       ) : null}
       <ProjectText>
         <h2 style={{ marginTop: "2%" }}>{title}</h2>
-        <h5>{description}</h5>
+        <Desc>{description}</Desc>
       </ProjectText>
     </Card>
   )

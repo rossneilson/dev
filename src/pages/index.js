@@ -44,7 +44,6 @@ export default function Main(props) {
       />
       <SignUp language={props.pageContext.intl.language} />
       <Contact />
-      eek
     </div>
   )
 }
