@@ -39,7 +39,7 @@ const Wrapper = styled(Link)`
   }
 `
 const Title = styled.h2`
-  margin-top: 5px;
+  margin: 5px 0px;
   color: #518ebb;
 `
 
