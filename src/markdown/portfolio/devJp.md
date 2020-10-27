@@ -1,5 +1,5 @@
 ---
-title: ロス ニルソン ディベロッパー
+title: ディベロッパー
 description: 自分のフリランスサイト
 image: /static/dev.jpg
 link: https://rossneilson.dev

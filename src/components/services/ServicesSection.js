@@ -72,7 +72,7 @@ const Description = styled.p`
 
 const CTA = styled.button`
   transition: 0.2s;
-  background-color: #2096f3;
+  background-color: #0374cc;
   color: white;
   height: 50px;
   width: 30%;
@@ -129,9 +129,9 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             <BulletPoint>
               <Title>
                 <Icon loading="eager" fixed={icon1} />
-                <h2>
+                <h4 style={{ fontSize: "1.73286rem" }}>
                   <FormattedMessage id="services.1.title" />
-                </h2>
+                </h4>
               </Title>
               <Description>
                 <FormattedMessage id="services.1.desc" />

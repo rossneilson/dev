@@ -40,7 +40,7 @@ const Wrapper = styled(Link)`
 `
 const Title = styled.h2`
   margin-top: 5px;
-  color: #76aed7;
+  color: #518ebb;
 `
 
 const Image = styled(Img)`
@@ -67,7 +67,7 @@ const Category = styled.section`
 
 const Description = styled.section`
   padding: 10px;
-  color: #76aed7;
+  color: #518ebb;
 `
 
 const Extra = styled.section`

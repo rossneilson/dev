@@ -1,5 +1,5 @@
 ---
-title: Ross Neilson Web Developer
+title: Web Developer
 description: Personal freelancing site with localisation
 image: /static/dev.jpg
 link: https://rossneilson.dev

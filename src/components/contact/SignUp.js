@@ -50,10 +50,10 @@ const StyledInput = styled.input`
   width: 250px;
   border-style: none;
   border-width: 1px 1px 4px;
-  border-color: black;
+  border-color: #000 #000 #6f81b3;
   border-radius: 10px;
   background-color: #fff;
-  color: #ff6200;
+  color: black;
   margin: 10px;
 `
 
