@@ -213,7 +213,7 @@ export default function Contact(props) {
             target="_blank"
             rel="canonical"
             aria-label="Twitter"
-            href="https://twitter.com/Ross__N"
+            href="https://twitter.com/RossNeilson_dev"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
