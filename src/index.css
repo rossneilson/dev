@@ -14,7 +14,8 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #036bbd;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -33,4 +34,21 @@ a:hover {
 
 ::-webkit-scrollbar-track {
   background: #2096f3c7;
+}
+
+.table-of-contents {
+  margin-bottom: 10px;
+  list-style: none;
+color: #808483;
+}
+.table-of-contents ul {
+  background-color: #53aef62e;
+  list-style: none;
+  max-width: 500px;
+  padding: 50px 10%;
+  margin: 0px;
+  border-radius: 4px;
+}
+.table-of-contents li {
+  border-bottom: 1px solid #8080802e;
 }

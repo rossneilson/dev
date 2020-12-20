@@ -100,7 +100,7 @@ export const postsQuery = graphql`
         fileAbsolutePath: { regex: "/(/blog/)/" }
         frontmatter: { locale: { eq: $locale } }
       }
-      sort: { fields: frontmatter___date, order: ASC }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -114,9 +114,11 @@ export const postsQuery = graphql`
             SEO
             image {
               childImageSharp {
-                fluid(maxWidth: 1000) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+                gatsbyImageData(
+                  maxWidth: 1000
+                  layout: FLUID
+                  placeholder: BLURRED
+                )
               }
             }
           }

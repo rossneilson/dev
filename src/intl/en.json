@@ -59,9 +59,10 @@
     "message": "Message",
     "submit": "Submit",
     "invalidEmail": "Invalid Email",
-    "success": "Sent, thank you"
+    "success": "Your information was sent perfectly, thank you"
   },
   "blog": {
+    "title": "Latest articles",
     "back": "Back to Blog",
     "authorDesc": "I am a young web developer working on going full time freelance, currently writing blogs about technical issues, solutions, technologies and experiences.",
     "cta": "Find out more"

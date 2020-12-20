@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css } from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import * as Keyframes from "../../utils/keyframes"
 
@@ -103,6 +103,7 @@ const ButtonLink = styled.a`
 
 export default function PortfolioModal({ handleClose, show, selectedExample }) {
   const { frontmatter, html } = selectedExample
+  const imageData = getImage(frontmatter.image)
 
   return (
     <Modal
@@ -122,8 +123,7 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
         <Card>
           {frontmatter.image ? (
             <Image
-              loading="eager"
-              fluid={frontmatter.image.childImageSharp.fluid}
+              image={imageData}
             />
           ) : null}
           <Description>

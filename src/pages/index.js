@@ -28,14 +28,14 @@ export default function Main(props) {
       />
       <Toggle language={props.pageContext.intl.language} />
       <Title />
-      <About image={props.data.profileImage.childImageSharp.fluid} />
+      <About image={props.data.profileImage} />
       <ServicesSection
-        icon1={props.data.icon1.childImageSharp.fixed}
-        icon2={props.data.icon2.childImageSharp.fixed}
-        icon3={props.data.icon3.childImageSharp.fixed}
-        icon4={props.data.icon4.childImageSharp.fixed}
-        icon5={props.data.icon5.childImageSharp.fixed}
-        icon6={props.data.icon6.childImageSharp.fixed}
+        icon1={props.data.icon1}
+        icon2={props.data.icon2}
+        icon3={props.data.icon3}
+        icon4={props.data.icon4}
+        icon5={props.data.icon5}
+        icon6={props.data.icon6}
       />
       <Portfolio sites={props.data.portfolioSites.edges} />
       <BlogSection
@@ -55,7 +55,7 @@ export const imageQuery = graphql`
         fileAbsolutePath: { regex: "/(/blog/)/" }
         frontmatter: { locale: { eq: $locale } }
       }
-      sort: { fields: frontmatter___date, order: ASC }
+      sort: { fields: frontmatter___date, order: DESC }
       limit: 4
     ) {
       edges {
@@ -70,9 +70,11 @@ export const imageQuery = graphql`
             SEO
             image {
               childImageSharp {
-                fluid(maxWidth: 3000) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+                gatsbyImageData(
+                  maxWidth: 3000
+                  layout: FLUID
+                  placeholder: BLURRED
+                )
               }
             }
           }
@@ -97,9 +99,11 @@ export const imageQuery = graphql`
             date
             image {
               childImageSharp {
-                fluid(maxWidth: 500) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
+                gatsbyImageData(
+                  maxWidth: 500
+                  layout: FLUID
+                  placeholder: BLURRED
+                )
               }
             }
           }
@@ -108,51 +112,37 @@ export const imageQuery = graphql`
     }
     profileImage: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 500, layout: FLUID, placeholder: BLURRED)
       }
     }
     icon1: file(relativePath: { eq: "icon1.png" }) {
       childImageSharp {
-        fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon2: file(relativePath: { eq: "icon2.png" }) {
       childImageSharp {
-        fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon3: file(relativePath: { eq: "icon3.png" }) {
       childImageSharp {
-        fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon4: file(relativePath: { eq: "icon4.png" }) {
       childImageSharp {
-        fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon5: file(relativePath: { eq: "icon5.png" }) {
       childImageSharp {
-        fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon6: file(relativePath: { eq: "icon6.png" }) {
       childImageSharp {
-        fixed(width: 50) {
-          ...GatsbyImageSharpFixed_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     site {

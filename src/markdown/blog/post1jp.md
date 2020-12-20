@@ -8,6 +8,15 @@ path: blog/migrating-to-jamstack
 locale: jp
 SEO: Advantages and disadvantages of react, jamstack, gatsby and netlify for freelance web development stack
 ---
+
+###### 目次
+```toc
+# This code block gets replaced with the TOC
+```
+
+---
+当分、このブログは英語だけですが。すみません、いつか翻訳するかもしれません。
+
 At work I use a react node stack for web development and honestly, I really enjoy using it. So when it came to side projects it was an obvious option and so without much consideration, I went with it. But that's where the problems started. There is a lot I love about react, the freedom it fives to build dynamic native-like apps is truly powerful, however not necessarily needed for every use case.
 As I began building personal projects (TabiTraveler) as well as building out a technology stack for my freelance business I ran into some issues:
 * SEO

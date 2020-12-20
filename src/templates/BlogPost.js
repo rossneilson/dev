@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 import { navigate } from "@reach/router"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
@@ -44,7 +44,7 @@ const Nav = styled(Navigation)`
 `
 
 const Gradient = styled.section`
-  background: rgb(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
   background: ${props =>
     "linear-gradient( 0deg,rgb(255 255 255) 0%,rgb(255 255 255 / " +
     props.offset +
@@ -75,6 +75,13 @@ const Category = styled.section`
   @media (pointer: coarse) {
     margin-left: 10%;
   }
+`
+
+const ToTop = styled.section`
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  cursor: pointer;
 `
 
 const Title = styled.h1`
@@ -143,7 +150,12 @@ export default function BlogPost({ data, pageContext }) {
     }
   })
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const { frontmatter, html } = data.posts
+  const imageData = getImage(frontmatter.image)
   const { language } = pageContext
 
   return (
@@ -154,10 +166,7 @@ export default function BlogPost({ data, pageContext }) {
         lang={frontmatter.locale}
         slug={"/" + frontmatter.path}
       />
-      <BackgroundImage
-        loading="eager"
-        fluid={frontmatter.image.childImageSharp.fluid}
-      />
+      <BackgroundImage image={imageData} />
       <Gradient offset={offset} />
       <BackIcon
         onClick={() => navigate("../../" + frontmatter.locale + "/blog")}
@@ -183,6 +192,30 @@ export default function BlogPost({ data, pageContext }) {
       </BackIcon>
 
       <Nav colour={"white"} language={pageContext.intl.language} />
+      <ToTop
+        onClick={() => {
+          window.scrollTo(0, 0)
+        }}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="icon icon-tabler icon-tabler-arrow-up-circle"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#53aef6"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <circle cx="12" cy="12" r="9" />
+          <line x1="12" y1="8" x2="8" y2="12" />
+          <line x1="12" y1="8" x2="12" y2="16" />
+          <line x1="16" y1="12" x2="12" y2="8" />
+        </svg>
+      </ToTop>
       <Category>{frontmatter.category}</Category>
       <Title>{frontmatter.title}</Title>
       <Location>{frontmatter.location}</Location>
@@ -195,7 +228,7 @@ export default function BlogPost({ data, pageContext }) {
       </FormattedDate>
       <Markdown dangerouslySetInnerHTML={{ __html: html }} />
       <SignUp language={pageContext.intl.language} />
-      <Footer image={data.image.childImageSharp.fluid} />
+      <Footer image={data.image} />
     </div>
   )
 }
@@ -217,18 +250,14 @@ export const query = graphql`
         SEO
         image {
           childImageSharp {
-            fluid(maxWidth: 3000) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
+            gatsbyImageData(maxWidth: 3000, layout: FLUID, placeholder: BLURRED)
           }
         }
       }
     }
     image: file(relativePath: { eq: "footerImage.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-        }
+        gatsbyImageData(maxWidth: 300, layout: FLUID, placeholder: BLURRED)
       }
     }
   }

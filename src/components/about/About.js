@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import AboutCard from "./AboutCard"
 import ProgressBar from "./ProgressBar"
@@ -34,12 +34,14 @@ const ProfileImage = styled(Img)`
 `
 
 export default function About(props) {
+  const imageData = getImage(props.image)
+
   return (
     <FlexContainer>
       <SvgPattern type="metal" />
       <AboutCard />
       <RightWrapper>
-        <ProfileImage loading="eager" fluid={props.image} />
+        <ProfileImage image={imageData} />
         <ProgressBar />
       </RightWrapper>
     </FlexContainer>

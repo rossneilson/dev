@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import Img from "gatsby-image"
+import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import Illustration from "../../images/developer.svg"
 import SvgPattern from "../svg/SvgPattern"
@@ -58,7 +58,8 @@ const BulletPoint = styled.section`
 `
 
 const Icon = styled(Img)`
-  min-width: 50px;
+  height: 100%;
+  min-width: 60px;
 `
 
 const Title = styled.section`
@@ -94,6 +95,12 @@ const CTA = styled.button`
 `
 
 export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
+  const icon1Image = getImage(icon1)
+  const icon2Image = getImage(icon2)
+  const icon3Image = getImage(icon3)
+  const icon4Image = getImage(icon4)
+  const icon5Image = getImage(icon5)
+  const icon6Image = getImage(icon6)
   return (
     <ServicesFlexContainer>
       <SvgPattern type="circle" />
@@ -126,7 +133,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
           <BulletPointContainer>
             <BulletPoint>
               <Title>
-                <Icon loading="eager" fixed={icon1} />
+                <Icon image={icon1Image} />
                 <h4 style={{ fontSize: "1.73286rem" }}>
                   <FormattedMessage id="services.1.title" />
                 </h4>
@@ -137,7 +144,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon loading="eager" fixed={icon2} />
+                <Icon image={icon2Image} />
                 <h2>
                   <FormattedMessage id="services.2.title" />
                 </h2>
@@ -148,7 +155,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon loading="eager" fixed={icon3} />
+                <Icon image={icon3Image} />
                 <h2>
                   <FormattedMessage id="services.3.title" />
                 </h2>
@@ -159,7 +166,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon loading="eager" fixed={icon4} />
+                <Icon image={icon4Image} />
                 <h2>
                   <FormattedMessage id="services.4.title" />
                 </h2>
@@ -170,7 +177,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon loading="eager" fixed={icon5} />
+                <Icon image={icon5Image} />
                 <h2>
                   <FormattedMessage id="services.5.title" />
                 </h2>
@@ -181,7 +188,7 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
             </BulletPoint>
             <BulletPoint>
               <Title>
-                <Icon loading="eager" fixed={icon6} />
+                <Icon image={icon6Image} />
                 <h2>
                   <FormattedMessage id="services.6.title" />
                 </h2>

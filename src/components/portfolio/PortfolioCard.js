@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
+import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 const Card = styled.section`
   z-index: 998;
@@ -52,6 +52,7 @@ const Desc = styled.section`
 
 export default function PortfolioCard({ frontmatter, html, openModal }) {
   const { title, description, image } = frontmatter
+  const imageData = getImage(image)
   return (
     <Card
       onClick={() => {
@@ -63,9 +64,7 @@ export default function PortfolioCard({ frontmatter, html, openModal }) {
         <Dot />
         <Dot />
       </Bar>
-      {image ? (
-        <Img loading="eager" fluid={image.childImageSharp.fluid} />
-      ) : null}
+      {image ? <Img image={imageData} /> : null}
       <ProjectText>
         <h2 style={{ marginTop: "2%" }}>{title}</h2>
         <Desc>{description}</Desc>

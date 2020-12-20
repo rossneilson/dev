@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 
 import PostCard from "./PostCard"
 import SvgPattern from "../svg/SvgPattern"
@@ -83,7 +84,7 @@ export default function Blog({ posts, language }) {
             <line x1="13" y1="8" x2="15" y2="8" />
             <line x1="13" y1="12" x2="15" y2="12" />
           </svg>
-          Latest articles
+          <FormattedMessage id="blog.title" />
         </Heading>
       </StyledLink>
       <FlexWrap>{postCards}</FlexWrap>

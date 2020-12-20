@@ -92,6 +92,18 @@ module.exports = {
               maxWidth: 590,
             },
           },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: ["Table of Contents", "目次", "「コナのコメント」"],
+              tight: true,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 10,
+              className: "table-of-contents",
+            },
+          },
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },
@@ -111,5 +123,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-loadable-components-ssr",
+    `gatsby-plugin-image`,
   ],
 }
