@@ -23,7 +23,7 @@ const FlexWrap = styled.section`
   margin-bottom: 50px;
   display: flex;
   justify-content: space-evenly;
-  height: 350px;
+  height: 400px;
   width: 100%;
   padding: 10px;
   @media (pointer: coarse) {
