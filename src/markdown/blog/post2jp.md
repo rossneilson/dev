@@ -3,7 +3,7 @@ title: Building an E-commerce Store on JAMstack
 location: Javascript
 category: Technology
 date: 2020-12-20T14:56:59.267Z
-image: /static/store.png
+image: /static/store.jpg
 path: blog/store-on-jamstack
 locale: jp
 SEO: Architectural overview of technologies used to build e-commerce store on jamstack with gatsby stripe and netlify with useful tips
@@ -25,7 +25,7 @@ This article is based off of my experiences creating a fully automated photograp
 ### Gatsby and CMS
 The base technology being used for this website is GatsbyJs so that is where we shall start. You can check out to my [previous article](https://rossneilson.dev/blog/migrating-to-jamstack)  for more detailed information about gatsby and static site generators (SSG). Since this is built on an SSG it only makes sense for the item pages to be built using markdown. Mine is essentially just frontmatter metadata about title, image and then an array of objects detailing product information such as SKUs (product ids) and pricing. Since I don't have much use for a full complex CMS that seem to be all the rage, and rather confusing when wrapping your head around the JAMstack, I am instead opting for the underrated netlify CMS. This is like most other CMS in that it provides a great UI to interact with your modelled markdown and JSON but, unlike other options, files are stored in Github. Some more on this later.
 
-![item page and md](/../../images/tabiPrintItem.png "item page and md")
+![item page and md](/../../images/tabiPrintItem.jpg "item page and md")
 
 ### Stripe Checkout
 So now we have an item page generated but how does the user buy the product. Do we need a checkout page and complex backend? No, stripe to the rescue. Stripe checkout is a fantastic payment form leveraging the secure simple stripe API as well as a prebuilt hosted UI giving users a clean, simple, secure checkout experience. 
@@ -35,7 +35,7 @@ On top of checkout you get access to the easy to use stripe dashboard giving you
 
 There are many fantastic tutorials to implement this but from the frontend perspective, the UI just calls a function then the user gets redirected to a clean wonderful checkout page with all correct pricing, multiple payment options and peace of mind. Unfortunately, nothing in life is ever this simple and you may have forgotten the golden rule of web development. **Never trust the client.**
 
-![stripe checkout](/../../images/store.png "stripe checkout")
+![stripe checkout](/../../images/store.jpg "stripe checkout")
 
 ### Netlify functions
 Although Stripe checkout is marketed as being hosted by stripe (not untrue), this is only for the form UI and all actual payment processing as expected from Stripe. We do unfortunately still need a backend to ensure proper calculation of prices to generate the checkout session. So where do we host a backend? Obviously, there is a host (see what I did there) of cloud platforms out there and if you are crazy enough, setting up your own server is even an option. However, you are likely already hosting on netlify (if not, you probably should be). So Netlify functions is a great, essentially free, option. So long as you are under 125,000 requests a month you can use them for free and then after that they scale automatically. Netlify functions are really just a nice wrapping around AWS lambda serverless compute, but they provide key functionality and advantages for this use case. 
