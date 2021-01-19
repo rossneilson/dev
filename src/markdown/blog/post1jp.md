@@ -5,7 +5,7 @@ category: Technology
 date: 2020-10-17T14:56:59.267Z
 image: /static/jam.jpg
 path: blog/migrating-to-jamstack
-locale: jp
+locale: ja
 SEO: Advantages and disadvantages of react, jamstack, gatsby and netlify for freelance web development stack
 ---
 

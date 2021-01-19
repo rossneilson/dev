@@ -6,7 +6,7 @@ date: 2020-12-20T14:56:59.267Z
 image: /static/store.jpg
 path: blog/store-on-jamstack
 locale: en
-SEO: Architectural overview of technologies used to build e-commerce store on jamstack with gatsby stripe and netlify with useful tips
+SEO: Architectural overview of technologies used to build e-commerce store on jamstack with gatsby stripe netlify and serverless with useful tips
 
 ---
 
@@ -21,7 +21,7 @@ This won't be an exhaustive tutorial since there are many of those out there alr
 
 This article is based off of my experiences creating a fully automated photography print store over at <https://www.tabitraveler.com>
 ### Gatsby and CMS
-The base technology being used for this website is GatsbyJs so that is where we shall start. You can check out to my [previous article](https://rossneilson.dev/blog/migrating-to-jamstack)  for more detailed information about gatsby and static site generators (SSG). Since this is built on an SSG it only makes sense for the item pages to be built using markdown. Mine is essentially just frontmatter metadata about title, image and then an array of objects detailing product information such as SKUs (product ids) and pricing. Since I don't have much use for a full complex CMS that seem to be all the rage, and rather confusing when wrapping your head around the JAMstack, I am instead opting for the underrated netlify CMS. This is like most other CMS in that it provides a great UI to interact with your modelled markdown and JSON but, unlike other options, files are stored in Github. Some more on this later.
+The base technology being used for this website is GatsbyJs so that is where we shall start. You can check out to my [previous article](https://rossneilson.dev/blog/migrating-to-jamstack) for more detailed information about gatsby and static site generators (SSG). Since this is built on an SSG it only makes sense for the item pages to be built using markdown. Mine is essentially just frontmatter metadata about title, image and then an array of objects detailing product information such as SKUs (product ids) and pricing. Since I don't have much use for a full complex CMS that seem to be all the rage, and rather confusing when wrapping your head around the JAMstack, I am instead opting for the underrated netlify CMS. This is like most other CMS in that it provides a great UI to interact with your modelled markdown and JSON but, unlike other options, files are stored in Github. Some more on this later.
 
 ![item page and md](/../../images/tabiPrintItem.jpg "item page and md")
 
@@ -35,7 +35,7 @@ There are many fantastic tutorials to implement this but from the frontend persp
 
 ![stripe checkout](/../../images/store.jpg "stripe checkout")
 
-### Netlify functions
+### Netlify functions - Serverless serverside
 Although Stripe checkout is marketed as being hosted by stripe (not untrue), this is only for the form UI and all actual payment processing as expected from Stripe. We do unfortunately still need a backend to ensure proper calculation of prices to generate the checkout session. So where do we host a backend? Obviously, there is a host (see what I did there) of cloud platforms out there and if you are crazy enough, setting up your own server is even an option. However, you are likely already hosting on netlify (if not, you probably should be). So Netlify functions is a great, essentially free, option. So long as you are under 125,000 requests a month you can use them for free and then after that they scale automatically. Netlify functions are really just a nice wrapping around AWS lambda serverless compute, but they provide key functionality and advantages for this use case. 
 
 All that's needed to get started with functions is a folder named "functions" then a js file exporting a function and netlify takes care of the rest. These functions are picked up automatically and from the code, endpoints are generated after the name of the file allowing the UI or other backends to call them to run your code, all from one little folder in the same repo as your website. For me, this means a function called "purchase" that main purpose is to generate a stripe checkout session for the user. However, a bit more has to happen. Since we can't trust the data coming from the client we can only really accept user choices such as the item they want and their location. So this means we need to re-calculate the price and shipping on the client-side so no cheeky person can buy things for £0.01. So we somehow need access to the original document specifying what prices are set at, in this case, the markdown. Because I am using netlify cms this file is in Github and can be accessed through GitHubs lovely API then parsed for the pricing information for calculation. Also, the printing service I am using for my products has an API for ordering that I can use to fully automate the selling process, from user pressing purchase through to delivery of the product without me manually processing anything. And so I also create a draft order in the function and hide it's Id in the checkout session metadata.
@@ -65,4 +65,5 @@ JAMstack continues to amaze me for how useful and versatile a stack it can be ev
 * [Stripe checkout docs](https://stripe.com/docs/payments/checkout)
 * [Stripe implementation guide - Learn with Jason](https://www.learnwithjason.dev/build-an-ecommerce-site-using-stripe-gatsby)
 * [Netlify functions](https://www.netlify.com/products/functions/)
+* [Sentry](https://sentry.io/)
 * [Printing Service](https://www.prodigi.com/)

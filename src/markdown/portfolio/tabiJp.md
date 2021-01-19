@@ -3,7 +3,7 @@ title: 旅Traveler
 description: 撮影のポートフォリオ、ブログ、プリント店があるサイト
 image: /static/tabi.jpg
 link: https://tabitraveler.com
-locale: jp
+locale: ja
 date: 2020-01-01T14:56:40.193Z
 
 ---

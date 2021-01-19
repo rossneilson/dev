@@ -7,7 +7,7 @@ module.exports = {
       description:
         "Freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses. Using javascript, react and gatsby.",
     },
-    jp: {
+    ja: {
       title: "ロス ニルソン ディベロッパー",
       description:
         "フリランスWebディベロッパー、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者",
@@ -18,7 +18,7 @@ module.exports = {
         description:
           "Freelance web developer blog about technical issues, solutions, technologies and experiences. Javascript, gatsby, react.",
       },
-      jp: {
+      ja: {
         title: "ロス ニルソン ディベロッパー ブログ",
         description:
           "フリランスWebディベロッパー、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者のブログ",
@@ -70,9 +70,9 @@ module.exports = {
       resolve: `gatsby-plugin-intl`,
       options: {
         path: `${__dirname}/src/intl`,
-        languages: [`en`, `jp`],
+        languages: [`en`, `ja`],
         defaultLanguage: `en`,
-        redirect: false,
+        redirect: true,
       },
     },
     {

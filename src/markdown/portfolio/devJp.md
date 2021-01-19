@@ -3,7 +3,7 @@ title: ディベロッパー
 description: 自分のフリランスサイト
 image: /static/dev.jpg
 link: https://rossneilson.dev
-locale: jp
+locale: ja
 date: 2020-08-01T14:56:40.193Z
 
 ---

@@ -5,7 +5,7 @@ category: Technology
 date: 2020-12-20T14:56:59.267Z
 image: /static/store.jpg
 path: blog/store-on-jamstack
-locale: jp
+locale: ja
 SEO: Architectural overview of technologies used to build e-commerce store on jamstack with gatsby stripe and netlify with useful tips
 
 ---
@@ -67,4 +67,5 @@ JAMstack continues to amaze me for how useful and versatile a stack it can be ev
 * [Stripe checkout docs](https://stripe.com/docs/payments/checkout)
 * [Stripe implementation guide - Learn with Jason](https://www.learnwithjason.dev/build-an-ecommerce-site-using-stripe-gatsby)
 * [Netlify functions](https://www.netlify.com/products/functions/)
+* [Sentry](https://sentry.io/)
 * [Printing Service](https://www.prodigi.com/)

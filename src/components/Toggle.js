@@ -31,7 +31,7 @@ export default function Toggle({
   top = true,
 }) {
   const checkLanguage = () => {
-    if (language === "jp") {
+    if (language === "ja") {
       return true
     } else if (language === "en") {
       return false
@@ -45,7 +45,7 @@ export default function Toggle({
     if (checked) {
       changeLocale("en")
     } else {
-      changeLocale("jp")
+      changeLocale("ja")
     }
   }
 

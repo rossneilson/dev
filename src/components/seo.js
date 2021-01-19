@@ -76,7 +76,7 @@ function SEO({ description, lang, meta, title, slug = "" }) {
       <link
         rel="alternate"
         hrefLang="ja"
-        href={"https://rossneilson.dev/jp" + slug}
+        href={"https://rossneilson.dev/ja" + slug}
       />
       <link
         rel="alternate"
