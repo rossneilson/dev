@@ -6,9 +6,17 @@ import SvgPattern from "../svg/SvgPattern"
 import ProjectCard from "./PortfolioCard"
 import PortfolioModal from "./PortfolioModal"
 
+const Container = styled.section`
+  background-color: ${props => props.theme.colors.primary300};
+  z-index: 9;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 13px;
+`
 const PortfolioFlexContainer = styled.section`
-  background-color: #76aed7;
-  z-index: 998;
+  z-index: 9;
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
@@ -21,13 +29,13 @@ const PortfolioFlexContainer = styled.section`
 `
 
 const Title = styled.h2`
-  color: #ffcd80;
+  color: ${props => props.theme.colors.secondary300};
   width: 100%;
   margin-left: 4%;
-  font-size: 250%;
+  font-size: ${props => props.theme.fontSizes.xl};
 `
 
-export default function About({ devSiteImage, tabiSiteImage, sites }) {
+export default function Portfolio({ sites }) {
   const [show, setShow] = useState(false)
   const [selectedExample, setSelectedExample] = useState({ frontmatter: {} })
   const ProjectCards = []
@@ -42,14 +50,12 @@ export default function About({ devSiteImage, tabiSiteImage, sites }) {
   })
 
   return (
-    <PortfolioFlexContainer>
+    <Container>
       <SvgPattern type="point" />
-      <div style={{ color: "black" }}>
-        Currently looking for portfolio projects (Please contact me)
-      </div>
+
       <Title>
         <svg
-          style={{ transform: "translateY(8px)" }}
+          style={{ transform: "translateY(10px)" }}
           xmlns="http://www.w3.org/2000/svg"
           className="icon icon-tabler icon-tabler-browser"
           width="48"
@@ -58,7 +64,7 @@ export default function About({ devSiteImage, tabiSiteImage, sites }) {
           strokeWidth="1.5"
           stroke="#ffcd80"
           fill="none"
-          stroke-Linecap="round"
+          strokeLinecap="round"
           strokeLinejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -68,12 +74,16 @@ export default function About({ devSiteImage, tabiSiteImage, sites }) {
         </svg>
         <FormattedMessage id="portfolio.title" />
       </Title>
-      <PortfolioModal
-        show={show}
-        handleClose={setShow}
-        selectedExample={selectedExample}
-      />
-      {ProjectCards}
-    </PortfolioFlexContainer>
+      {show ? (
+        <PortfolioModal
+          show={show}
+          handleClose={setShow}
+          selectedExample={selectedExample}
+        />
+      ) : null}
+      <PortfolioFlexContainer data-sal="slide-up">
+        {ProjectCards}
+      </PortfolioFlexContainer>
+    </Container>
   )
 }

@@ -3,21 +3,20 @@ import styled from "styled-components"
 import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 const Card = styled.section`
-  z-index: 998;
+  z-index: 9;
   width: 400px;
   height: 396px;
   margin: 1% 1% 5% 1%;
-  flexgrow: 2;
   background-color: #ffffffd2;
   cursor: pointer;
-  transition: all 1s;
+  transition: all 0.3s;
   &:hover {
-    opacity: 0.8;
-    transform: translateY(-15px);
+    box-shadow: 0px 0px 20px 9px #0000003c;
+    transform: translateY(-5px);
   }
   &:focus {
-    opacity: 0.8;
-    transform: translateY(-15px);
+    box-shadow: 0px 0px 20px 9px #0000003c;
+    transform: translateY(-5px);
   }
 
   @media (pointer: coarse) {
@@ -26,7 +25,7 @@ const Card = styled.section`
 `
 
 const Bar = styled.section`
-  z-index: 998;
+  z-index: 9;
   display: flex;
   align-items: center;
   padding: 9px;
@@ -47,14 +46,20 @@ const ProjectText = styled.section`
 `
 
 const Desc = styled.section`
-  font-size: 0.8rem;
+  font-size: ${props => props.theme.fontSizes.s};
+`
+
+const Image = styled(Img)`
+  height: 55%;
+  z-index: -1;
 `
 
 export default function PortfolioCard({ frontmatter, html, openModal }) {
-  const { title, description, image } = frontmatter
-  const imageData = getImage(image)
+  const { title, description, images } = frontmatter
+  const imageData = getImage(images[0])
   return (
     <Card
+      data-sal="slide-up"
       onClick={() => {
         openModal({ frontmatter, html })
       }}
@@ -64,7 +69,7 @@ export default function PortfolioCard({ frontmatter, html, openModal }) {
         <Dot />
         <Dot />
       </Bar>
-      {image ? <Img image={imageData} /> : null}
+      {images ? <Image image={imageData} /> : null}
       <ProjectText>
         <h2 style={{ marginTop: "2%" }}>{title}</h2>
         <Desc>{description}</Desc>

@@ -24,7 +24,7 @@ const Wrapper = styled.section`
 const ContactCard = styled.section`
   background-color: white;
   padding: 5%;
-  z-index: 978;
+  z-index: 9;
   min-height: 20%;
   width: 40%;
   margin: 5% 1% 5% 1%;
@@ -49,7 +49,7 @@ const StyledInput = styled.input`
   height: 38px;
   padding: 8px 12px;
   margin: 5% 0%;
-  font-size: 18px;
+  font-size: ${props => props.theme.fontSizes.m};
   line-height: 1.42857143;
   font-weight: 500;
   width: 100%;
@@ -57,17 +57,21 @@ const StyledInput = styled.input`
   border-width: 1px 1px 4px;
   border-color: #000 #000 #6f81b3;
   border-radius: 10px;
-  background-color: ${props => (props.error ? "#ff7777" : "#eaebec")};
+  background-color: ${props => {
+    return props.error
+      ? props.theme.colors.fail400
+      : props.theme.colors.white700
+  }};
   color: black;
 `
 
 const StyledButton = styled.button`
   transition: 0.2s;
-  background-color: #1771c1;
+  background-color: ${props => props.theme.colors.buttonColor};
   color: white;
   height: 40px;
   justify-content: space-around;
-  font-size: large;
+  font-size: ${props => props.theme.fontSizes.r};
   font-weight: 500;
   min-width: 30%;
   border: none;
@@ -76,10 +80,10 @@ const StyledButton = styled.button`
   margin: auto;
   margin-top: 2%;
   &:hover {
-    background-color: rgb(250, 182, 0);
+    background-color: ${props => props.theme.colors.buttonHoverColor};
   }
   &:focus {
-    background-color: rgb(250, 182, 0);
+    background-color: ${props => props.theme.colors.buttonHoverColor};
   }
 `
 
@@ -142,7 +146,7 @@ export default function Contact(props) {
 
   return (
     <Wrapper background={cover}>
-      <ContactCard>
+      <ContactCard data-sal="slide-up">
         <Title>{intl.formatMessage({ id: "contact.title" })}</Title>
         <form name="contact" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />

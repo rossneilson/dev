@@ -1,14 +1,17 @@
 import React from "react"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import Illustration from "../../images/developer.svg"
 import SvgPattern from "../svg/SvgPattern"
+import Products from "./Products"
+import KeyPoints from "./KeyPoints"
+import LookingForProjects from "./LookingForProjects"
+import Localisation from "./Internationalization"
 
 const ServicesFlexContainer = styled.section`
-  background-color: #f2a31991;
-  z-index: 998;
+  background-color: ${props => props.theme.colors.secondary200};
+  z-index: 9;
   display: flex;
   max-width: 100%;
   height: 100%;
@@ -21,7 +24,7 @@ const ServicesFlexContainer = styled.section`
 const Card = styled.section`
   padding: 2%;
   background-color: white;
-  z-index: 998;
+  z-index: 9;
   width: 95%;
   margin: 15px;
   margin-bottom: 30px;
@@ -37,77 +40,27 @@ const StyledIllustration = styled.img`
   object-fit: contain;
   @media (pointer: coarse) {
     max-height: 30vh;
-    margin-bottom: 0px;
   }
 `
-
-const Explanation = styled.section`
-  width: 50%;
-  min-width: 300px;
+const ServiceHeader = styled.h3`
+  margin-top: 0;
 `
 
-const BulletPointContainer = styled.section`
-  display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-`
-
-const BulletPoint = styled.section`
-  min-width: 300px;
-  width: 50%;
-`
-
-const Icon = styled(Img)`
-  height: 100%;
-  min-width: 60px;
-`
-
-const Title = styled.section`
-  display: flex;
-`
-
-const Description = styled.p`
-  font-size: small;
-  margin-left: 40px;
-`
-
-const CTA = styled.button`
-  transition: 0.2s;
-  background-color: #0374cc;
-  color: white;
-  height: 50px;
-  width: 30%;
-  justify-content: space-around;
-  font-size: large;
-  font-weight: 500;
-  min-width: 300px;
+const HalfContainer = styled.section`
   width: 40%;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  margin: auto;
-  &:hover {
-    background-color: #f5b547;
-  }
-  &:focus {
-    background-color: #f5b547;
+  min-width: 300px;
+  @media (pointer: coarse) {
+    width: 80%;
   }
 `
 
-export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
-  const icon1Image = getImage(icon1)
-  const icon2Image = getImage(icon2)
-  const icon3Image = getImage(icon3)
-  const icon4Image = getImage(icon4)
-  const icon5Image = getImage(icon5)
-  const icon6Image = getImage(icon6)
+export default function Services({ icons }) {
   return (
     <ServicesFlexContainer>
       <SvgPattern type="circle" />
       <Card>
-        <StyledIllustration src={Illustration} alt={"services illustration"} />
-        <Explanation>
-          <h3>
+        <HalfContainer data-sal="slide-up">
+          <ServiceHeader>
             <svg
               style={{ transform: "translateY(10px)", marginRight: "4px" }}
               xmlns="http://www.w3.org/2000/svg"
@@ -129,83 +82,14 @@ export default function Services({ icon1, icon2, icon3, icon4, icon5, icon6 }) {
               <line x1="12" y1="5" x2="12" y2="3" />
             </svg>
             <FormattedMessage id="services.title" />
-          </h3>
-          <BulletPointContainer>
-            <BulletPoint>
-              <Title>
-                <Icon image={icon1Image} />
-                <h4 style={{ fontSize: "1.73286rem" }}>
-                  <FormattedMessage id="services.1.title" />
-                </h4>
-              </Title>
-              <Description>
-                <FormattedMessage id="services.1.desc" />
-              </Description>
-            </BulletPoint>
-            <BulletPoint>
-              <Title>
-                <Icon image={icon2Image} />
-                <h2>
-                  <FormattedMessage id="services.2.title" />
-                </h2>
-              </Title>
-              <Description>
-                <FormattedMessage id="services.2.desc" />
-              </Description>
-            </BulletPoint>
-            <BulletPoint>
-              <Title>
-                <Icon image={icon3Image} />
-                <h2>
-                  <FormattedMessage id="services.3.title" />
-                </h2>
-              </Title>
-              <Description>
-                <FormattedMessage id="services.3.desc" />
-              </Description>
-            </BulletPoint>
-            <BulletPoint>
-              <Title>
-                <Icon image={icon4Image} />
-                <h2>
-                  <FormattedMessage id="services.4.title" />
-                </h2>
-              </Title>
-              <Description>
-                <FormattedMessage id="services.4.desc" />
-              </Description>
-            </BulletPoint>
-            <BulletPoint>
-              <Title>
-                <Icon image={icon5Image} />
-                <h2>
-                  <FormattedMessage id="services.5.title" />
-                </h2>
-              </Title>
-              <Description>
-                <FormattedMessage id="services.5.desc" />
-              </Description>
-            </BulletPoint>
-            <BulletPoint>
-              <Title>
-                <Icon image={icon6Image} />
-                <h2>
-                  <FormattedMessage id="services.6.title" />
-                </h2>
-              </Title>
-              <Description>
-                <FormattedMessage id="services.6.desc" />
-              </Description>
-            </BulletPoint>
-          </BulletPointContainer>
-        </Explanation>
-        <CTA
-          aria-label="Contact me button"
-          variant="contained"
-          onClick={() => window.scrollTo(0, 99999)}
-        >
-          <FormattedMessage id="contact.title" />
-        </CTA>
+          </ServiceHeader>
+          <Localisation />
+        </HalfContainer>
+        <StyledIllustration src={Illustration} alt={"services illustration"} />
+
+        <KeyPoints {...icons} />
+        <LookingForProjects icon={icons.discount} />
+        <Products />
       </Card>
     </ServicesFlexContainer>
   )

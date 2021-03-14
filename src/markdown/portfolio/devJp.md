@@ -1,10 +1,10 @@
 ---
-title: ディベロッパー
+title: ウェブエンジニア
 description: 自分のフリランスサイト
-image: /static/dev.jpg
+images: [/static/devJa.jpg]
 link: https://rossneilson.dev
 locale: ja
-date: 2020-08-01T14:56:40.193Z
+date: 2016-08-01T14:56:40.193Z
 
 ---
 * モダンデザイン

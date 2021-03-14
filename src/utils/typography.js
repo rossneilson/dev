@@ -1,6 +1,6 @@
 import Typography from "typography"
 import theme from "typography-theme-moraga"
-import "fontsource-source-sans-pro"
+// import "@fontsource  /noto-sans-jp"
 
 theme.overrideThemeStyles = () => ({
   h3: {
@@ -10,7 +10,7 @@ theme.overrideThemeStyles = () => ({
     paddingBottom: "10px",
     marginRight: "20%",
     marginTop: "20px",
-    fontSize: "180%",
+    fontSize: "1.8rem",
   },
 })
 

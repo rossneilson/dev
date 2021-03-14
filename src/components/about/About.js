@@ -7,8 +7,8 @@ import ProgressBar from "./ProgressBar"
 import SvgPattern from "../svg/SvgPattern"
 
 const FlexContainer = styled.section`
-  background-color: #76aed7;
-  z-index: 998;
+  background-color: ${props => props.theme.colors.primary300};
+  z-index: 9;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -18,7 +18,7 @@ const FlexContainer = styled.section`
 `
 
 const RightWrapper = styled.section`
-  z-index: 998;
+  z-index: 9;
   margin: auto;
   margin-top: 4%;
   width: 30%;
@@ -26,11 +26,11 @@ const RightWrapper = styled.section`
 `
 
 const ProfileImage = styled(Img)`
-  z-index: 998;
+  z-index: 9;
   margin: auto;
   transform: scale(0.95);
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
 `
 
 export default function About(props) {
@@ -41,7 +41,7 @@ export default function About(props) {
       <SvgPattern type="metal" />
       <AboutCard />
       <RightWrapper>
-        <ProfileImage image={imageData} />
+        <ProfileImage image={imageData} alt="Profile image" />
         <ProgressBar />
       </RightWrapper>
     </FlexContainer>

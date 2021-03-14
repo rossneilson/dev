@@ -22,7 +22,7 @@ const Background = styled.section`
 `
 
 const CenterSection = styled.section`
-  background-color: #2196f3;
+  background-color: ${props => props.theme.colors.primary};
   padding: 5% 2% 5% 2%;
   width: 50%;
   min-width: 270px;
@@ -31,7 +31,7 @@ const CenterSection = styled.section`
 const MainTitle = styled.h1`
   margin-top: 30px;
   border-bottom: 2px solid;
-  border-bottom-color: #fab601;
+  border-bottom-color: ${props => props.theme.colors.secondary};;
   padding-bottom: 6;
   color: white;
 `

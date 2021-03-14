@@ -5,7 +5,7 @@ import { changeLocale } from "gatsby-plugin-intl"
 
 const Wrap = styled.section`
   position: ${props => props.position};
-  z-index: 999999999;
+  z-index: 99;
   margin: 10px;
   margin-right: 10px;
   right: ${props => (props.right ? 0 : null)};
@@ -19,7 +19,7 @@ const Icon = styled.section`
   justify-content: center;
   align-items: center;
   height: 100%;
-  font-size: 10px;
+  font-size: 0.6rem;
   color: white;
   padding-right: 2;
 `
@@ -57,8 +57,8 @@ export default function Toggle({
           onChange={changeLanguage}
           height={50}
           width={100}
-          offColor="#0069bd"
-          onColor="#0069bd"
+          offColor="#1a78c1"
+          onColor="#1a78c1"
           aria-label="language switch"
           role="button"
           id="language switch"

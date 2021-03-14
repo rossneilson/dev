@@ -1,16 +1,19 @@
 const path = require(`path`)
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     en: {
       title: "Ross Neilson | Web Developer",
       description:
-        "Freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses. Using javascript, react and gatsby.",
+        "Freelance web developer in Glasgow, Scotland specializing in international complex dynamic web apps to improve small-medium businesses. Using javascript, react and gatsby.",
     },
     ja: {
-      title: "ロス ニルソン ディベロッパー",
+      title: "ロス ニルソン ウェブエンジニア",
       description:
-        "フリランスWebディベロッパー、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者",
+        "フリランスWebエンジニア、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者",
     },
     blog: {
       en: {
@@ -19,15 +22,15 @@ module.exports = {
           "Freelance web developer blog about technical issues, solutions, technologies and experiences. Javascript, gatsby, react.",
       },
       ja: {
-        title: "ロス ニルソン ディベロッパー ブログ",
+        title: "ロス ニルソン ウェブエンジニア ブログ",
         description:
-          "フリランスWebディベロッパー、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者のブログ",
+          "フリランスWebエンジニア、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者のブログ",
       },
     },
     author: `Ross Neilson`,
     title: "Ross Neilson | Web Developer",
     description:
-      "A freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses",
+      "A freelance web developer in Glasgow, Scotland specializing in international complex dynamic web apps to improve small-medium businesses",
 
     siteUrl: `https://www.rossneilson.dev`,
   },
@@ -111,6 +114,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-139306598-1",
+        anonymize: true,
+        respectDNT: true,
+        storage: "none",
       },
     },
     {
@@ -124,5 +130,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-loadable-components-ssr",
     `gatsby-plugin-image`,
+    `gatsby-plugin-scroll-reveal`,
   ],
 }

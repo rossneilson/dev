@@ -4,7 +4,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 
 const Card = styled.section`
   background-color: white;
-  z-index: 998;
+  z-index: 9;
   width: 60%;
   margin: 5% 4% 5% 4%;
   left: 6%;
@@ -21,9 +21,21 @@ const Paragraphs = styled.section`
   padding: 2% 8% 8% 8%;
 `
 
+const OutOfJapanWarning = styled.section`
+  display: flex;
+  background-color: ${props => props.theme.colors.lightWarning};
+  border-radius: 10px;
+  padding: 10px;
+  font-size: ${props => props.theme.fontSizes.s};
+`
+
+const Message = styled.section`
+  width: 90%;
+`
+
 export default function AboutCard(props) {
   return (
-    <Card>
+    <Card data-sal="slide-up" data-sal-duration="2000" data-sal-easing="ease">
       <Title>
         <svg
           style={{ transform: "translateY(10px)", marginRight: "4px" }}
@@ -62,6 +74,29 @@ export default function AboutCard(props) {
         <p>
           <FormattedMessage id="about.line4" />
         </p>
+        <OutOfJapanWarning>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-user-exclamation"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            strokeWidth="0.5"
+            stroke="#000000"
+            fill="none"
+            strokeLinecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            <line x1="19" y1="7" x2="19" y2="10" />
+            <line x1="19" y1="14" x2="19" y2="14.01" />
+          </svg>
+          <Message>
+            <FormattedMessage style={{ flexGrow: 1 }} id="about.outOfJapan" />
+          </Message>
+        </OutOfJapanWarning>
       </Paragraphs>
     </Card>
   )

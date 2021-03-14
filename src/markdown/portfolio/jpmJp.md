@@ -1,10 +1,10 @@
 ---
-title: Web Developer
-description: Personal freelancing site with localisation
-images: [/static/devEn.jpg]
+title: JPモルガン
+description: 3+ years experience at large international bank
+images: [/static/jpm.jpg]
 link: https://rossneilson.dev
-locale: en
-date: 2016-08-01T14:56:40.193Z
+locale: ja
+date: 2017-09-01T14:56:40.193Z
 
 ---
 * Minimal landing page design
@@ -14,4 +14,4 @@ date: 2016-08-01T14:56:40.193Z
 * Headless CMS backend for easy editing
 * SEO optimization
 * Mobile friendly
-* Full english and Japanese localization
+* Full english and Japanese localisation

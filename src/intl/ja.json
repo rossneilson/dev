@@ -1,25 +1,34 @@
 {
   "title": {
     "top": "ロス ニルソン",
-    "bottom": "ディベロッパー",
-    "full": "ロス ニルソン - ディベロッパー"
+    "bottom": "ウェブエンジニア",
+    "full": "ロス ニルソン - ウェブエンジニア"
   },
   "about": {
     "title": "紹介",
-    "line1": "こんにちは、私は国際的な中小企業向けの高品質で複雑なWebソリューションを専門とするフリーランスのWeb開発者です。 ",
+    "line1": "こんにちは、私は国際的な中小企業向けの国際化Webソリューションを専門とするフリーランスのWeb開発者です。",
     "line2": "私は世界最大の銀行の1つであるJP MorganでエンタープライズグレードのWebアプリケーションを構築した経験があり、ビジネス向けソフトウェア開発の学位を取得しています（2022年卒業予定）。",
-    "line3": "私は、現代のビジネスの複雑なニーズに特化したソリューションを構築して、たくさんの人ががウェブで繁栄するのを手助けすることを目的としています。",
+    "line3": "現代のグローバル化日本にいっぱいビジネスは",
     "line4": "私のサービスを通じて、eコマースからブログ、そしてその間のすべてをビジネスの成長に役立てることができるように、緻密に設計された直感的でプロフェッショナルなWebプレゼンスを提供します。",
-    "progress": "Progress through apprenticeship (until full-time freelance)"
+    "progress": "Progress through apprenticeship (until full-time freelance)",
+    "outOfJapan": "コロナの影響で日本にいませんですがまだオンラインで開発できます。来年(2022)、日本に引っ越すつもりです。"
+  
   },
   "services": {
     "title": "サービス",
+    "i18n": {
+      "title": "インターナショナリゼーションとは",
+      "explanation1": "Internationalization is software designed around the international world we live in. Internationalized websites can be easily localized to multiple locales.",
+      "explanation2": "Localization is the process of adapting to a region or language, this involves translation as well as other UI changes to accommodate users from different cultures.",
+      "explanation3": "Internationalization provides the best experience to all users. This is important, both businesses entering foreign markets as well as supporting a growing mixed English population domestically.",
+      "readMore": "もっと読む"
+    },
     "1": {
-      "title": "ウェブアプリ",
-      "desc": "簡単なサイトや、CMSを使用したeコマース、ブログ、複雑なバックエンドビジネスシステムなど、ビジネスのニーズに合わせてなんでもお作りします。"
+      "title": "国際化",
+      "desc": "現代世界に日本人と外国人のお客様向け会社に国際化サイトは必要です。翻訳だけじゃなくて異文化に適合も。１秒で言語を変えて自動的に転送します。"
     },
     "2": {
-      "title": "ビジネスのニーズの特化したソリューション",
+      "title": "ビジネスの特化したソリューション",
       "desc": "クライアントさまと直接やりとりをし、ご希望のソリューションを完璧にお作りいたします。ワードプレスなどではなく一つ一つ丁寧に0からお作り致します。"
     },
     "3": {
@@ -32,7 +41,7 @@
     },
     "5": {
       "title": "SEO＋Google analytics",
-      "desc": "全てのサイトはビジネス固有のSEOがあり、Google analyticsを含んでいます。"
+      "desc": "サイトはビジネスと地域固有のSEOがあり、Google analyticsを含んでいます。"
     },
     "6": {
       "title": "ホスティングサービス",
@@ -41,19 +50,11 @@
   },
   "portfolio": {
     "title": "ポートフォリオ",
-    "1": {
-      "title": "ロスにルソン　ディベロッパー",
-      "desc": "Freelance site made in react and gatsby with english and japanese localization",
-      "detailed": "Modern designed landing page !Contact form !Lightweight high performance !Optimized SEO !Mobile friendly !All 90+ score in lighthouse !Progressive Web app (PWA) !Full Japanese and English localization"
-    },
-    "2": {
-      "title": "旅traveler",
-      "desc": "High-performance photography website with a portfolio, blog and shop",
-      "detailed": "Dynamic landing page design with parallax scrolling effect  !Interactive portfolio for photos with interactive filters !A blog with CMS backend for easy content changes and additions !Shop with stripe for selling prints and automatic processing of orders !SEO optimization !Mobile friendly !High performance !Localization"
-    }
+    "lookingForProjects": "ポートフォリオを増やす割引キャンペーン途中、連絡してください"
   },
   "contact": {
     "title": "連絡先",
+    "contact": "連絡",
     "name": "名前",
     "email": "メール",
     "message": "メッセージ",
@@ -62,14 +63,14 @@
     "success": "送りました、ありがとうございます"
   },
   "blog": {
-    "title": "ブログ（当分、英語だけです）",
+    "title": "ブログ",
     "back": "ブログに戻る",
     "authorDesc": "私は国際的な中小企業向けの高品質で複雑なWebソリューションを専門とするフリーランスのWeb開発者です。",
     "cta": "もっと見る"
   },
   "signup": {
     "subscribe": "購読",
-    "title": "毎月配信されるブログや、の情報を受け取りたい方はこちらからご登録ください"
+    "title": "毎月配信されるブログや、新しい情報を受け取りたい方はこちらからご登録ください"
   },
   "lang": "ja"
 }

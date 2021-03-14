@@ -7,23 +7,22 @@ import { urlLocaleFormatting } from "../../utils/formatters"
 
 const Wrapper = styled(Link)`
   width: 100%;
-  z-index: 999;
+  z-index: 9;
   max-width: ${props => (props.isfullpage ? "null" : "380px")};
-  overflow: hidden;
-  transition: all 1s;
+  overflow: visible;
+  transition: all 0.3s;
   background-color: white;
-  color: #5065a3;
   cursor: pointer;
   border-radius: 5px;
   margin: 0% 2.5% 0% 2.5%;
   box-shadow: 0px 0px 15px 1px #0000003c;
   &:hover {
-    opacity: 0.8;
-    transform: translateY(-15px);
+    box-shadow: 0px 0px 20px 9px #0000003c;
+    transform: translateY(-5px);
   }
   &:focus {
-    opacity: 0.8;
-    transform: translateY(-15px);
+    box-shadow: 0px 0px 20px 9px #0000003c;
+    transform: translateY(-5px);
   }
   @media (pointer: coarse) {
     margin: 0% 2.5% 5% 2.5%;
@@ -40,7 +39,7 @@ const Wrapper = styled(Link)`
 `
 const Title = styled.h2`
   margin: 5px 0px;
-  color: #518ebb;
+  color: ${props => props.theme.colors.primary700};
 `
 
 const Image = styled(Img)`
@@ -53,7 +52,7 @@ const Image = styled(Img)`
 
 const Category = styled.section`
   font-size: 10px;
-  background-color: #aacee8;
+  background-color: ${props => props.theme.colors.primary200};
   padding: 3px;
   justify-content: center;
   display: flex;
@@ -66,8 +65,8 @@ const Category = styled.section`
 `
 
 const Description = styled.section`
-  padding: 10px;
-  color: #336d98;
+  padding: 0px 20px;
+  color: ${props => props.theme.colors.primary700};
 `
 
 const Extra = styled.section`
@@ -78,14 +77,14 @@ const Extra = styled.section`
 
 const OpenFab = styled.section`
   float: right;
-  background-color: #699bbf;
+  background-color: ${props => props.theme.colors.primary400};
   width: 70px;
   height: 70px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 8px 20px -6px #000000ab;
+  box-shadow: 0px 0px 20px -5px #00000061;
 `
 
 export default function PostCard({ post, index, isfullpage, language }) {
@@ -103,6 +102,7 @@ export default function PostCard({ post, index, isfullpage, language }) {
 
   return (
     <Wrapper
+      data-sal="slide-up"
       isfullpage={isfullpage}
       to={urlLocaleFormatting(frontmatter.locale, "/" + frontmatter.path)}
       onClick={() => {

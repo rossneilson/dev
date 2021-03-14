@@ -8,8 +8,8 @@ import SvgPattern from "../svg/SvgPattern"
 import { urlLocaleFormatting } from "../../utils/formatters"
 
 const BlogFlexContainer = styled.section`
-  background-color: #f2a31991;
-  z-index: 8;
+  background-color: ${props => props.theme.colors.secondary200};
+  z-index: 7;
   max-width: 100%;
   height: 100%;
   overflow: hidden;
@@ -18,7 +18,7 @@ const BlogFlexContainer = styled.section`
 `
 
 const FlexWrap = styled.section`
-  z-index: 999;
+  z-index: 8;
   margin: auto;
   margin-bottom: 50px;
   display: flex;
@@ -33,14 +33,14 @@ const FlexWrap = styled.section`
 `
 
 const Heading = styled.h2`
-  color: #76aed7;
+  color: ${props => props.theme.colors.primary400};
   margin-left: 4%;
-  font-size: 250%;
+  font-size: ${props => props.theme.fontSizes.xl};
 `
 
 const StyledLink = styled(Link)`
   position: relative;
-  z-index: 99999;
+  z-index: 9;
 `
 
 export default function Blog({ posts, language }) {
@@ -67,14 +67,14 @@ export default function Blog({ posts, language }) {
       >
         <Heading>
           <svg
-            style={{ transform: "translateY(6px)" }}
+            style={{ transform: "translateY(10px)" }}
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-notebook"
             width="48"
             height="48"
             viewBox="0 0 24 24"
             strokeWidth="2"
-            stroke="#76aed7"
+            stroke="#4dabf5"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"

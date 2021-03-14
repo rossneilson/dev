@@ -19,7 +19,7 @@ const SingularTab = styled.button`
   color: ${props => (props.active ? "#8597da" : "#0000008a")};
   display: flex;
   justify-content: space-around;
-  font-size: large;
+  font-size: ${props => props.theme.fontSizes.l};
   font-weight: 500;
   border: none;
   cursor: pointer;

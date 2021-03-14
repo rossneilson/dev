@@ -14,9 +14,6 @@ const Background = styled.section`
   background-repeat: no-repeat;
   text-align: center;
   min-height: 100vh;
-  webkit-background-size: cover;
-  moz-background-size: cover;
-  o-background-size: cover;
   background-size: cover;
   background-position: center left;
   position: relative;
@@ -25,7 +22,7 @@ const Background = styled.section`
 const CenterSection = styled.section`
   font-family: Sacramento;
   animation: 1.5s ease-out 0s 1 ${slideInFromBottom};
-  background-color: #2196f3;
+  background-color: ${props => props.theme.colors.primary};
   padding: 5% 2% 5% 2%;
   width: 45%;
   min-width: 270px;
@@ -35,7 +32,7 @@ const MainTitle = styled.h1`
   margin-top: 30px;
   font-family: Sacramento;
   border-bottom: 2px solid;
-  border-bottom-color: #fab601;
+  border-bottom-color: ${props => props.theme.colors.secondary};
   padding-bottom: 6;
   color: white;
 `
@@ -63,7 +60,8 @@ function Title(props) {
 
   return (
     <div>
-      <Background cover={cover} style={{ backgroundPositionY: offset / 1.6 }}>
+      {/* <Anime {...animeProperties}></Anime> */}
+      <Background cover={cover} style={{ backgroundPositionY: offset / 3 }}>
         <CenterSection>
           <MainTitle>
             <FormattedMessage id="title.top" />

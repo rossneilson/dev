@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import "../index.css"
+import "@fontsource/sacramento"
 
 import SEO from "../components/seo"
 import Title from "../components/title/Title"
 import About from "../components/about/About"
 import Portfolio from "../components/portfolio/Portfolio"
 import Toggle from "../components/Toggle"
+import ContactCTA from "../components/ContactCTA"
 import BlogSection from "../components/blog/BlogSection"
 import ServicesSection from "../components/services/ServicesSection"
 import SignUp from "../components/contact/SignUp"
@@ -27,15 +27,19 @@ export default function Main(props) {
         lang={props.pageContext.intl.language}
       />
       <Toggle language={props.pageContext.intl.language} />
+      <ContactCTA />
       <Title />
       <About image={props.data.profileImage} />
       <ServicesSection
-        icon1={props.data.icon1}
-        icon2={props.data.icon2}
-        icon3={props.data.icon3}
-        icon4={props.data.icon4}
-        icon5={props.data.icon5}
-        icon6={props.data.icon6}
+        icons={{
+          icon1: props.data.icon1,
+          icon2: props.data.icon2,
+          icon3: props.data.icon3,
+          icon4: props.data.icon4,
+          icon5: props.data.icon5,
+          icon6: props.data.icon6,
+          discount: props.data.discount,
+        }}
       />
       <Portfolio sites={props.data.portfolioSites.edges} />
       <BlogSection
@@ -71,8 +75,8 @@ export const imageQuery = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  maxWidth: 3000
-                  layout: FLUID
+                  width: 3000
+                  layout: CONSTRAINED
                   placeholder: BLURRED
                 )
               }
@@ -86,7 +90,7 @@ export const imageQuery = graphql`
         fileAbsolutePath: { regex: "/(/portfolio/)/" }
         frontmatter: { locale: { eq: $locale } }
       }
-      sort: { fields: frontmatter___date, order: ASC }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
@@ -97,11 +101,11 @@ export const imageQuery = graphql`
             link
             locale
             date
-            image {
+            images {
               childImageSharp {
                 gatsbyImageData(
-                  maxWidth: 500
-                  layout: FLUID
+                  width: 1000
+                  layout: CONSTRAINED
                   placeholder: BLURRED
                 )
               }
@@ -112,37 +116,42 @@ export const imageQuery = graphql`
     }
     profileImage: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 500, layout: FLUID, placeholder: BLURRED)
+        gatsbyImageData(width: 500, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon1: file(relativePath: { eq: "icon1.png" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon2: file(relativePath: { eq: "icon2.png" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon3: file(relativePath: { eq: "icon3.png" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon4: file(relativePath: { eq: "icon4.png" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon5: file(relativePath: { eq: "icon5.png" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     icon6: file(relativePath: { eq: "icon6.png" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 50, layout: CONSTRAINED, placeholder: BLURRED)
+        gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
+      }
+    }
+    discount: file(relativePath: { eq: "discount 1.png" }) {
+      childImageSharp {
+        gatsbyImageData(width: 75, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     site {

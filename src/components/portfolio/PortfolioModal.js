@@ -1,11 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import styled, { css } from "styled-components"
 import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import * as Keyframes from "../../utils/keyframes"
 
 const Modal = styled.section`
-  z-index: 99999;
+  z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,8 +26,7 @@ const ModalMain = styled.section`
   position: fixed;
   background: white;
   width: 80%;
-  min-width: 350px;
-  height: auto;
+  min-width: 450px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -38,6 +37,7 @@ const ModalMain = styled.section`
         `
       : "none"};
 `
+
 const Bar = styled.section`
   z-index: 998;
   display: flex;
@@ -58,34 +58,29 @@ const Dot = styled.section`
 const Card = styled.section`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 `
 
 const Image = styled(Img)`
   min-width: 350px;
-  width: 50%;
-  flex-grow: 1;
+  max-height: 500px;
 `
 
 const Description = styled.section`
-  padding: 0px 30px 20px 30px;
+  padding: 10px 30px 20px 30px;
   min-width: 340px;
-  max-height: 10%;
   overflow: auto;
-  width: 50%;
-  flex-grow: 1;
-  background-color: #444444;
+  flex-grow: 2;
+  background-color: ${props => props.theme.colors.grayBackground};
   color: white;
-  font-size: 70%;
+  font-size: ${props => props.theme.fontSizes.s};
 `
 
 const ButtonLink = styled.a`
   transition: 0.2s;
-  background-color: rgb(32, 150, 243);
+  background-color: ${props => props.theme.colors.buttonColor};
   color: white;
-  height: 50px;
   justify-content: space-around;
-  font-size: large;
+  font-size: ${props => props.theme.fontSizes.m};
   font-weight: 500;
   width: 300px;
   padding: 10px;
@@ -94,16 +89,27 @@ const ButtonLink = styled.a`
   border-radius: 5px;
   margin: auto;
   &:hover {
-    background-color: rgb(250, 182, 0);
+    background-color: ${props => props.theme.colors.buttonHoverColor};
   }
   &:focus {
-    background-color: rgb(250, 182, 0);
+    background-color: ${props => props.theme.colors.buttonHoverColor};
   }
 `
 
 export default function PortfolioModal({ handleClose, show, selectedExample }) {
   const { frontmatter, html } = selectedExample
-  const imageData = getImage(frontmatter.image)
+  const [imageIndex, setImageIndex] = useState(0)
+  const images = []
+  if (frontmatter.images) {
+    frontmatter.images.forEach(image => {
+      images.push(getImage(image))
+    })
+  }
+
+  const interval = setInterval(
+    () => setImageIndex(imageIndex < images.length - 1 ? imageIndex + 1 : 0),
+    5000
+  )
 
   return (
     <Modal
@@ -111,6 +117,8 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
       onClick={event => {
         if (event.target === event.currentTarget) {
           handleClose(false)
+          clearInterval(interval)
+          setImageIndex(0)
         }
       }}
     >
@@ -121,11 +129,7 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
           <Dot />
         </Bar>
         <Card>
-          {frontmatter.image ? (
-            <Image
-              image={imageData}
-            />
-          ) : null}
+          {frontmatter.images ? <Image image={images[imageIndex]} /> : null}
           <Description>
             <h2 style={{ color: "white" }}>{frontmatter.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: html }} />
