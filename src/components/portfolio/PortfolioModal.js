@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled, { css } from "styled-components"
 import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import * as Keyframes from "../../utils/keyframes"
 
 const Modal = styled.section`
-  z-index: 9999;
+  z-index: 99999;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,7 +26,8 @@ const ModalMain = styled.section`
   position: fixed;
   background: white;
   width: 80%;
-  min-width: 450px;
+  min-width: 350px;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -37,7 +38,6 @@ const ModalMain = styled.section`
         `
       : "none"};
 `
-
 const Bar = styled.section`
   z-index: 998;
   display: flex;
@@ -58,19 +58,28 @@ const Dot = styled.section`
 const Card = styled.section`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 `
 
 const Image = styled(Img)`
   min-width: 350px;
-  max-height: 500px;
+  width: 60%;
+  height: 600px;
+  transition: 1s;
+  /* flex-grow: 1; */
+  @media (pointer: coarse) {
+    height: 25%;
+  }
 `
 
 const Description = styled.section`
-  padding: 10px 30px 20px 30px;
+  padding: 30px 30px 20px 30px;
   min-width: 340px;
+  max-height: 10%;
   overflow: auto;
-  flex-grow: 2;
-  background-color: ${props => props.theme.colors.grayBackground};
+  width: 40%;
+  flex-grow: 1;
+  background-color: #444444;
   color: white;
   font-size: ${props => props.theme.fontSizes.s};
 `
@@ -79,6 +88,7 @@ const ButtonLink = styled.a`
   transition: 0.2s;
   background-color: ${props => props.theme.colors.buttonColor};
   color: white;
+  height: 50px;
   justify-content: space-around;
   font-size: ${props => props.theme.fontSizes.m};
   font-weight: 500;
@@ -105,11 +115,18 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
       images.push(getImage(image))
     })
   }
+  var interval
 
-  const interval = setInterval(
-    () => setImageIndex(imageIndex < images.length - 1 ? imageIndex + 1 : 0),
-    5000
-  )
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setImageIndex(imageIndex =>
+        imageIndex < images.length - 1 ? imageIndex + 1 : 0
+      )
+    }, 4000)
+    return () => {
+      clearInterval(timer)
+    }
+  }, [])
 
   return (
     <Modal
@@ -117,7 +134,6 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
       onClick={event => {
         if (event.target === event.currentTarget) {
           handleClose(false)
-          clearInterval(interval)
           setImageIndex(0)
         }
       }}
@@ -129,7 +145,7 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
           <Dot />
         </Bar>
         <Card>
-          {frontmatter.images ? <Image image={images[imageIndex]} /> : null}
+          {<Image image={images[imageIndex]} />}
           <Description>
             <h2 style={{ color: "white" }}>{frontmatter.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: html }} />

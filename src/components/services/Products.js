@@ -216,11 +216,11 @@ export default function Products({}) {
             <List>
               <ListItem>
                 <SVGCheck />
-                <Point>Complex application on web</Point>
+                <Point>Full application on web</Point>
               </ListItem>
               <ListItem>
                 <SVGCheck />
-                <Point>App performance - no download</Point>
+                <Point>App like features - no download</Point>
               </ListItem>
               <ListItem>
                 <SVGCheck />
