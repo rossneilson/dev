@@ -58,17 +58,6 @@ export default function KeyPoints({
       <BulletPointContainer>
         <BulletPoint data-sal="slide-up">
           <Title>
-            <Icon image={icon1Image} />
-            <Heading>
-              <FormattedMessage id="services.1.title" />
-            </Heading>
-          </Title>
-          <Description>
-            <FormattedMessage id="services.1.desc" />
-          </Description>
-        </BulletPoint>
-        <BulletPoint data-sal="slide-up" data-sal-delay="500">
-          <Title>
             <Icon image={icon2Image} />
             <Heading>
               <FormattedMessage id="services.2.title" />
@@ -78,7 +67,19 @@ export default function KeyPoints({
             <FormattedMessage id="services.2.desc" />
           </Description>
         </BulletPoint>
+
         <BulletPoint data-sal="slide-up" data-sal-delay="600">
+          <Title>
+            <Icon image={icon1Image} />
+            <Heading>
+              <FormattedMessage id="services.1.title" />
+            </Heading>
+          </Title>
+          <Description>
+            <FormattedMessage id="services.1.desc" />
+          </Description>
+        </BulletPoint>
+        <BulletPoint data-sal="slide-up" data-sal-delay="700">
           <Title>
             <Icon image={icon3Image} />
             <Heading>
@@ -89,18 +90,7 @@ export default function KeyPoints({
             <FormattedMessage id="services.3.desc" />
           </Description>
         </BulletPoint>
-        <BulletPoint data-sal="slide-up" data-sal-delay="700">
-          <Title>
-            <Icon image={icon4Image} />
-            <Heading>
-              <FormattedMessage id="services.4.title" />
-            </Heading>
-          </Title>
-          <Description>
-            <FormattedMessage id="services.4.desc" />
-          </Description>
-        </BulletPoint>
-        <BulletPoint data-sal="slide-up" data-sal-delay="900">
+        <BulletPoint data-sal="slide-up" data-sal-delay="800">
           <Title>
             <Icon image={icon5Image} />
             <Heading>
@@ -111,7 +101,7 @@ export default function KeyPoints({
             <FormattedMessage id="services.5.desc" />
           </Description>
         </BulletPoint>
-        <BulletPoint data-sal="slide-up" data-sal-delay="1000">
+        <BulletPoint data-sal="slide-up" data-sal-delay="900">
           <Title>
             <Icon image={icon6Image} />
             <Heading>
@@ -120,6 +110,17 @@ export default function KeyPoints({
           </Title>
           <Description>
             <FormattedMessage id="services.6.desc" />
+          </Description>
+        </BulletPoint>
+        <BulletPoint data-sal="slide-up" data-sal-delay="1000">
+          <Title>
+            <Icon image={icon4Image} />
+            <Heading>
+              <FormattedMessage id="services.4.title" />
+            </Heading>
+          </Title>
+          <Description>
+            <FormattedMessage id="services.4.desc" />
           </Description>
         </BulletPoint>
       </BulletPointContainer>

@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
-import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 const ProductsContainer = styled.section`
   width: 100%;
@@ -57,10 +56,6 @@ const OptionRight = styled(Option)`
   }
 `
 
-const Packages = styled.section`
-  width: 100%;
-`
-
 const Title = styled.h2`
   width: 100%;
   color: black;
@@ -96,7 +91,41 @@ const ListItem = styled.li`
   align-items: center;
 `
 
-const Text = styled.p``
+const Point = styled.section`
+  max-width: 80%;
+  margin: 20px 0px;
+`
+
+const ButtonLight = styled.button`
+  background-color: ${props => props.theme.colors.secondary300};
+  color: ${props => props.theme.colors.black};
+  border-radius: 20px;
+  padding: 10px;
+  border: solid 1px ${props => props.theme.colors.secondary};
+  cursor: pointer;
+  &:hover {
+    background-color: ${props => props.theme.colors.primary};
+  }
+  &:focus {
+    background-color: ${props => props.theme.colors.primary};
+  }
+`
+const ButtonDark = styled.button`
+  background-color: ${props => props.theme.colors.buttonColor};
+  color: ${props => props.theme.colors.white};
+  border-radius: 20px;
+  padding: 10px;
+  border: solid 1px ${props => props.theme.colors.secondary};
+  cursor: pointer;
+  &:hover {
+    background-color: ${props => props.theme.colors.buttonHoverColor};
+    color: ${props => props.theme.colors.buttonColor};
+  }
+  &:focus {
+    background-color: ${props => props.theme.colors.buttonHoverColor};
+    color: ${props => props.theme.colors.buttonColor};
+  }
+`
 
 function SVGCheck({}) {
   return (
@@ -142,122 +171,109 @@ function SVGAdd({}) {
   )
 }
 
-const Point = styled.section`
-  max-width: 80%;
-  margin: 20px 0px;
-`
-
-const ButtonLight = styled.button`
-  background-color: ${props => props.theme.colors.secondary300};
-  color: ${props => props.theme.colors.black};
-  border-radius: 20px;
-  padding: 10px;
-  border: solid 1px ${props => props.theme.colors.secondary};
-  cursor: pointer;
-  &:hover {
-    background-color: ${props => props.theme.colors.primary};
-  }
-  &:focus {
-    background-color: ${props => props.theme.colors.primary};
-  }
-`
-const ButtonDark = styled.button`
-  background-color: ${props => props.theme.colors.buttonColor};
-  color: ${props => props.theme.colors.white};
-  border-radius: 20px;
-  padding: 10px;
-  border: solid 1px ${props => props.theme.colors.secondary};
-  cursor: pointer;
-  &:hover {
-    background-color: ${props => props.theme.colors.buttonHoverColor};
-    color: ${props => props.theme.colors.buttonColor};
-  }
-  &:focus {
-    background-color: ${props => props.theme.colors.buttonHoverColor};
-    color: ${props => props.theme.colors.buttonColor};
-  }
-`
-
 export default function Products({}) {
   return (
-    <ProductsContainer
-    // data-sal="slide-up"
-    >
+    <ProductsContainer data-sal="slide-up">
       <Split>
         <OptionLeft>
-          <Title>Website</Title>
+          <Title>
+            <FormattedMessage id={"services.products.site.title"} />
+          </Title>
           <Content>
             <List>
               <ListItem>
                 <SVGCheck />
-                <Point>Professional business site</Point>
-              </ListItem>
-              <ListItem>
-                <SVGCheck />
-                <Point>Simple interactive features</Point>
-              </ListItem>
-              <ListItem>
-                <SVGCheck />
-                <Point>Easy to edit content</Point>
-              </ListItem>
-              <ListItem>
-                <SVGCheck />
-                <Point>Localization - Dynamic designs and campaigns</Point>
-              </ListItem>
-            </List>
-            <ButtonLight onClick={() => window.scrollTo(0, 99999)}>
-              Contact me
-            </ButtonLight>
-          </Content>
-        </OptionLeft>
-        <MainOption>
-          <TitleMain>Web app</TitleMain>
-          <Content>
-            <List>
-              <ListItem>
-                <SVGCheck />
-                <Point>Full application on web</Point>
-              </ListItem>
-              <ListItem>
-                <SVGCheck />
-                <Point>App like features - no download</Point>
-              </ListItem>
-              <ListItem>
-                <SVGCheck />
-                <Point>E-commerce /business app /backend system</Point>
-              </ListItem>
-              <ListItem>
-                <SVGCheck />
-                <Point>Full Internationalization</Point>
-              </ListItem>
-            </List>
-            <ButtonDark onClick={() => window.scrollTo(0, 99999)}>
-              Contact me
-            </ButtonDark>
-          </Content>
-        </MainOption>
-        <OptionRight>
-          <Title>Additional Options</Title>
-          <Content>
-            <List>
-              <ListItem>
-                <SVGAdd />
-                <Point>Admin, support, updates, reports, enhancements</Point>
-              </ListItem>
-              <ListItem>
-                <SVGAdd />
-                <Point>Translation - EN→JP / JP→EN</Point>
-              </ListItem>
-              <ListItem>
-                <SVGAdd />
                 <Point>
-                  Unsure what your business needs? Lets talk about what is best
-                  for you
+                  <FormattedMessage id={"services.products.site.1"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.site.2"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.site.3"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.site.4"} />
                 </Point>
               </ListItem>
             </List>
             <ButtonLight onClick={() => window.scrollTo(0, 99999)}>
-              Contact me
+              <FormattedMessage id={"services.products.site.contact"} />
+            </ButtonLight>
+          </Content>
+        </OptionLeft>
+        <MainOption>
+          <TitleMain>
+            <FormattedMessage id={"services.products.app.title"} />
+          </TitleMain>
+          <Content>
+            <List>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.app.1"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.app.2"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.app.3"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGCheck />
+                <Point>
+                  <FormattedMessage id={"services.products.app.4"} />
+                </Point>
+              </ListItem>
+            </List>
+            <ButtonDark onClick={() => window.scrollTo(0, 99999)}>
+              <FormattedMessage id={"services.products.app.contact"} />
+            </ButtonDark>
+          </Content>
+        </MainOption>
+        <OptionRight>
+          <Title>
+            <FormattedMessage id={"services.products.options.title"} />
+          </Title>
+          <Content>
+            <List>
+              <ListItem>
+                <SVGAdd />
+                <Point>
+                  <FormattedMessage id={"services.products.options.1"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGAdd />
+                <Point>
+                  <FormattedMessage id={"services.products.options.2"} />
+                </Point>
+              </ListItem>
+              <ListItem>
+                <SVGAdd />
+                <Point>
+                  <FormattedMessage id={"services.products.options.3"} />
+                </Point>
+              </ListItem>
+            </List>
+            <ButtonLight onClick={() => window.scrollTo(0, 99999)}>
+              <FormattedMessage id={"services.products.options.contact"} />
             </ButtonLight>
           </Content>
         </OptionRight>

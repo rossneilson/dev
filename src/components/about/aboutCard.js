@@ -35,7 +35,7 @@ const Message = styled.section`
 
 export default function AboutCard(props) {
   return (
-    <Card data-sal="slide-up" data-sal-duration="2000" data-sal-easing="ease">
+    <Card data-sal="slide-up">
       <Title>
         <svg
           style={{ transform: "translateY(10px)", marginRight: "4px" }}
@@ -73,6 +73,9 @@ export default function AboutCard(props) {
         </p>
         <p>
           <FormattedMessage id="about.line4" />
+        </p>
+        <p>
+          <FormattedMessage id="about.techs" />
         </p>
         <OutOfJapanWarning>
           <svg

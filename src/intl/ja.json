@@ -8,8 +8,9 @@
     "title": "紹介",
     "line1": "こんにちは、私は国際的な中小企業向けの国際化Webソリューションを専門とするフリーランスのWeb開発者です。",
     "line2": "私は世界最大の銀行の1つであるJP MorganでエンタープライズグレードのWebアプリケーションを構築した経験があり、ビジネス向けソフトウェア開発の学位を取得しています（2022年卒業予定）。",
-    "line3": "現代のグローバル化日本にいっぱいビジネスは",
+    "line3": "現代のグローバル化日本に、ビジネスにとっては増えてる国際客にアクセスできるサイトとサービスが大切になっています。",
     "line4": "私のサービスを通じて、eコマースからブログ、そしてその間のすべてをビジネスの成長に役立てることができるように、緻密に設計された直感的でプロフェッショナルなWebプレゼンスを提供します。",
+    "techs": "専門テクノロジーはReactとGatsbyとNode.js",
     "progress": "Progress through apprenticeship (until full-time freelance)",
     "outOfJapan": "コロナの影響で日本にいませんですがまだオンラインで開発できます。来年(2022)、日本に引っ越すつもりです。"
   
@@ -18,26 +19,26 @@
     "title": "サービス",
     "i18n": {
       "title": "インターナショナリゼーションとは",
-      "explanation1": "Internationalization is software designed around the international world we live in. Internationalized websites can be easily localized to multiple locales.",
-      "explanation2": "Localization is the process of adapting to a region or language, this involves translation as well as other UI changes to accommodate users from different cultures.",
-      "explanation3": "Internationalization provides the best experience to all users. This is important, both businesses entering foreign markets as well as supporting a growing mixed English population domestically.",
+      "explanation1": "現代の国際的な社会になんの国でも、言語でも当てはめるソフトです。",
+      "explanation2": "これはいろんな文化を合えるように翻訳とデザインを含めてる",
+      "explanation3": "日本人に邪魔しないでお客様によって使いやすい経験を備えて新しい景気に膨らめる",
       "readMore": "もっと読む"
     },
     "1": {
       "title": "国際化",
-      "desc": "現代世界に日本人と外国人のお客様向け会社に国際化サイトは必要です。翻訳だけじゃなくて異文化に適合も。１秒で言語を変えて自動的に転送します。"
+      "desc": "翻訳だけじゃなくて異文化に適合も。すぐに言語を変えて自動的に転送します。"
     },
     "2": {
       "title": "ビジネスの特化したソリューション",
-      "desc": "クライアントさまと直接やりとりをし、ご希望のソリューションを完璧にお作りいたします。ワードプレスなどではなく一つ一つ丁寧に0からお作り致します。"
+      "desc": "ワードプレスなどではなく一つ一つ丁寧に0からご希望のソリューションお作り致します。"
     },
     "3": {
       "title": "モダンデザイン",
-      "desc": "モダンビジネスではお客様の目を引くようなプロフェッショナルで特徴的なデザインが必要です。全てのデバイスで対応のものをお作りします。"
+      "desc": "モダンビジネスではお客様の目を引くようなプロフェッショナルで特徴的なデザインが必要です。"
     },
     "4": {
       "title": "整備オプション",
-      "desc": "追加料金保持パッケージも月額料金で利用できます。メンテナンス、改善、パフォーマンスの分析、サポートをご利用いただけます。"
+      "desc": "翻訳とサポート追加料金パッケージもあります。"
     },
     "5": {
       "title": "SEO＋Google analytics",
@@ -46,6 +47,31 @@
     "6": {
       "title": "ホスティングサービス",
       "desc": "サイトにはとても素晴らしいポスティングを使っています。無料プランもご用意しております。"
+    },
+    "products": {
+      "site": {
+        "title": "Webサイト",
+        "1": "プロフェッショナルなWebプレゼンス",
+        "2": "簡単インタラクティブな機能",
+        "3": "使いやすい編集するインタフェース",
+        "4": "現地化 - 現地と言語によって違うデザインとキャンペーン",
+        "contact": "連絡"
+      },
+      "app": {
+        "title": "Webアプリ",
+        "1": "アプリと同じことができる",
+        "2": "お客様はダウンロードをしなくていい",
+        "3": "Eコマース / ビジネスアプリ / バックエンドシステム",
+        "4": "インターナショナリゼーション",
+        "contact": "連絡"
+      },
+      "options": {
+        "title": "他の選択肢",
+        "1": "メンテナンス、改善、パフォーマンスの分析、サポート追加料金保持パッケージ",
+        "2": "翻訳 - 日本語 ↔ 英語",
+        "3": "ビジネスにはなにが必要か分かりませんか？ 会議で話しましょう",
+        "contact": "連絡"
+      }
     }
   },
   "portfolio": {

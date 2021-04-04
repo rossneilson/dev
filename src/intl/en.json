@@ -8,23 +8,24 @@
     "title": "A little about me",
     "line1": "Hi, I'm a freelance web developer specializing in localization web solutions for international small-medium businesses.",
     "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business (in progress).",
-    "line3": "As the world globalizes, many businesses don't take advantage of emerging markets. I specialize in helping Japanese businesses reach a more international market and vis versa.",
+    "line3": "I specialize in helping Japanese businesses reach a more international market or international brands expand in Japan.",
     "line4": "Through my services, I can build your business a professional internationalized modern web application to accomplish anything online, reach new markets and grow your business.",
-    "progress": "Progress through apprenticeship (until full-time freelance)",
+    "techs": "Specializing in React, Gatsby and Node.js",
+    "progress": "Progress through apprenticeship",
     "outOfJapan": "Due to current coronavirus situation I am currently not in Japan but am still available to work online. Currently planning to move to Japan in 2022."
   },
   "services": {
     "title": "My Services",
     "i18n": {
       "title": "What is Internationalization?",
-      "explanation1": "Internationalization is software designed around the international world we live in. Internationalized websites can be easily localized to multiple locales.",
-      "explanation2": "Localization is the process of adapting to a region or language, this involves translation as well as other UI changes to accommodate users from different cultures.",
-      "explanation3": "Internationalization provides the best experience to all users. This is important, both businesses entering foreign markets as well as supporting a growing mixed English population domestically.",
+      "explanation1": "When software is designed from scratch to be internationally accessible it can be easily adapted to any country and language.",
+      "explanation2": "This involves translation as well as other interface changes to accommodate users from different cultures.",
+      "explanation3": "By providing an intuitive experience to all users businesses can reach new customers in foreign markets as well as supporting a growing mixed English population domestically.",
       "readMore": "Read more"
     },
     "1": {
       "title": "Internationalization",
-      "desc": "Automatically redirect and change languages in seconds dynamically. Helping bring your business to new international markets."
+      "desc": "Automatically redirect and change languages instantly. Helping bring your business to new international markets and users."
     },
     "2": {
       "title": "Built for you",
@@ -45,6 +46,31 @@
     "6": {
       "title": "Hosting",
       "desc": "Hosting is set up with a generous free plan that can scale with your business."
+    },
+    "products": {
+      "site": {
+        "title": "Website",
+        "1": "Professional business site",
+        "2": "Basic interactive features",
+        "3": "Easy to edit side-by-side content",
+        "4": "Localization - Dynamic design & campaigns",
+        "contact": "Contact Me"
+      },
+      "app": {
+        "title": "Web App",
+        "1": "Full application on web",
+        "2": "App like features - no downloads",
+        "3": "E-commerce / business app / backend system",
+        "4": "Full internationalization",
+        "contact": "Contact Me"
+      },
+      "options": {
+        "title": "Additional options",
+        "1": "Admin + support + updates + reports + enhancements",
+        "2": "Translation - English ↔ Japanese",
+        "3": "Unsure what your business needs? Lets talk about what is best for you",
+        "contact": "Contact Me"
+      }
     }
   },
   "portfolio":{
