@@ -9,10 +9,10 @@ date: 2017-09-01T14:56:40.193Z
 ---
 3+ years experience working as full stack developer on a new web application for one fo the largest banks in the world.
 
-Associate level software developer.
+Working on university degree during full time work as apprentice.
 
-Cannot share details due to nature of internal application.
+🤫 Cannot share details due to nature of internal application 🤫
+* Experience working on large complex application in professional team
 * Fast responsive react based web application
 * Modern backend cloud technologies; mongodb, docker, kubernetes
 * Secure agile practices
-* Experience working on large complex application in professional team

@@ -9,7 +9,7 @@ import Portfolio from "../components/portfolio/Portfolio"
 import Toggle from "../components/Toggle"
 import ContactCTA from "../components/ContactCTA"
 import BlogSection from "../components/blog/BlogSection"
-import ServicesSection from "../components/services/ServicesSection"
+import TechSection from "../components/tech/TechSection"
 import SignUp from "../components/contact/SignUp"
 import Contact from "../components/contact/Contact"
 
@@ -30,7 +30,7 @@ export default function Main(props) {
       <ContactCTA />
       <Title />
       <About image={props.data.profileImage} />
-      <ServicesSection
+      <TechSection
         icons={{
           icon1: props.data.icon1,
           icon2: props.data.icon2,
@@ -99,6 +99,7 @@ export const imageQuery = graphql`
             title
             description
             link
+            github
             locale
             date
             images {
@@ -147,11 +148,6 @@ export const imageQuery = graphql`
     icon6: file(relativePath: { eq: "icon6.png" }) {
       childImageSharp {
         gatsbyImageData(width: 50, layout: CONSTRAINED, placeholder: BLURRED)
-      }
-    }
-    discount: file(relativePath: { eq: "discount 1.png" }) {
-      childImageSharp {
-        gatsbyImageData(width: 75, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
     site {

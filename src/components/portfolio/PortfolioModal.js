@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import styled, { css } from "styled-components"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import * as Keyframes from "../../utils/keyframes"
@@ -155,8 +156,19 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
               href={frontmatter.link}
               target="_blank"
             >
-              Go to site
+              <FormattedMessage id="portfolio.goToSiteButton" />
             </ButtonLink>
+            {frontmatter.github ? (
+              <ButtonLink
+                style={{ marginLeft: "10px" }}
+                aria-label="View on github button"
+                rel="canonical"
+                href={frontmatter.github}
+                target="_blank"
+              >
+                <FormattedMessage id="portfolio.githubButton" />
+              </ButtonLink>
+            ) : null}
           </Description>
         </Card>
       </ModalMain>

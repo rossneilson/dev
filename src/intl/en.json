@@ -6,13 +6,45 @@
   },
   "about": {
     "title": "A little about me",
-    "line1": "Hi, I'm a freelance web developer specializing in localization web solutions for international small-medium businesses.",
+    "line1": "Hi, I'm a full stack web developer with 3+ years experience.",
     "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business (in progress).",
-    "line3": "I specialize in helping Japanese businesses reach a more international market or international brands expand in Japan.",
-    "line4": "Through my services, I can build your business a professional internationalized modern web application to accomplish anything online, reach new markets and grow your business.",
-    "techs": "Specializing in React, Gatsby and Node.js",
+    "line3": "I love learning about new web technologies and everything relating to Javascript.",
+    "line4": "Recently I have been interested in learning and building on web3 and ethereum.",
     "progress": "Progress through apprenticeship",
-    "outOfJapan": "Due to current coronavirus situation I am currently not in Japan but am still available to work online. Currently planning to move to Japan in 2022."
+    "outOfJapan": "Planning to move to Japan in 2022."
+  },
+  "tech": {
+    "title": "Technology",
+    "explanation": {
+      "title": "What am I currently doing?",
+      "explanation1": "I'm currently exploring new web3 technologies and all things relating to ethereum development.",
+      "explanation2": "Over the past year my interest in decentralized blockchain Dapps and specifically DeFi has grown and as has my understanding of the space.",
+      "explanation3": "My existing experience developing web apps has many overlaps and so I am currently learning solidity and other technologies in the ethereum development stack, as well as getting involved in the open source community."
+    },
+    "1": {
+      "title": "React.js",
+      "desc": "Experience building complex web apps using redux"
+    },
+    "2": {
+      "title": "Node.js",
+      "desc": "Designed and built many microservices using Express.js + Websockets."
+    },
+    "3": {
+      "title": "Gatsby.js",
+      "desc": "Fast, SEO Optimized SSR react sites with CMS. What this site uses."
+    },
+    "4": {
+      "title": "Solidity",
+      "desc": "Currently expanding on base knowledge."
+    },
+    "5": {
+      "title": "Ethereum",
+      "desc": "Fundamental grasp of blockchain, EVM and smart contracts."
+    },
+    "6": {
+      "title": "i18n",
+      "desc": "Internationalization + English ↔ Japanese localization."
+    }
   },
   "services": {
     "title": "My Services",
@@ -75,6 +107,8 @@
   },
   "portfolio":{
     "title": "Portfolio",
+    "githubButton": "View on Github",
+    "goToSiteButton": "Go to site",
     "lookingForProjects": "Currently offering reduced pricing offer to expand portfolio - Please contact me"
   },
   "contact": {

@@ -3,6 +3,7 @@ title: Web Developer
 description: Personal freelancing site with localisation
 images: [/static/devEn.jpg]
 link: https://rossneilson.dev
+github: https://github.com/rossneilson/dev
 locale: en
 date: 2016-08-01T14:56:40.193Z
 

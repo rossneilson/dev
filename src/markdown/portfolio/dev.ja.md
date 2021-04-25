@@ -3,6 +3,7 @@ title: ウェブエンジニア
 description: 自分のフリランスサイト
 images: [/static/devJa.jpg]
 link: https://rossneilson.dev
+github: https://github.com/rossneilson/dev
 locale: ja
 date: 2016-08-01T14:56:40.193Z
 

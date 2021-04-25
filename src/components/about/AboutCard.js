@@ -74,9 +74,6 @@ export default function AboutCard(props) {
         <p>
           <FormattedMessage id="about.line4" />
         </p>
-        <p>
-          <FormattedMessage id="about.techs" />
-        </p>
         <OutOfJapanWarning>
           <svg
             xmlns="http://www.w3.org/2000/svg"
