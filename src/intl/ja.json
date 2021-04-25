@@ -108,6 +108,8 @@
   },
   "portfolio": {
     "title": "ポートフォリオ",
+    "githubButton": "GitHubにコードを見る",
+    "goToSiteButton": "サイトに行く",
     "lookingForProjects": "ポートフォリオを増やす割引キャンペーン途中、連絡してください"
   },
   "contact": {
