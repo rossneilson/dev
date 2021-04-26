@@ -1,33 +1,36 @@
 const path = require(`path`)
 
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     en: {
       title: "Ross Neilson | Web Developer",
       description:
-        "Freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses. Using javascript, react and gatsby.",
+        "Full stack web developer in Scotland, moving to Japan. Specializing in javascript, react, node, ethereum and web3 blockchain technologies.",
     },
     ja: {
-      title: "ロス ニルソン ディベロッパー",
+      title: "ロス ニルソン ウェブエンジニア",
       description:
-        "フリランスWebディベロッパー、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者",
+        "Webエンジニア、専門はJavaScriptとreactとイーサリアムDapp開発者。イーサリアムに転職活動中",
     },
     blog: {
       en: {
         title: "Ross Neilson Web Development Blog",
         description:
-          "Freelance web developer blog about technical issues, solutions, technologies and experiences. Javascript, gatsby, react.",
+          "Web development blog about technical issues, solutions, technologies and experiences. Javascript, ethereum, blockchain, gatsby, react.",
       },
       ja: {
-        title: "ロス ニルソン ディベロッパー ブログ",
+        title: "ロス ニルソン ウェブエンジニア ブログ",
         description:
-          "フリランスWebディベロッパー、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者のブログ",
+          "Webエンジニア、react、node、javascript、イーサリアムWeb開発のブログ",
       },
     },
     author: `Ross Neilson`,
     title: "Ross Neilson | Web Developer",
     description:
-      "A freelance web developer in Glasgow, Scotland specialising in international complex dynamic web apps to improve small-medium businesses",
+      "Full stack web developer in Scotland, moving to Japan. Specializing in javascript, react, node as well as ethereum and web3 blockchain technologies.",
 
     siteUrl: `https://www.rossneilson.dev`,
   },
@@ -111,6 +114,9 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-139306598-1",
+        anonymize: true,
+        respectDNT: true,
+        storage: "none",
       },
     },
     {
@@ -124,5 +130,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-loadable-components-ssr",
     `gatsby-plugin-image`,
+    `gatsby-plugin-scroll-reveal`,
   ],
 }

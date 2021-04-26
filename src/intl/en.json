@@ -1,59 +1,119 @@
 {
   "title": {
     "top": "Ross Neilson",
-    "bottom": "Developer",
+    "bottom": "Web Developer",
     "full": "Ross Neilson - Web Developer"
   },
   "about": {
     "title": "A little about me",
-    "line1": "Hi, I'm a freelance web developer specializing in high-quality complex web solutions for international small-medium businesses.",
-    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the largest banks in the world and a degree in software development for business (in progress).",
-    "line3": "My aim is to build specialised solutions for the complex needs of modern businesses to help people thrive on the web.",
-    "line4": "Through my services, I can develop you a well designed intuitive and professional web presence to allow you to do anything from eCommerce to blogs and everything in between to help grow your business.",
-    "progress": "Progress through apprenticeship (until full-time freelance)"
+    "line1": "Hi, I'm a full stack web developer with 3+ years experience.",
+    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business (in progress).",
+    "line3": "I love learning about new web technologies and everything relating to Javascript.",
+    "line4": "Recently I have been interested in learning and building on web3 and ethereum.",
+    "progress": "Progress through apprenticeship",
+    "outOfJapan": "Planning to move to Japan in 2022."
+  },
+  "tech": {
+    "title": "Technology",
+    "explanation": {
+      "title": "What am I currently doing?",
+      "explanation1": "I'm currently exploring new web3 technologies and all things relating to ethereum development.",
+      "explanation2": "Over the past year my interest in decentralized blockchain Dapps and specifically DeFi has grown and as has my understanding of the space.",
+      "explanation3": "My existing experience developing web apps has many overlaps and so I am currently learning solidity and other technologies in the ethereum development stack, as well as getting involved in the open source community."
+    },
+    "1": {
+      "title": "React.js",
+      "desc": "Experience building complex web apps using redux"
+    },
+    "2": {
+      "title": "Node.js",
+      "desc": "Designed and built many microservices using Express.js + Websockets."
+    },
+    "3": {
+      "title": "Gatsby.js",
+      "desc": "Fast, SEO Optimized SSR react sites with CMS. What this site uses."
+    },
+    "4": {
+      "title": "Solidity",
+      "desc": "Currently expanding on base knowledge."
+    },
+    "5": {
+      "title": "Ethereum",
+      "desc": "Fundamental grasp of blockchain, EVM and smart contracts."
+    },
+    "6": {
+      "title": "i18n",
+      "desc": "Internationalization + English ↔ Japanese localization."
+    }
   },
   "services": {
     "title": "My Services",
+    "i18n": {
+      "title": "What is Internationalization?",
+      "explanation1": "When software is designed from scratch to be internationally accessible it can be easily adapted to any country and language.",
+      "explanation2": "This involves translation as well as other interface changes to accommodate users from different cultures.",
+      "explanation3": "By providing an intuitive experience to all users businesses can reach new customers in foreign markets as well as supporting a growing mixed English population domestically.",
+      "readMore": "Read more"
+    },
     "1": {
-      "title": "Complex web application",
-      "desc": "From simple sites, to blogs and stores using CMS, to complex applications with backend integration, I can build what your business needs."
+      "title": "Internationalization",
+      "desc": "Automatically redirect and change languages instantly. Helping bring your business to new international markets and users."
     },
     "2": {
-      "title": "Built for individual business needs",
-      "desc": "I will work directly with you to build the perfect web solution for your business. Always hand built with cutting edge technology, no wordpress or pagebuilders."
+      "title": "Built for you",
+      "desc": "Always hand built with cutting edge technology, no wordpress or pagebuilders."
     },
     "3": {
       "title": "Modern Design",
-      "desc": "A modern business needs a proffesional unique design to create a brand and catch users attention. All designs work on all devices"
+      "desc": "Professional, responsive, unique design to create a brand to catch users attention."
     },
     "4": {
-      "title": "Maintenence package",
-      "desc": "An additional retainer package is also available for a monthly fee. Including maintenence, additional improvements, reports, training, and support."
+      "title": "Additional packages",
+      "desc": "Options for translation, and support retainer packages."
     },
     "5": {
       "title": "SEO + Analytics",
-      "desc": "All web sites are optimised for SEO results and have google analytics installed."
+      "desc": "Optimized SEO results for all languages and google analytics installed."
     },
     "6": {
       "title": "Hosting",
-      "desc": "Hosting is set up on an excellant service with a generous free plan that can scale with your business."
+      "desc": "Hosting is set up with a generous free plan that can scale with your business."
+    },
+    "products": {
+      "site": {
+        "title": "Website",
+        "1": "Professional business site",
+        "2": "Basic interactive features",
+        "3": "Easy to edit side-by-side content",
+        "4": "Localization - Dynamic design & campaigns",
+        "contact": "Contact Me"
+      },
+      "app": {
+        "title": "Web App",
+        "1": "Full application on web",
+        "2": "App like features - no downloads",
+        "3": "E-commerce / business app / backend system",
+        "4": "Full internationalization",
+        "contact": "Contact Me"
+      },
+      "options": {
+        "title": "Additional options",
+        "1": "Admin + support + updates + reports + enhancements",
+        "2": "Translation - English ↔ Japanese",
+        "3": "Unsure what your business needs? Lets talk about what is best for you",
+        "contact": "Contact Me"
+      }
     }
   },
   "portfolio":{
     "title": "Portfolio",
-    "1": {
-      "title": "Ross Neilson Web developer",
-      "desc": "Freelance site made in react and gatsby with english and japanese localization",
-      "detailed": "Modern designed landing page !Contact form !Lightweight high performance !Optimized SEO !Mobile friendly !All 90+ score in lighthouse !Progressive Web app (PWA) !Full Japanese and English localization"
-    },
-    "2": {
-      "title": "Tabi Traveler",
-      "desc": "High-performance photography website with a portfolio, blog and shop",
-      "detailed": "Dynamic landing page design with parallax scrolling effect  !Interactive portfolio for photos with interactive filters !A blog with CMS backend for easy content changes and additions !Shop with stripe for selling prints and automatic processing of orders !SEO optimization !Mobile friendly !High performance !Localization"
-    }
+    "githubButton": "View on GitHub",
+    "goToSiteButton": "Go to site",
+    "lookingForProjects": "Currently offering reduced pricing offer to expand portfolio - Please contact me"
   },
   "contact": {
     "title": "Contact Me",
+    "contact": "Contact Me",
     "name": "Name",
     "email": "Email",
     "message": "Message",

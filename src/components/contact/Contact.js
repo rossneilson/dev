@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
+import SNS from "./sns"
 import cover from "../../images/cover.svg"
 
 const Wrapper = styled.section`
@@ -24,7 +25,7 @@ const Wrapper = styled.section`
 const ContactCard = styled.section`
   background-color: white;
   padding: 5%;
-  z-index: 978;
+  z-index: 9;
   min-height: 20%;
   width: 40%;
   margin: 5% 1% 5% 1%;
@@ -49,7 +50,7 @@ const StyledInput = styled.input`
   height: 38px;
   padding: 8px 12px;
   margin: 5% 0%;
-  font-size: 18px;
+  font-size: ${props => props.theme.fontSizes.m};
   line-height: 1.42857143;
   font-weight: 500;
   width: 100%;
@@ -57,17 +58,21 @@ const StyledInput = styled.input`
   border-width: 1px 1px 4px;
   border-color: #000 #000 #6f81b3;
   border-radius: 10px;
-  background-color: ${props => (props.error ? "#ff7777" : "#eaebec")};
+  background-color: ${props => {
+    return props.error
+      ? props.theme.colors.fail400
+      : props.theme.colors.white700
+  }};
   color: black;
 `
 
 const StyledButton = styled.button`
   transition: 0.2s;
-  background-color: #1771c1;
+  background-color: ${props => props.theme.colors.buttonColor};
   color: white;
   height: 40px;
   justify-content: space-around;
-  font-size: large;
+  font-size: ${props => props.theme.fontSizes.r};
   font-weight: 500;
   min-width: 30%;
   border: none;
@@ -76,28 +81,11 @@ const StyledButton = styled.button`
   margin: auto;
   margin-top: 2%;
   &:hover {
-    background-color: rgb(250, 182, 0);
+    background-color: ${props => props.theme.colors.buttonHoverColor};
   }
   &:focus {
-    background-color: rgb(250, 182, 0);
+    background-color: ${props => props.theme.colors.buttonHoverColor};
   }
-`
-
-const Icons = styled.section`
-  margin-top: 25px;
-`
-
-const Link = styled.a`
-  margin: 10px;
-  color: #2096f3;
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0) 1px,
-    #ffff 1px,
-    #ffff 2px,
-    rgba(0, 0, 0, 0) 2px
-  );
 `
 
 const validEmailRegex = RegExp(
@@ -142,7 +130,7 @@ export default function Contact(props) {
 
   return (
     <Wrapper background={cover}>
-      <ContactCard>
+      <ContactCard data-sal="slide-up">
         <Title>{intl.formatMessage({ id: "contact.title" })}</Title>
         <form name="contact" netlify-honeypot="bot-field" hidden>
           <input type="text" name="name" />
@@ -208,81 +196,7 @@ export default function Contact(props) {
             ? intl.formatMessage({ id: "contact.success" })
             : null}
         </Form>
-        <Icons>
-          <Link
-            target="_blank"
-            rel="canonical"
-            aria-label="Twitter"
-            href="https://twitter.com/RossNeilson_dev"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-twitter"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="#2096f3"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 0 0 .497 -3.753C20.18 7.773 21.692 5.25 22 4.009z" />
-            </svg>
-          </Link>
-
-          <Link
-            target="_blank"
-            rel="canonical"
-            aria-label="Email me"
-            href="mailto:me@rossneilson.dev"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-mail"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="#2096f3"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <rect x="3" y="5" width="18" height="14" rx="2" />
-              <polyline points="3 7 12 13 21 7" />
-            </svg>
-          </Link>
-
-          <Link
-            target="_blank"
-            rel="canonical"
-            aria-label="LinkedIn"
-            href="https://www.linkedin.com/in/ross-neilson-99b62b14a/"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-brand-linkedin"
-              width="48"
-              height="48"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="#2096f3"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <rect x="4" y="4" width="16" height="16" rx="2" />
-              <line x1="8" y1="11" x2="8" y2="16" />
-              <line x1="8" y1="8" x2="8" y2="8.01" />
-              <line x1="12" y1="16" x2="12" y2="11" />
-              <path d="M16 16v-3a2 2 0 0 0 -4 0" />
-            </svg>
-          </Link>
-        </Icons>
+        <SNS github gitcoin email linkedin twitter />
       </ContactCard>
     </Wrapper>
   )

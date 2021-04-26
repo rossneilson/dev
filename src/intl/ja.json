@@ -1,59 +1,120 @@
 {
   "title": {
     "top": "ロス ニルソン",
-    "bottom": "ディベロッパー",
-    "full": "ロス ニルソン - ディベロッパー"
+    "bottom": "ウェブエンジニア",
+    "full": "ロス ニルソン - ウェブエンジニア"
   },
   "about": {
     "title": "紹介",
-    "line1": "こんにちは、私は国際的な中小企業向けの高品質で複雑なWebソリューションを専門とするフリーランスのWeb開発者です。 ",
+    "line1": "こんにちは、私は3年間でWeb開発者です。",
     "line2": "私は世界最大の銀行の1つであるJP MorganでエンタープライズグレードのWebアプリケーションを構築した経験があり、ビジネス向けソフトウェア開発の学位を取得しています（2022年卒業予定）。",
-    "line3": "私は、現代のビジネスの複雑なニーズに特化したソリューションを構築して、たくさんの人ががウェブで繁栄するのを手助けすることを目的としています。",
-    "line4": "私のサービスを通じて、eコマースからブログ、そしてその間のすべてをビジネスの成長に役立てることができるように、緻密に設計された直感的でプロフェッショナルなWebプレゼンスを提供します。",
-    "progress": "Progress through apprenticeship (until full-time freelance)"
+    "line3": "専門はウェブとJavaScriptです。新しいウェブテクノロジーに興味があって学びたい。",
+    "line4": "最近はイーサリアムとWeb3を習っていて開発しています。",
+    "progress": "Progress through apprenticeship",
+    "outOfJapan": "来年(2022)日本に引っ越すつもりです。"
+  
+  },
+  "tech": {
+    "title": "Technology",
+    "explanation": {
+      "title": "今は何してる?",
+      "explanation1": "現在はweb3とイーサリアムを習っていて開発しています。",
+      "explanation2": "コロナの間に分散型ブロックチェーンテクノロジーとDappについて特にDeFiの興が乗って、それでブロックチェーンの知識と能録が上がっている。",
+      "explanation3": "もうあるウェブエンジニアの経験でDappを作れて、さらにもっと上手くなれるようにイーサリアムの腕を磨いていてハッカソンをやってオープンソース社会に手伝っている。"
+    },
+    "1": {
+      "title": "React.js",
+      "desc": "reduxも使ってウェブアプリケーションを開発経験がある。"
+    },
+    "2": {
+      "title": "Node.js",
+      "desc": "Express.jsとWebsocketを使って、いっぱいマイクロサービスをデザインと開発したことがあります。"
+    },
+    "3": {
+      "title": "Gatsby.js",
+      "desc": "固有のSEOとCMSがありサーバーサイドレンダリングreactの効率的なサイト。このサイトを開発したのテクノロジー。"
+    },
+    "4": {
+      "title": "Solidity",
+      "desc": "基本的な知識を膨らんでいます。"
+    },
+    "5": {
+      "title": "イーサリアム",
+      "desc": "ブロックチェーンとイーサリアム仮想マシンとスマートコントラクトが分かっています。"
+    },
+    "6": {
+      "title": "i18n",
+      "desc": "インターナショナリゼーション + 日本語 ↔ 英語の現地化."
+    }
   },
   "services": {
     "title": "サービス",
+    "i18n": {
+      "title": "インターナショナリゼーションとは",
+      "explanation1": "現代の国際的な社会になんの国でも、言語でも当てはめるソフトです。",
+      "explanation2": "これはいろんな文化を合えるように翻訳とデザインを含めてる",
+      "explanation3": "日本人に邪魔しないでお客様によって使いやすい経験を備えて新しい景気に膨らめる",
+      "readMore": "もっと読む"
+    },
     "1": {
-      "title": "ウェブアプリ",
-      "desc": "簡単なサイトや、CMSを使用したeコマース、ブログ、複雑なバックエンドビジネスシステムなど、ビジネスのニーズに合わせてなんでもお作りします。"
+      "title": "国際化",
+      "desc": "翻訳だけじゃなくて異文化に適合も。すぐに言語を変えて自動的に転送します。"
     },
     "2": {
-      "title": "ビジネスのニーズの特化したソリューション",
-      "desc": "クライアントさまと直接やりとりをし、ご希望のソリューションを完璧にお作りいたします。ワードプレスなどではなく一つ一つ丁寧に0からお作り致します。"
+      "title": "ビジネスの特化したソリューション",
+      "desc": "ワードプレスなどではなく一つ一つ丁寧に0からご希望のソリューションお作り致します。"
     },
     "3": {
       "title": "モダンデザイン",
-      "desc": "モダンビジネスではお客様の目を引くようなプロフェッショナルで特徴的なデザインが必要です。全てのデバイスで対応のものをお作りします。"
+      "desc": "モダンビジネスではお客様の目を引くようなプロフェッショナルで特徴的なデザインが必要です。"
     },
     "4": {
       "title": "整備オプション",
-      "desc": "追加料金保持パッケージも月額料金で利用できます。メンテナンス、改善、パフォーマンスの分析、サポートをご利用いただけます。"
+      "desc": "翻訳とサポート追加料金パッケージもあります。"
     },
     "5": {
       "title": "SEO＋Google analytics",
-      "desc": "全てのサイトはビジネス固有のSEOがあり、Google analyticsを含んでいます。"
+      "desc": "サイトはビジネスと地域固有のSEOがあり、Google analyticsを含んでいます。"
     },
     "6": {
       "title": "ホスティングサービス",
       "desc": "サイトにはとても素晴らしいポスティングを使っています。無料プランもご用意しております。"
+    },
+    "products": {
+      "site": {
+        "title": "Webサイト",
+        "1": "プロフェッショナルなWebプレゼンス",
+        "2": "簡単インタラクティブな機能",
+        "3": "使いやすい編集するインタフェース",
+        "4": "現地化 - 現地と言語によって違うデザインとキャンペーン",
+        "contact": "連絡"
+      },
+      "app": {
+        "title": "Webアプリ",
+        "1": "アプリと同じことができる",
+        "2": "お客様はダウンロードをしなくていい",
+        "3": "Eコマース / ビジネスアプリ / バックエンドシステム",
+        "4": "インターナショナリゼーション",
+        "contact": "連絡"
+      },
+      "options": {
+        "title": "他の選択肢",
+        "1": "メンテナンス、改善、パフォーマンスの分析、サポート追加料金保持パッケージ",
+        "2": "翻訳 - 日本語 ↔ 英語",
+        "3": "ビジネスにはなにが必要か分かりませんか？ 会議で話しましょう",
+        "contact": "連絡"
+      }
     }
   },
   "portfolio": {
     "title": "ポートフォリオ",
-    "1": {
-      "title": "ロスにルソン　ディベロッパー",
-      "desc": "Freelance site made in react and gatsby with english and japanese localization",
-      "detailed": "Modern designed landing page !Contact form !Lightweight high performance !Optimized SEO !Mobile friendly !All 90+ score in lighthouse !Progressive Web app (PWA) !Full Japanese and English localization"
-    },
-    "2": {
-      "title": "旅traveler",
-      "desc": "High-performance photography website with a portfolio, blog and shop",
-      "detailed": "Dynamic landing page design with parallax scrolling effect  !Interactive portfolio for photos with interactive filters !A blog with CMS backend for easy content changes and additions !Shop with stripe for selling prints and automatic processing of orders !SEO optimization !Mobile friendly !High performance !Localization"
-    }
+    "githubButton": "GitHubにコードを見る",
+    "goToSiteButton": "サイトに行く",
+    "lookingForProjects": "ポートフォリオを増やす割引キャンペーン途中、連絡してください"
   },
   "contact": {
     "title": "連絡先",
+    "contact": "連絡",
     "name": "名前",
     "email": "メール",
     "message": "メッセージ",
@@ -62,14 +123,14 @@
     "success": "送りました、ありがとうございます"
   },
   "blog": {
-    "title": "ブログ（当分、英語だけです）",
+    "title": "ブログ",
     "back": "ブログに戻る",
     "authorDesc": "私は国際的な中小企業向けの高品質で複雑なWebソリューションを専門とするフリーランスのWeb開発者です。",
     "cta": "もっと見る"
   },
   "signup": {
     "subscribe": "購読",
-    "title": "毎月配信されるブログや、の情報を受け取りたい方はこちらからご登録ください"
+    "title": "毎月配信されるブログや、新しい情報を受け取りたい方はこちらからご登録ください"
   },
   "lang": "ja"
 }

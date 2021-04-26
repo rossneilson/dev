@@ -12,13 +12,13 @@ const BarHorizontal = styled.section`
   justify-content: center;
   ${"" /* margin-top: 15px; */}
   position: relative;
-  z-index: 9999;
+  z-index: 990;
 `
 
 const Home = styled(Link)`
   padding: 0% 3% 3% 3%;
-  font-size: 200%;
-  color: ${props => (props.colour ? props.colour : "#8698da")};
+  font-size: ${props => props.theme.fontSizes.xl};
+  color: ${props => (props.colour ? props.colour : props.theme.colors.primary)};
   background-image: none;
   text-align: center;
   text-shadow: none;
@@ -26,10 +26,10 @@ const Home = styled(Link)`
   margin-top: 20px;
   transition: 1s;
   &:hover {
-    color: #5065a3;
+    color: ${props => props.theme.colors.secondary600};
   }
   &:focus {
-    color: #5065a3;
+    color: ${props => props.theme.colors.secondary600};
   }
 `
 

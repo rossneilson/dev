@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import "../index.css"
+// import "../index.css"
 
 import SEO from "../components/seo"
 
@@ -51,6 +51,10 @@ const setFilteredPosts = (tab, posts, categories) => {
 }
 
 export default function Blog(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [tab, setTab] = React.useState(0)
 
   const posts = props.data.allMarkdownRemark.edges
@@ -61,7 +65,6 @@ export default function Blog(props) {
 
   return (
     <BlogContainer>
-      {/* <SvgPattern type="circle" fullPage /> */}
       <SEO
         title={
           props.data.site.siteMetadata.blog[props.pageContext.intl.language]
@@ -115,8 +118,8 @@ export const postsQuery = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  maxWidth: 1000
-                  layout: FLUID
+                  width: 1000
+                  layout: CONSTRAINED
                   placeholder: BLURRED
                 )
               }

@@ -10,8 +10,7 @@ const Wrapper = styled.section`
 `
 
 const Title = styled.h3`
-  font-family: Space Mono;
-  font-size: 110%;
+  font-size: ${props => props.theme.fontSizes.m};
   color: white;
   margin: 0;
   width: 100%;
@@ -31,7 +30,7 @@ const Bar = styled.section`
 
 const Progress = styled.section`
   width: ${props => props.progress + "%"};
-  background-color: rgb(245, 181, 72);
+  background-color: ${props => props.theme.colors.secondary};
   border-radius: 20px 0px 0px 20px;
 `
 

@@ -2,12 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-import Illustration from "../../images/developer.svg"
+import Illustration from "../../images/ethDeveloper.svg"
 import SvgPattern from "../svg/SvgPattern"
-import Products from "./Products"
 import KeyPoints from "./KeyPoints"
-import LookingForProjects from "./LookingForProjects"
-import Localisation from "./Internationalization"
+import Explanation from "./Explanation"
 
 const ServicesFlexContainer = styled.section`
   background-color: ${props => props.theme.colors.secondary200};
@@ -63,33 +61,29 @@ export default function Services({ icons }) {
           <ServiceHeader>
             <svg
               style={{ transform: "translateY(10px)", marginRight: "4px" }}
-              xmlns="http://www.w3.org/2000/svg"
-              className="icon icon-tabler icon-tabler-directions"
-              width="48"
-              height="48"
+              width="44"
+              height="44"
               viewBox="0 0 24 24"
-              strokeWidth="1.5"
+              stroke-width="1.5"
               stroke="#76aed7"
               fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M9 5h10l2 2l-2 2h-10a1 1 0 0 1 -1 -1v-2a1 1 0 0 1 1 -1" />
-              <path d="M13 13h-7l-2 2l2 2h7a1 1 0 0 0 1 -1v-2a1 1 0 0 0 -1 -1" />
-              <line x1="12" y1="22" x2="12" y2="17" />
-              <line x1="12" y1="13" x2="12" y2="9" />
-              <line x1="12" y1="5" x2="12" y2="3" />
+              <path d="M6 12l6 -9l6 9l-6 9z" />
+              <path d="M6 12l6 -3l6 3l-6 2z" />
             </svg>
-            <FormattedMessage id="services.title" />
+            <FormattedMessage id="tech.title" />
           </ServiceHeader>
-          <Localisation />
+          <Explanation />
         </HalfContainer>
-        <StyledIllustration src={Illustration} alt={"services illustration"} />
+        <StyledIllustration
+          src={Illustration}
+          alt={"technologies illustration"}
+        />
 
         <KeyPoints {...icons} />
-        <LookingForProjects icon={icons.discount} />
-        <Products />
       </Card>
     </ServicesFlexContainer>
   )

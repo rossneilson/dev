@@ -1,10 +1,11 @@
 ---
 title: Web Developer
 description: Personal freelancing site with localisation
-image: /static/dev.jpg
+images: [/static/devEn.jpg]
 link: https://rossneilson.dev
+github: https://github.com/rossneilson/dev
 locale: en
-date: 2020-08-01T14:56:40.193Z
+date: 2016-08-01T14:56:40.193Z
 
 ---
 * Minimal landing page design
@@ -14,4 +15,4 @@ date: 2020-08-01T14:56:40.193Z
 * Headless CMS backend for easy editing
 * SEO optimization
 * Mobile friendly
-* Full english and Japanese localisation
+* Full english and Japanese localization

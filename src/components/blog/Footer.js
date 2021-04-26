@@ -47,7 +47,7 @@ const CTA = styled(Link)`
   text-shadow: none;
   width: 150px;
   align-self: flex-end;
-  z-index: 99999;
+  z-index: 999;
   &:hover {
     background: #5065a3;
   }
@@ -65,7 +65,7 @@ export default function Footer(props) {
     <Wrapper>
       <Image image={imageData} />
       <Description>
-        <h3 style={{ color: "#1281d2" }}>
+        <h3>
           <FormattedMessage id="title.top" />
         </h3>
         <blockquote>

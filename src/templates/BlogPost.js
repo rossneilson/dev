@@ -5,8 +5,8 @@ import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 import { navigate } from "@reach/router"
 import { FormattedMessage } from "gatsby-plugin-intl"
 
-import "../index.css"
-import "fontsource-sacramento"
+// import "../index.css"
+import "@fontsource/sacramento"
 
 import Navigation from "../components/blog/Navigation"
 import Footer from "../components/blog/Footer"
@@ -60,7 +60,7 @@ const Gradient = styled.section`
 `
 
 const Category = styled.section`
-  font-size: 10px;
+  font-size: ${props => props.theme.fontSizes.xs};
   background-color: #ffffffb0;
   padding: 4px;
   justify-content: center;
@@ -109,7 +109,7 @@ const FormattedDate = styled.h2`
   color: white;
   margin-left: 25%;
   margin-right: 25%;
-  font-size: 1rem;
+  font-size: ${props => props.theme.fontSizes.m};
   @media (pointer: coarse) {
     margin-left: 10%;
     margin-right: 10%;
@@ -117,7 +117,7 @@ const FormattedDate = styled.h2`
 `
 
 const Markdown = styled.section`
-  font-size: medium;
+  font-size: ${props => props.theme.fontSizes.s};
   color: black;
   line-height: 2;
   letter-spacing: 0.5px;
@@ -199,14 +199,14 @@ export default function BlogPost({ data, pageContext }) {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-arrow-up-circle"
+          Nameclass="icon icon-tabler icon-tabler-arrow-up-circle"
           width="40"
           height="40"
           viewBox="0 0 24 24"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           stroke="#53aef6"
           fill="none"
-          stroke-linecap="round"
+          strokeLinecap="round"
           stroke-linejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -250,14 +250,18 @@ export const query = graphql`
         SEO
         image {
           childImageSharp {
-            gatsbyImageData(maxWidth: 3000, layout: FLUID, placeholder: BLURRED)
+            gatsbyImageData(
+              width: 3000
+              layout: CONSTRAINED
+              placeholder: BLURRED
+            )
           }
         }
       }
     }
     image: file(relativePath: { eq: "footerImage.jpg" }) {
       childImageSharp {
-        gatsbyImageData(maxWidth: 300, layout: FLUID, placeholder: BLURRED)
+        gatsbyImageData(width: 300, layout: CONSTRAINED, placeholder: BLURRED)
       }
     }
   }
