@@ -5,7 +5,9 @@
 <img src="/src/images/icon-512x512.png" width="300"/>
 
 JAMstack based personal development site with internationalization
+
 JAMstackとインターナショナリゼーションで作った個人的なウェブエンジニアサイト
+
 [Visit live website](https://rossneilson.dev)
 
 ## Features
