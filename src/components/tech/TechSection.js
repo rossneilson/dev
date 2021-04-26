@@ -81,8 +81,9 @@ export default function Services({ icons }) {
         <StyledIllustration
           src={Illustration}
           alt={"technologies illustration"}
+          width={1245}
+          height={600}
         />
-
         <KeyPoints {...icons} />
       </Card>
     </ServicesFlexContainer>
