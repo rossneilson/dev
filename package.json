@@ -1,7 +1,7 @@
 {
   "name": "ross-neilson-dev",
   "private": true,
-  "description": "Freelance site for Ross Neilson",
+  "description": "Developer site for Ross Neilson",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

@@ -30,7 +30,7 @@ const OutOfJapanWarning = styled.section`
 `
 
 const Message = styled.section`
-  width: 90%;
+  margin: 8px;
 `
 
 export default function AboutCard(props) {

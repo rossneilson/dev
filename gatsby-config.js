@@ -8,29 +8,29 @@ module.exports = {
     en: {
       title: "Ross Neilson | Web Developer",
       description:
-        "Freelance web developer in Glasgow, Scotland specializing in international complex dynamic web apps to improve small-medium businesses. Using javascript, react and gatsby.",
+        "Full stack web developer in Scotland, moving to Japan. Specializing in javascript, react, node, ethereum and web3 blockchain technologies.",
     },
     ja: {
       title: "ロス ニルソン ウェブエンジニア",
       description:
-        "フリランスWebエンジニア、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者",
+        "Webエンジニア、専門はJavaScriptとreactとイーサリアムDapp開発者。イーサリアムに転職活動中",
     },
     blog: {
       en: {
         title: "Ross Neilson Web Development Blog",
         description:
-          "Freelance web developer blog about technical issues, solutions, technologies and experiences. Javascript, gatsby, react.",
+          "Web development blog about technical issues, solutions, technologies and experiences. Javascript, ethereum, blockchain, gatsby, react.",
       },
       ja: {
         title: "ロス ニルソン ウェブエンジニア ブログ",
         description:
-          "フリランスWebエンジニア、国際的な中小企業向けの高品質で複雑なWebソリューションを専門フリーランスのWeb開発者のブログ",
+          "Webエンジニア、react、node、javascript、イーサリアムWeb開発のブログ",
       },
     },
     author: `Ross Neilson`,
     title: "Ross Neilson | Web Developer",
     description:
-      "A freelance web developer in Glasgow, Scotland specializing in international complex dynamic web apps to improve small-medium businesses",
+      "Full stack web developer in Scotland, moving to Japan. Specializing in javascript, react, node as well as ethereum and web3 blockchain technologies.",
 
     siteUrl: `https://www.rossneilson.dev`,
   },
