@@ -101,7 +101,7 @@ export default function KeyPoints({
             <FormattedMessage id="tech.5.desc" />
           </Description>
         </BulletPoint>
-        <BulletPoint data-sal="slide-up" data-sal-delay="1000">
+        <BulletPoint data-sal="slide-up" data-sal-delay="900">
           <Title>
             <Icon image={icon6Image} />
             <Heading>
@@ -112,7 +112,7 @@ export default function KeyPoints({
             <FormattedMessage id="tech.4.desc" />
           </Description>
         </BulletPoint>
-        <BulletPoint data-sal="slide-up" data-sal-delay="900">
+        <BulletPoint data-sal="slide-up" data-sal-delay="1000">
           <Title>
             <Icon image={icon1Image} />
             <Heading>
