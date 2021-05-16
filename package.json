@@ -18,7 +18,7 @@
     "@loadable/component": "^5.14.1",
     "@sentry/react": "^6.2.1",
     "babel-plugin-styled-components": "^1.10.7",
-    "dot-crypto-donate-react": "^1.1.1",
+    "dot-crypto-donate-react": "^1.1.2",
     "ethers": "^5.1.4",
     "front-matter": "^4.0.2",
     "gatsby": "^3.1.0",
