@@ -24,3 +24,4 @@ JAMstackとインターナショナリゼーションで作った個人的なウ
 * Gatsby js (SSG)
 * Deployed via netlify
 * Netlify CMS
+

@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
+import CryptoDonate from "dot-crypto-donate-react"
+
 import SNS from "./sns"
 import cover from "../../images/cover.svg"
 
@@ -197,6 +199,22 @@ export default function Contact(props) {
             : null}
         </Form>
         <SNS github gitcoin email linkedin twitter />
+        <CryptoDonate
+          cryptoDomain="rossneilson.crypto"
+          infuraApi="5730f284ad6741b183c921ebb0509880"
+          colors={{
+            primary: "#2096f3",
+            secondary: "#fde199",
+            button: "#1a78c2",
+            buttonSecondary: "#fab601",
+            text: "#ffffff",
+          }}
+          text={{
+            title: intl.formatMessage({ id: "donate.title" }),
+            thanks: intl.formatMessage({ id: "donate.thanks" }),
+            copied: intl.formatMessage({ id: "donate.copied" }),
+          }}
+        />
       </ContactCard>
     </Wrapper>
   )

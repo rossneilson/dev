@@ -18,6 +18,8 @@
     "@loadable/component": "^5.14.1",
     "@sentry/react": "^6.2.1",
     "babel-plugin-styled-components": "^1.10.7",
+    "dot-crypto-donate-react": "^1.1.1",
+    "ethers": "^5.1.4",
     "front-matter": "^4.0.2",
     "gatsby": "^3.1.0",
     "gatsby-plugin-google-analytics": "^3.0.0",
@@ -43,6 +45,7 @@
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-remark": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
+    "js-sha3": "^0.8.0",
     "netlify-cms-app": "^2.14.26",
     "npm": "^6.14.8",
     "polished": "^4.1.1",
@@ -66,9 +69,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/rossneilson/dev"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/rossneilson/dev"
   }
 }
