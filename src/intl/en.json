@@ -121,6 +121,11 @@
     "invalidEmail": "Invalid Email",
     "success": "Your information was sent perfectly, thank you"
   },
+  "donate": {
+    "title": "Donate",
+    "thanks": "Thank you for donating, please let me know via the form above",
+    "copied": "Address copied, send via wallet to donate, thank you"
+  },
   "blog": {
     "title": "Latest articles",
     "back": "Back to Blog",
