@@ -21,7 +21,7 @@ const Wrapper = styled.section`
   moz-background-size: cover;
   o-background-size: cover;
   background-size: cover;
-  /* background-position: left top; */
+  background-position: right;
 `
 
 const ContactCard = styled.section`
