@@ -81,9 +81,7 @@ export default function Portfolio({ sites }) {
           selectedExample={selectedExample}
         />
       ) : null}
-      <PortfolioFlexContainer data-sal="slide-up">
-        {ProjectCards}
-      </PortfolioFlexContainer>
+      <PortfolioFlexContainer>{ProjectCards}</PortfolioFlexContainer>
     </Container>
   )
 }
