@@ -42,7 +42,7 @@ const Remainder = styled.section`
 
 export default function ProgressBar(props) {
   const start = new Date(2017, 8, 18)
-  const end = new Date(2021, 11, 23)
+  const end = new Date(2021, 8, 14)
   const today = new Date()
 
   const progress = Math.round(((today - start) / (end - start)) * 100)

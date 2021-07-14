@@ -4,7 +4,7 @@ description: 3+ years experience leading web application development at large in
 images: [/static/jpm.jpg]
 link: https://www.glassdoor.co.uk/Salary/J-P-Morgan-Associate-Glasgow-Salaries-EJI_IE145.0,10_KO11,20_IL.21,28_IM1145.htm
 locale: ja
-date: 2017-09-01T14:56:40.193Z
+date: 2000-09-01T14:56:40.193Z
 
 ---
 世界最大の投資銀行の1つであるJPモルガンでエンタープライズグレードのWebアプリケーションを構築した四年間経験があります。

@@ -6,10 +6,10 @@
   },
   "about": {
     "title": "A little about me",
-    "line1": "Hi, I'm a full stack web developer with 3+ years experience.",
+    "line1": "Hi, I'm a full stack web developer with 4+ years experience.",
     "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business (in progress).",
-    "line3": "I love learning about new web technologies and everything relating to Javascript.",
-    "line4": "Recently I have been interested in learning and building on web3 and ethereum.",
+    "line3": "I love learning about new web technologies and everything relating to Ethereum.",
+    "line4": "Recently I have been building web3 Dapps with DXdao.",
     "progress": "Progress through apprenticeship",
     "outOfJapan": "Planning to move to Japan in 2022."
   },
@@ -19,7 +19,7 @@
       "title": "What am I currently doing?",
       "explanation1": "I'm currently exploring new web3 technologies and all things relating to ethereum development.",
       "explanation2": "Over the past year my interest in decentralized blockchain Dapps and specifically DeFi has grown and as has my understanding of the space.",
-      "explanation3": "My existing experience developing web apps has many overlaps and so I am currently learning solidity and other technologies in the ethereum development stack, as well as getting involved in the open source community."
+      "explanation3": "I am currently developing Dapps as a contributor to DXdao."
     },
     "1": {
       "title": "React.js",
