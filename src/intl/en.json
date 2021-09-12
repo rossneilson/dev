@@ -7,11 +7,11 @@
   "about": {
     "title": "A little about me",
     "line1": "Hi, I'm a full stack web developer with 4+ years experience.",
-    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business (in progress).",
-    "line3": "I love learning about new web technologies and everything relating to Ethereum.",
-    "line4": "Recently I have been building web3 Dapps with DXdao.",
+    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business.",
+    "line3": "I love learning about new web technologies and everything related to Ethereum.",
+    "line4": "I am currently a full time contributor to DXdao, taking part in governance and building awesome decentralised applications.",
     "progress": "Progress through apprenticeship",
-    "outOfJapan": "Planning to move to Japan in 2022."
+    "outOfJapan": "I'm likely either in EU(GMT/EST) or JST timezones."
   },
   "tech": {
     "title": "Technology",
@@ -23,7 +23,7 @@
     },
     "1": {
       "title": "React.js",
-      "desc": "Experience building complex web apps using redux"
+      "desc": "Experience building complex web apps using redux and typescript"
     },
     "2": {
       "title": "Node.js",
@@ -35,11 +35,11 @@
     },
     "4": {
       "title": "Solidity",
-      "desc": "Currently expanding on base knowledge."
+      "desc": "Learning by building."
     },
     "5": {
       "title": "Ethereum",
-      "desc": "Fundamental grasp of blockchain, EVM and smart contracts."
+      "desc": "Fundamental grasp of EVM, debugging and integrating into web3 Dapps."
     },
     "6": {
       "title": "i18n",
@@ -106,7 +106,7 @@
     }
   },
   "portfolio":{
-    "title": "Portfolio",
+    "title": "Experience",
     "githubButton": "View on GitHub",
     "goToSiteButton": "Go to site",
     "lookingForProjects": "Currently offering reduced pricing offer to expand portfolio - Please contact me"

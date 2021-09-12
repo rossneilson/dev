@@ -1,7 +1,7 @@
 ---
 title: Contractual-NFT 
 description: Polygon 0xHack Hackathon winner
-images: [/static/maticnetwork.png]
+images: [/static/0xhack.png]
 link: https://gitcoin.co/hackathon/0x-hack/projects/5348/contractual-nft
 github: https://github.com/rossneilson/contractual-nft
 locale: en

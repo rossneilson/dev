@@ -1,16 +1,17 @@
 ---
 title: DXdao
-description: Contributor at DXdao
-images: [/static/dxdao.svg]
+description: 自律分散型組織に開発者とプロジェクト‐マネージャー
+images: [/static/dxdao.png]
 link: https://dxdao.eth.link
-github: https://github.com/cryptonative-ch
+github: https://github.com/dxgovernance
 locale: ja
 date: 2021-07-01T14:56:40.193Z
 
 ---
-Currently a part time contributor at DXdao building Aqua and taking part in on-chain governance
-* React web3 app
-* Aqua protocol
-* Mainnet + xDai (more L2s in future)
-* On-chain governance
-* Fully decentralised DAO
+DXdaoの社員として働いています。
+* React web3 Dapps
+* 現在分散ガバナンスのアプリを開発とプロジェクトリーダーをしています
+* Aquaのプロジェクトマネージャーとして始めた
+* イーサリアム + Arbitrum + xDai
+* イーサリアムを使ってるガバナンス
+* 自律分散型組織

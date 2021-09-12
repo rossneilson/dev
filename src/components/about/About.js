@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { GatsbyImage as Img, getImage } from "gatsby-plugin-image"
 
 import AboutCard from "./AboutCard"
-import ProgressBar from "./ProgressBar"
 import SvgPattern from "../svg/SvgPattern"
 
 const FlexContainer = styled.section`
@@ -42,7 +41,6 @@ export default function About(props) {
       <AboutCard />
       <RightWrapper>
         <ProfileImage image={imageData} alt="Profile image" />
-        <ProgressBar />
       </RightWrapper>
     </FlexContainer>
   )
