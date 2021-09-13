@@ -202,6 +202,7 @@ export default function Contact(props) {
         <CryptoDonate
           cryptoDomain="rossneilson.crypto"
           infuraApi="5730f284ad6741b183c921ebb0509880"
+          ens="rossdev.eth"
           colors={{
             primary: "#2096f3",
             secondary: "#fde199",
