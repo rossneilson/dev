@@ -1,0 +1,37 @@
+name: IPFS Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  develop-ci:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Remove dependencies
+        run: rm -rf package-lock.json node_modules
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Dapp
+        run: npx gatsby build
+
+      - name: Deploy to IPFS
+        uses: web3-storage/add-to-web3@v1
+        id: web3
+        with:
+          web3_token: ${{ secrets.WEB3_STORAGE_TOKEN }}
+          path_to_add: 'public'
