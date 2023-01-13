@@ -2,3 +2,5 @@
   from = "/prox/unblockSentry"
   to = "https://8df1b391b909437e9bb78de5d9128eba@o425302.ingest.sentry.io/api/4504496775561216/envelope/"
   status = 200
+  force = true
+  headers = {Access-Control-Allow-Origin = "*"}
