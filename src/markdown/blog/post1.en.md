@@ -3,7 +3,7 @@ title: Migrating to JamStack and Gatsby
 location: Javascript
 category: Technology
 date: 2020-10-17T14:56:59.267Z
-image: /static/jam.jpg
+image: ../../images/jam.jpg
 path: blog/migrating-to-jamstack
 locale: en
 SEO: Advantages and disadvantages of react, jamstack, gatsby and netlify for freelance web development stack

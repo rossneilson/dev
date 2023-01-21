@@ -107,6 +107,10 @@ const ButtonLink = styled.a`
   }
 `
 
+const ButtonGrouping = styled.section`
+  margin: 2rem 0rem;
+`
+
 export default function PortfolioModal({ handleClose, show, selectedExample }) {
   const { frontmatter, html } = selectedExample
   const [imageIndex, setImageIndex] = useState(0)
@@ -150,25 +154,27 @@ export default function PortfolioModal({ handleClose, show, selectedExample }) {
           <Description>
             <h2 style={{ color: "white" }}>{frontmatter.title}</h2>
             <div dangerouslySetInnerHTML={{ __html: html }} />
-            <ButtonLink
-              aria-label="Go to website button"
-              rel="canonical"
-              href={frontmatter.link}
-              target="_blank"
-            >
-              <FormattedMessage id="portfolio.goToSiteButton" />
-            </ButtonLink>
-            {frontmatter.github ? (
+            <ButtonGrouping>
               <ButtonLink
-                style={{ marginLeft: "10px" }}
-                aria-label="View on github button"
+                aria-label="Go to website button"
                 rel="canonical"
-                href={frontmatter.github}
+                href={frontmatter.link}
                 target="_blank"
               >
-                <FormattedMessage id="portfolio.githubButton" />
+                <FormattedMessage id="portfolio.goToSiteButton" />
               </ButtonLink>
-            ) : null}
+              {frontmatter.github ? (
+                <ButtonLink
+                  style={{ marginLeft: "10px" }}
+                  aria-label="View on github button"
+                  rel="canonical"
+                  href={frontmatter.github}
+                  target="_blank"
+                >
+                  <FormattedMessage id="portfolio.githubButton" />
+                </ButtonLink>
+              ) : null}
+            </ButtonGrouping>
           </Description>
         </Card>
       </ModalMain>

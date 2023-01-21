@@ -3,7 +3,7 @@ title: Building an E-commerce Store on JAMstack
 location: Javascript
 category: Technology
 date: 2020-12-20T14:56:59.267Z
-image: /static/store.jpg
+image: ../../images/store.jpg
 path: blog/store-on-jamstack
 locale: en
 SEO: Architectural overview of technologies used to build e-commerce store on jamstack with gatsby stripe netlify and serverless with useful tips

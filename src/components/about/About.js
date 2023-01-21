@@ -26,7 +26,7 @@ const RightWrapper = styled.section`
 
 const ProfileImage = styled(Img)`
   z-index: 9;
-  margin: auto;
+  margin: 1.5rem auto;
   transform: scale(0.95);
   width: 100%;
   max-width: 400px;

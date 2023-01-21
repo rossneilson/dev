@@ -26,7 +26,6 @@ export default function Explanation({}) {
       <Para>{intl.formatMessage({ id: "tech.explanation.explanation1" })}</Para>
       <Para>{intl.formatMessage({ id: "tech.explanation.explanation2" })}</Para>
       <Para>{intl.formatMessage({ id: "tech.explanation.explanation3" })}</Para>
-      <SNS github gitcoin />
     </Container>
   )
 }

@@ -1,7 +1,7 @@
 ---
 title: JP Morgan
 description: 4 years experience leading web application development at large international bank
-images: [/static/jpm.jpg]
+images: [../../images/jpm.jpg]
 link: https://www.glassdoor.co.uk/Salary/J-P-Morgan-Associate-Glasgow-Salaries-EJI_IE145.0,10_KO11,20_IL.21,28_IM1145.htm
 locale: en
 date: 2020-08-01T14:56:40.193Z

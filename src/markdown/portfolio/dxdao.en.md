@@ -1,17 +1,15 @@
 ---
 title: DXdao
 description: Contributor at DXdao
-images: [/static/dxdao.png]
-link: https://dxdao.eth.link
+images: [../../images/dxdao.png]
+link: https://dxdao.eth.limo
 github: https://github.com/dxgovernance
 locale: en
 date: 2021-07-01T14:56:40.193Z
 
 ---
-Currently a full time contributor at DXdao building DXvote governance, Aqua and taking part in on-chain governance
-* React web3 Dapps
-* Working on fully decentralised governance application DXvote
-* Started by leading development of Aqua - IDO platform
-* Mainnet + Arbitrum + xDai
+Currently a full time contributor at DXdao leading DXgov team to build governance for DXdao and the space as a whole
+* Web3 Dapp development and architecture
+* Project management of DXgov team
 * On-chain governance
-* Fully decentralised DAO
+* Fully decentralized DAO

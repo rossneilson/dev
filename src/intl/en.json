@@ -1,115 +1,54 @@
 {
   "title": {
     "top": "Ross Neilson",
-    "bottom": "Web Developer",
-    "full": "Ross Neilson - Web Developer"
+    "bottom": "Web3 Developer & Project Lead",
+    "full": "Ross Neilson - Web Developer & PM"
   },
   "about": {
     "title": "A little about me",
-    "line1": "Hi, I'm a full stack web developer with 4+ years experience.",
-    "line2": "I have experience building enterprise-grade web applications at JP Morgan, one of the world's largest banks, and a degree in software development for business.",
-    "line3": "I love learning about new web technologies and everything related to Ethereum.",
-    "line4": "I am currently a full time contributor to DXdao, taking part in governance and building awesome decentralised applications.",
-    "progress": "Progress through apprenticeship",
-    "outOfJapan": "I'm likely either in EU(GMT/EST) or JST timezones."
+    "line1": "Hi, I'm a web developer from Scotland with 6+ years experience.",
+    "line2": "I have experience building web applications from enterprise-grade at JP Morgan to decentralized applications in DXdao and a degree in software development.",
+    "line4": "",
+    "line3": "I am currently a full time contributor to DXdao and project lead of DXgov, building Project-DAVI.",
+    "outOfJapan": "I'm likely either in WET or JST timezones."
   },
   "tech": {
-    "title": "Technology",
+    "title": "Tech",
     "explanation": {
       "title": "What am I currently doing?",
-      "explanation1": "I'm currently exploring new web3 technologies and all things relating to ethereum development.",
-      "explanation2": "Over the past year my interest in decentralized blockchain Dapps and specifically DeFi has grown and as has my understanding of the space.",
-      "explanation3": "I am currently developing Dapps as a contributor to DXdao."
+      "explanation1": "Currently I am focusing on DAO governance in web3.",
+      "explanation2": "My role as a developer has evolved into project and product management but still doing architecture and contributing to the code is very rewarding.",
+      "explanation3": "Working in a DAO can be a challenge but its the most fun I have had and most invested I have been in what we build."
     },
     "1": {
-      "title": "React.js",
-      "desc": "Experience building complex web apps using redux and typescript"
+      "title": "Web apps",
+      "desc": "Experience building complex web apps using react and typescript"
     },
     "2": {
-      "title": "Node.js",
-      "desc": "Designed and built many microservices using Express.js + Websockets."
+      "title": "Product & UX",
+      "desc": "Overseeing product development with focus on creating unique UX."
     },
     "3": {
-      "title": "Gatsby.js",
-      "desc": "Fast, SEO Optimized SSR react sites with CMS. What this site uses."
+      "title": "DAO Governance",
+      "desc": "Building and using on-chain governance systems."
     },
     "4": {
       "title": "Solidity",
       "desc": "Learning by building."
     },
     "5": {
-      "title": "Ethereum",
-      "desc": "Fundamental grasp of EVM, debugging and integrating into web3 Dapps."
+      "title": "Decentralization",
+      "desc": "Building applications with proper decentralization at its core."
     },
     "6": {
       "title": "i18n",
       "desc": "Internationalization + English ↔ Japanese localization."
     }
   },
-  "services": {
-    "title": "My Services",
-    "i18n": {
-      "title": "What is Internationalization?",
-      "explanation1": "When software is designed from scratch to be internationally accessible it can be easily adapted to any country and language.",
-      "explanation2": "This involves translation as well as other interface changes to accommodate users from different cultures.",
-      "explanation3": "By providing an intuitive experience to all users businesses can reach new customers in foreign markets as well as supporting a growing mixed English population domestically.",
-      "readMore": "Read more"
-    },
-    "1": {
-      "title": "Internationalization",
-      "desc": "Automatically redirect and change languages instantly. Helping bring your business to new international markets and users."
-    },
-    "2": {
-      "title": "Built for you",
-      "desc": "Always hand built with cutting edge technology, no wordpress or pagebuilders."
-    },
-    "3": {
-      "title": "Modern Design",
-      "desc": "Professional, responsive, unique design to create a brand to catch users attention."
-    },
-    "4": {
-      "title": "Additional packages",
-      "desc": "Options for translation, and support retainer packages."
-    },
-    "5": {
-      "title": "SEO + Analytics",
-      "desc": "Optimized SEO results for all languages and google analytics installed."
-    },
-    "6": {
-      "title": "Hosting",
-      "desc": "Hosting is set up with a generous free plan that can scale with your business."
-    },
-    "products": {
-      "site": {
-        "title": "Website",
-        "1": "Professional business site",
-        "2": "Basic interactive features",
-        "3": "Easy to edit side-by-side content",
-        "4": "Localization - Dynamic design & campaigns",
-        "contact": "Contact Me"
-      },
-      "app": {
-        "title": "Web App",
-        "1": "Full application on web",
-        "2": "App like features - no downloads",
-        "3": "E-commerce / business app / backend system",
-        "4": "Full internationalization",
-        "contact": "Contact Me"
-      },
-      "options": {
-        "title": "Additional options",
-        "1": "Admin + support + updates + reports + enhancements",
-        "2": "Translation - English ↔ Japanese",
-        "3": "Unsure what your business needs? Lets talk about what is best for you",
-        "contact": "Contact Me"
-      }
-    }
-  },
   "portfolio":{
     "title": "Experience",
     "githubButton": "View on GitHub",
-    "goToSiteButton": "Go to site",
-    "lookingForProjects": "Currently offering reduced pricing offer to expand portfolio - Please contact me"
+    "goToSiteButton": "See more"
   },
   "contact": {
     "title": "Contact Me",
@@ -122,9 +61,9 @@
     "success": "Your information was sent perfectly, thank you"
   },
   "donate": {
-    "title": "Donate",
+    "title": "Buy me coffee?",
     "thanks": "Thank you for donating, please let me know via the form above",
-    "copied": "Address copied, send via wallet to donate, thank you"
+    "copied": "Address copied"
   },
   "blog": {
     "title": "Latest articles",

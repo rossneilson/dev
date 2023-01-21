@@ -7,7 +7,6 @@ import Title from "../components/title/Title"
 import About from "../components/about/About"
 import Portfolio from "../components/portfolio/Portfolio"
 import Toggle from "../components/Toggle"
-import ContactCTA from "../components/ContactCTA"
 import BlogSection from "../components/blog/BlogSection"
 import TechSection from "../components/tech/TechSection"
 import SignUp from "../components/contact/SignUp"
@@ -27,7 +26,6 @@ export default function Main(props) {
         lang={props.pageContext.intl.language}
       />
       <Toggle language={props.pageContext.intl.language} />
-      <ContactCTA />
       <Title />
       <About image={props.data.profileImage} />
       <TechSection
@@ -42,11 +40,11 @@ export default function Main(props) {
         }}
       />
       <Portfolio sites={props.data.portfolioSites.edges} />
-      <BlogSection
+      {/* <BlogSection
         language={props.pageContext.intl.language}
         posts={props.data.blogPosts.edges}
-      />
-      <SignUp language={props.pageContext.intl.language} />
+      /> */}
+      {/* <SignUp language={props.pageContext.intl.language} /> */}
       <Contact />
     </div>
   )
@@ -115,7 +113,7 @@ export const imageQuery = graphql`
         }
       }
     }
-    profileImage: file(relativePath: { eq: "me.jpg" }) {
+    profileImage: file(relativePath: { eq: "me2.jpeg" }) {
       childImageSharp {
         gatsbyImageData(width: 500, layout: CONSTRAINED, placeholder: BLURRED)
       }

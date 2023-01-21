@@ -26,11 +26,11 @@ const Wrapper = styled.section`
 
 const ContactCard = styled.section`
   background-color: white;
-  padding: 5%;
+  padding: 3rem 1rem;
   z-index: 9;
   min-height: 20%;
   width: 40%;
-  margin: 5% 1% 5% 1%;
+  margin: 3rem 1% 3rem 1%;
   flex-grow: 2;
   text-align: center;
   min-width: 300px;
@@ -198,7 +198,7 @@ export default function Contact(props) {
             ? intl.formatMessage({ id: "contact.success" })
             : null}
         </Form>
-        <SNS github gitcoin email linkedin twitter />
+        <SNS github gitcoin email linkedin twitter telegram />
         <CryptoDonate
           cryptoDomain="rossneilson.crypto"
           infuraApi="5730f284ad6741b183c921ebb0509880"

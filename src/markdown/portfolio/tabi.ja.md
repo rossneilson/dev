@@ -1,7 +1,7 @@
 ---
 title: 旅Traveler
 description: 撮影のポートフォリオ、ブログ、プリント店があるサイト
-images: [/static/tabiJa.jpg]
+images: [../../images/tabiJa.jpg]
 link: https://tabitraveler.com
 github: https://github.com/rossneilson/tabi-traveler
 locale: ja
