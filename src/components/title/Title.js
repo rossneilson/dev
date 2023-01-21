@@ -60,14 +60,18 @@ function Title(props) {
 
   return (
     <div>
-      {/* <Anime {...animeProperties}></Anime> */}
       <Background cover={cover} style={{ backgroundPositionY: offset / 3 }}>
         <CenterSection>
           <MainTitle>
             <FormattedMessage id="title.top" />
           </MainTitle>
           <SubTitle>
-            <FormattedMessage id="title.bottom" />
+            <FormattedMessage
+              values={{
+                br: <br />,
+              }}
+              id="title.bottom"
+            />
           </SubTitle>
         </CenterSection>
       </Background>
