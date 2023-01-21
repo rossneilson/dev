@@ -7,13 +7,11 @@ module.exports = {
   siteMetadata: {
     en: {
       title: "Ross Neilson | Web Developer",
-      description:
-        "Full stack web developer in Scotland, moving to Japan. Specializing in javascript, react, node, ethereum and web3 blockchain technologies.",
+      description: "Web3 developer and PM from Scotland.",
     },
     ja: {
       title: "ロス ニルソン ウェブエンジニア",
-      description:
-        "Webエンジニア、専門はJavaScriptとreactとイーサリアムDapp開発者。イーサリアムに転職活動中",
+      description: "Web3エンジニアとPM",
     },
     blog: {
       en: {
@@ -29,8 +27,7 @@ module.exports = {
     },
     author: `Ross Neilson`,
     title: "Ross Neilson | Web Developer",
-    description:
-      "Full stack web developer in Scotland, moving to Japan. Specializing in javascript, react, node as well as ethereum and web3 blockchain technologies.",
+    description: "Web3 developer and PM from Scotland.",
 
     siteUrl: `https://www.rossneilson.dev`,
   },

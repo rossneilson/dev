@@ -106,7 +106,7 @@ export default function SNS({
         <Link
           target="_blank"
           rel="canonical"
-          aria-label="Email me"
+          aria-label="Telegram"
           href="https://t.me/rossneilson"
         >
           <svg
@@ -126,8 +126,6 @@ export default function SNS({
           </svg>
         </Link>
       ) : null}
-
-      {/* https://t.me/rossneilson */}
 
       {linkedin ? (
         <Link
