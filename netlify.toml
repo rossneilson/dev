@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/api/coingecko/*"
+  to = "https://api.coingecko.com/api/v3/simple/price/:splat"
+  status = 200
